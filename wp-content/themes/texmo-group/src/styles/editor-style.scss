@@ -1,0 +1,20 @@
+// Setup
+@import "settings";
+@import "utilities/mq";
+@import "utilities/mixins";
+@import "variables";
+@import "utilities/helpers";
+
+// Base
+@import "base/base";
+@import "base/typography";
+@import "components/*";
+
+html, body  {
+	background-image: none !important;
+}
+
+/* Stop links being clickable in the block editor */
+.acf-block-preview a {
+	pointer-events: none!important;
+}
