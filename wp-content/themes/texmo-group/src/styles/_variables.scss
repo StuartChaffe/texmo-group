@@ -20,14 +20,15 @@
 	--line-height: 1.5;
 	--line-height-headings: 1.2;
 
-	--color-grey-dark: #6a6a6a;
-	--color-grey: #ddd;
+	--color-grey-dark: #424244;
+	--color-grey: #DBDBDB;
 	--color-grey-light: #efefef;
 
-	--color-primary: #59BACC;
-	--color-secondary: #58AD69;
-	--color-tertiary: #FFBC49;
-	--color-quaternary: #E2574C;
+	--color-primary: var(--color-grey-dark);
+	--color-secondary: #E55E20;
+	--color-secondary-dark: #D46634;
+	--color-tertiary: var(--color-grey);
+	--color-quaternary: #F8F7F1;
 
 	--color-text-base: #333;
 	--color-text-dark: #181822;
@@ -41,7 +42,7 @@
 	--color-youtube: #cc181e;
 	--color-linkedin: #0077B5;
 
-	--body-background-color: #fff;
+	--body-background-color: var(--color-quaternary);
 
 	--border-radius: 16px;
 
@@ -52,9 +53,9 @@
 	--spacing-s: 0.5em;
 	--spacing-xs: 0.25em;
 
-	--container-width: 75rem;
-	--container-width-l: 100rem;
-	--content-width: 50rem;
+	--container-width: 1060px;
+	--container-width-l: 1430px;
+	--content-width: var(--container-width);
 
 	@include mq(large) {
 		--font-size-h1: calc(3.2rem + 0.2vw);
