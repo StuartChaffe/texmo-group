@@ -26,12 +26,15 @@ remove_action( 'wp_print_styles', 'print_emoji_styles' );
 remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
 remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
 
-
+/**
+* Editor styles
+*/
+add_theme_support( 'editor-styles' );
+add_editor_style( 'assets/css/editor-style.css' );
 
 /**
- * Add no-js class to body
- */
- 
+* Add no-js class to body
+*/
 function origin_no_js_body_classes( $classes ) {
     return array_merge( $classes, array( 'no-js' ) );
 }
@@ -40,8 +43,8 @@ add_filter( 'body_class', 'origin_no_js_body_classes', 20 );
 
 
 /**
- * Tidy up body classes
- */
+* Tidy up body classes
+*/
 function origin_clean_body_classes( $classes ) {
     $allowed_classes = [
         'single',

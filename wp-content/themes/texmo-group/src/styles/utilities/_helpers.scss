@@ -59,9 +59,29 @@ img.aligncenter     { display: block; margin-left: auto; margin-right: auto; }
 	}
 }
 
+.fade {
+	opacity: 0;
+	transition: opacity 0.5s ease-out;
+}
+.fade--visible {
+	opacity: 1;
+	transition: opacity 0.5s ease-out;
+}
+
+.fade--delay__1 {
+	transition-delay: 0.5s;
+}
+.fade--delay__2 {
+	transition-delay: 1s;
+}
+.fade--delay__3 {
+	transition-delay: 1.5s;
+}
+
+
 // debugging
 @if $debug == true {
-    * {
-        box-shadow: inset 0 0 0 1px red;
-    }
+	* {
+		box-shadow: inset 0 0 0 1px red;
+	}
 }
