@@ -56,7 +56,7 @@ html.with-featherlight {
 }
 
 .featherlight .featherlight-content {
-	position: relative;
+	// position: relative;
 	vertical-align: middle;
 	display: inline-block;
 	// overflow: auto;
@@ -92,9 +92,9 @@ html.with-featherlight {
 .featherlight .featherlight-close-icon {
 	position: absolute;
 	z-index: 9999;
-	top: -5px;
-	right: 0;
-	transform: translate(0, -100%);
+	top: 15px;
+	right: 15px;
+	// transform: translate(0, -100%);
 	width: 50px;
 	height: 50px;
 	background-color: transparent;
