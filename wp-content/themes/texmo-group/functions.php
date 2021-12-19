@@ -29,15 +29,15 @@ function my_login_logo() { ?>
 	<style type="text/css">
 		#login h1 a, .login h1 a {
 		background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/src/images/logo.svg);
-		height:39px;
-		width:300px;
-		background-size: 300px 39px;
+		height: 49px;
+		width: 121px;
+		background-size: 121px 49px;
 		background-repeat: no-repeat;
 			padding-bottom: 30px;
 		}
 		.wp-core-ui .button-primary {
-			background: #62338F !important;
-			background-color: #62338F !important;
+			background: #E55E20 !important;
+			background-color: #E55E20 !important;
 			border: 0 !important;
 		}
 		.wp-core-ui .button.button-large {
@@ -46,7 +46,7 @@ function my_login_logo() { ?>
 			font-size: 16px !important;
 		}
 		a {
-			color: #000 !important;
+			color: #fff !important;
 		}
 		.privacy-policy-page-link {
 			display: none;
@@ -54,7 +54,8 @@ function my_login_logo() { ?>
 		.login-action-login {
 			display: flex;
     		flex-direction: column;
-			background-color: #EAEAEB !important;
+			color: white;
+			background-color: #424244 !important;
 		}
 		.login label {
 			font-size: 16px !important;

@@ -10,13 +10,16 @@
 	overflow: hidden;
 }
 .global-header {
-	position: absolute;
+	position: fixed;
 	transition: transform 0.2s ease-in-out;
 	width: 100%;
 	top: 0;
 	z-index: 999;
 	&-active {
 		position: fixed;
+	}
+	@include mq(medium) {
+		position: absolute;
 	}
 	&--inner {
 		display: flex;
@@ -120,6 +123,7 @@
 				.global-header--nav-inner::before,
 				.global-header--nav-inner::after {
 					background-color: var(--color-secondary);
+					transition: all 0.1s ease-in-out;
 				}
 			}
 		}
@@ -259,6 +263,7 @@ ul.menu li:hover > .sub-menu {
 .global-header--nav-btn.is-active .global-header--nav-inner::before,
 .global-header--nav-btn.is-active .global-header--nav-inner::after {
 	background-color: white;
+	transition: all 0.1s ease-in-out;
 }
 .global-header--nav-btn.is-active {
 	// position: fixed;

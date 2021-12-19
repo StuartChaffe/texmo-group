@@ -1,4 +1,7 @@
 .content {
+	background: red;
+	min-height: 100px;
+	@extend .container--large;
 	> * {
 		max-width: var(--content-width);
 		margin-right: auto;

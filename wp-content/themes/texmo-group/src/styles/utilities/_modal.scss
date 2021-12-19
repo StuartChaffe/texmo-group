@@ -61,14 +61,17 @@ html.with-featherlight {
 	display: inline-block;
 	// overflow: auto;
 	padding: 0;
-    width: 90%;
+    width: 100%;
     height: 85%;
 	margin-left: 5%;
 	margin-right: 5%;
-	max-height: 95%;
 	background: #000;
 	cursor: auto;
 	white-space: normal;
+	@include mq(medium) {
+		width: 90%;
+		max-height: 95%;
+	}
 }
 
 /* contains the content */

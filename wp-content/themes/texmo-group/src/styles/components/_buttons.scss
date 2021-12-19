@@ -17,6 +17,23 @@
 		color: var(--color-grey-dark);
 		text-decoration: none;
 	}
+
+	&-video {
+		display: flex;
+		align-items: center;
+		transition: all 0.1s ease-in-out;
+		svg {
+			margin-right: 1rem;
+		}
+		&:hover {
+			text-decoration: none;
+			color: var(--color-secondary);
+			transition: all 0.1s ease-in-out;
+			.icon--play {
+				color: var(--color-secondary);
+			}
+		}
+	}
 }
 
 .btn--primary {

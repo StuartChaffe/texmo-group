@@ -28,16 +28,6 @@ function texmo_acf_blocks() {
 			'keywords'			=> array( 'accordion, expanding' ),
 		));
 		acf_register_block(array(
-			'name'				=> 'awards',
-			'title'				=> __('Awards'),
-			'description'		=> __('Add an award block'),
-			'render_callback'	=> 'texmo_acf_block_render_callback',
-			'category'			=> 'texmo-blocks',
-			'icon'				=> 'awards',
-			'align' 			=> 'wide',
-			'keywords'			=> array( 'award' ),
-		));
-		acf_register_block(array(
 			'name'				=> 'banner',
 			'title'				=> __('Banner'),
 			'description'		=> __('Add a banner block'),
@@ -46,16 +36,6 @@ function texmo_acf_blocks() {
 			'icon'				=> 'format-image',
 			'align' 			=> 'full',
 			'keywords'			=> array( 'banner' ),
-		));
-		acf_register_block(array(
-			'name'				=> 'careers',
-			'title'				=> __('Careers'),
-			'description'		=> __('Add a careers block'),
-			'render_callback'	=> 'texmo_acf_block_render_callback',
-			'category'			=> 'texmo-blocks',
-			'icon'				=> 'admin-users',
-			'align' 			=> 'full',
-			'keywords'			=> array( 'careers, jobs' ),
 		));
 		acf_register_block(array(
 			'name'				=> 'carousel',
@@ -89,16 +69,6 @@ function texmo_acf_blocks() {
 			'keywords'			=> array( 'cta, call to action' ),
 		));
 		acf_register_block(array(
-			'name'				=> 'download',
-			'title'				=> __('Download'),
-			'description'		=> __('Add a download block'),
-			'render_callback'	=> 'texmo_acf_block_render_callback',
-			'category'			=> 'texmo-blocks',
-			'icon'				=> 'download',
-			'align' 			=> 'wide',
-			'keywords'			=> array( 'download' ),
-		));
-		acf_register_block(array(
 			'name'				=> 'featured-posts',
 			'title'				=> __('Featured posts'),
 			'description'		=> __('Add featured posts'),
@@ -109,84 +79,14 @@ function texmo_acf_blocks() {
 			'keywords'			=> array( 'posts, featured' ),
 		));
 		acf_register_block(array(
-			'name'				=> 'featured-lists',
-			'title'				=> __('Featured lists'),
-			'description'		=> __('Add a featured list'),
+			'name'				=> 'link-block',
+			'title'				=> __('Link block'),
+			'description'		=> __('Add link block'),
 			'render_callback'	=> 'texmo_acf_block_render_callback',
 			'category'			=> 'texmo-blocks',
-			'icon'				=> 'screenoptions',
+			'icon'				=> 'grid-view',
 			'align' 			=> 'wide',
-			'keywords'			=> array( 'list, featured' ),
-		));
-		acf_register_block(array(
-			'name'				=> 'featured-team',
-			'title'				=> __('Featured team members'),
-			'description'		=> __('Add team members'),
-			'render_callback'	=> 'texmo_acf_block_render_callback',
-			'category'			=> 'texmo-blocks',
-			'icon'				=> 'admin-users',
-			'align' 			=> 'wide',
-			'keywords'			=> array( 'team, featured' ),
-		));
-		acf_register_block(array(
-			'name'				=> 'form',
-			'title'				=> __('Form'),
-			'description'		=> __('Add a form'),
-			'render_callback'	=> 'texmo_acf_block_render_callback',
-			'category'			=> 'texmo-blocks',
-			'icon'				=> 'email-alt',
-			'align' 			=> 'wide',
-			'keywords'			=> array( 'form, contact' ),
-		));
-		acf_register_block(array(
-			'name'				=> 'highlighted-service',
-			'title'				=> __('Highlighted service'),
-			'description'		=> __('Add highlighted service'),
-			'render_callback'	=> 'texmo_acf_block_render_callback',
-			'category'			=> 'texmo-blocks',
-			'icon'				=> 'align-full-width',
-			'align' 			=> 'wide',
-			'keywords'			=> array( 'services, highlight' ),
-		));
-		acf_register_block(array(
-			'name'				=> 'highlighted-text',
-			'title'				=> __('Highlighted text'),
-			'description'		=> __('Add highlighted text'),
-			'render_callback'	=> 'texmo_acf_block_render_callback',
-			'category'			=> 'texmo-blocks',
-			'icon'				=> 'menu-alt3',
-			'align' 			=> 'wide',
-			'keywords'			=> array( 'text, highlight' ),
-		));
-		acf_register_block(array(
-			'name'				=> 'link-list',
-			'title'				=> __('Link list'),
-			'description'		=> __('Add link list block'),
-			'render_callback'	=> 'texmo_acf_block_render_callback',
-			'category'			=> 'texmo-blocks',
-			'icon'				=> 'columns',
-			'align' 			=> 'wide',
-			'keywords'			=> array( 'link list, links' ),
-		));
-		acf_register_block(array(
-			'name'				=> 'offices',
-			'title'				=> __('Office list'),
-			'description'		=> __('Add office list'),
-			'render_callback'	=> 'texmo_acf_block_render_callback',
-			'category'			=> 'texmo-blocks',
-			'icon'				=> 'columns',
-			'align' 			=> 'wide',
-			'keywords'			=> array( 'office' ),
-		));
-		acf_register_block(array(
-			'name'				=> 'platforms',
-			'title'				=> __('Platform list'),
-			'description'		=> __('Add platform list'),
-			'render_callback'	=> 'texmo_acf_block_render_callback',
-			'category'			=> 'texmo-blocks',
-			'icon'				=> 'columns',
-			'align' 			=> 'wide',
-			'keywords'			=> array( 'platform' ),
+			'keywords'			=> array( 'link, links' ),
 		));
 		acf_register_block(array(
 			'name'				=> 'posts',
@@ -199,26 +99,6 @@ function texmo_acf_blocks() {
 			'keywords'			=> array( 'posts, blogs' ),
 		));
 		acf_register_block(array(
-			'name'				=> 'signup',
-			'title'				=> __('Signup'),
-			'description'		=> __('Add a signup form'),
-			'render_callback'	=> 'texmo_acf_block_render_callback',
-			'category'			=> 'texmo-blocks',
-			'icon'				=> 'email-alt',
-			'align' 			=> 'wide',
-			'keywords'			=> array( 'form, signup' ),
-		));
-		acf_register_block(array(
-			'name'				=> 'team',
-			'title'				=> __('Team'),
-			'description'		=> __('Add all team members'),
-			'render_callback'	=> 'texmo_acf_block_render_callback',
-			'category'			=> 'texmo-blocks',
-			'icon'				=> 'groups',
-			'align' 			=> 'wide',
-			'keywords'			=> array( 'team, people' ),
-		));
-		acf_register_block(array(
 			'name'				=> 'testimonial',
 			'title'				=> __('Testimonial'),
 			'description'		=> __('Add testimonial'),
@@ -229,14 +109,14 @@ function texmo_acf_blocks() {
 			'keywords'			=> array( 'testimonial, quote' ),
 		));
 		acf_register_block(array(
-			'name'				=> 'video',
-			'title'				=> __('Video'),
-			'description'		=> __('Add a video'),
+			'name'				=> 'text-image',
+			'title'				=> __('Text with image'),
+			'description'		=> __('Add a standard text with image block'),
 			'render_callback'	=> 'texmo_acf_block_render_callback',
 			'category'			=> 'texmo-blocks',
-			'icon'				=> 'video-alt3',
+			'icon'				=> 'align-pull-right',
 			'align' 			=> 'wide',
-			'keywords'			=> array( 'video' ),
+			'keywords'			=> array( 'content, text, image' ),
 		));
 	}
 }
@@ -254,27 +134,16 @@ add_filter( 'allowed_block_types_all', 'texmo_allowed_block_types' );
 function texmo_allowed_block_types( $allowed_blocks ) {
  
 	return array(
-		'acf/accordion',
-		'acf/awards',
+		// 'acf/accordion',
 		'acf/banner',
-		'acf/careers',
-		'acf/carousel',
+		// 'acf/carousel',
 		'acf/content',
 		'acf/cta',
-		'acf/download',
-		'acf/featured-posts',
-		'acf/featured-lists',
-		'acf/featured-team',
-		'acf/highlighted-service',
-		'acf/highlighted-text',
-		'acf/link-list',
-		'acf/offices',
-		'acf/platforms',
-		'acf/posts',
-		'acf/signup',
-		'acf/team',
+		// 'acf/featured-posts',
+		'acf/link-block',
+		// 'acf/posts',
 		'acf/testimonial',
-		'acf/video'
+		'acf/text-image',
 	);
  
 }

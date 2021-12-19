@@ -4,6 +4,7 @@
 @import "utilities/mixins";
 @import "variables";
 @import "utilities/helpers";
+@import "utilities/modal";
 
 // Base
 @import "base/base";
@@ -12,6 +13,9 @@
 
 html, body  {
 	background-image: none !important;
+}
+.fade {
+	opacity: 1;
 }
 
 /* Stop links being clickable in the block editor */
