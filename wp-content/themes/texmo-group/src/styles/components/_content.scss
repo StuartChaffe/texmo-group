@@ -1,20 +1,23 @@
 .content {
-	background: red;
-	min-height: 100px;
 	@extend .container--large;
+	padding: var(--spacing-l) 0;
 	> * {
 		max-width: var(--content-width);
 		margin-right: auto;
 		margin-left: auto;
 	}
 
-	h2,
-	h3,
-	h4,
-	h5 {
-		margin-top: var(--spacing-l);
-		margin-bottom: 0;
+	p {
+		margin-top: 0;
 	}
+
+	// h2,
+	// h3,
+	// h4,
+	// h5 {
+	// 	margin-top: var(--spacing-l);
+	// 	margin-bottom: 0;
+	// }
 
 	a {
 		color: var(--link-color);

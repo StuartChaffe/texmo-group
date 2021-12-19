@@ -12,9 +12,12 @@
 	cursor: pointer;
 	transition: all 0.1s ease-in-out;
 
-	&:hover, &:focus {
+	&:hover, &:focus,
+	a:hover, a:focus {
 		outline: 0;
-		color: var(--color-grey-dark);
+		color: var(--color-text-dark);
+		// background-color: var(--color-secondary);
+		border-color: var(--color-primary);
 		text-decoration: none;
 	}
 
@@ -33,6 +36,15 @@
 				color: var(--color-secondary);
 			}
 		}
+	}
+}
+span.btn {
+	padding: 0;
+	a {
+		display: inline-block;
+		padding: 20px 65px;
+		border-radius: 200px;
+		transition: all 0.1s ease-in-out;
 	}
 }
 

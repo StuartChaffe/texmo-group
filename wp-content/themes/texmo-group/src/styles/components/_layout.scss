@@ -28,3 +28,15 @@
 	margin-bottom: var(--spacing-l);
 	flex: 1;
 }
+
+.bkg {
+	&--white {
+		background-color: var(--color-white);
+	}
+	&--darkgrey {
+		background-color: var(--color-grey-dark);
+	}
+	&--grey {
+		background-color: var(--color-grey);
+	}
+}
