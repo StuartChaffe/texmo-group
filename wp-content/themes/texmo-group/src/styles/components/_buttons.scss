@@ -11,6 +11,8 @@
 	text-align: center;
 	cursor: pointer;
 	transition: all 0.1s ease-in-out;
+	overflow: hidden;
+	z-index: 1;
 
 	&:hover, &:focus,
 	a:hover, a:focus {
@@ -41,10 +43,32 @@
 span.btn {
 	padding: 0;
 	a {
+		position: relative;
 		display: inline-block;
 		padding: 20px 65px;
 		border-radius: 200px;
 		transition: all 0.1s ease-in-out;
+		z-index: 1;
+		// &:before {
+		// 	position: absolute;
+		// 	transition: .3s;
+		// 	content: '';
+		// 	width: 0;
+		// 	bottom: -1px;
+		// 	background: var(--color-secondary);
+	
+		// 	height: 120%;
+		// 	left: -10%;
+		// 	transform: skewX(15deg);
+		// 	z-index: -1;
+		// }
+		// &:hover {
+		// 	color: white;
+		// 	&:before {
+		// 		left: -10%;
+		// 		width: 120%;
+		// 	}
+		// }
 	}
 }
 

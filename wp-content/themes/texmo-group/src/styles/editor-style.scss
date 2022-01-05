@@ -22,3 +22,7 @@ html, body  {
 .acf-block-preview a {
 	pointer-events: none!important;
 }
+
+.wp-block[data-align=wide] {
+    max-width: var(--container-l);
+}

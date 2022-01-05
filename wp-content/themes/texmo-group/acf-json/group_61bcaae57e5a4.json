@@ -84,6 +84,25 @@
                     "layout": "horizontal",
                     "return_format": "value",
                     "save_other_choice": 0
+                },
+                {
+                    "key": "field_61d5dcf7f9735",
+                    "label": "Hide on mobile?",
+                    "name": "text-image-mobile",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
                 }
             ]
         },
@@ -130,5 +149,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1639935049
+    "modified": 1641405731
 }

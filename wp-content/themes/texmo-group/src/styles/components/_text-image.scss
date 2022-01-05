@@ -2,32 +2,64 @@
 	position: relative;
 	overflow: hidden;
 	display: flex;
+	flex-direction: column;
+	@include mq(medium) {
+		flex-direction: row;
+	}
 	&--content {
 		@extend .container--large;
-		width: 30%;
-		margin-left: var(--spacing-l);
-		padding: var(--spacing-l) 0;
+		// max-width: var(--container-l);
+		// width: 30%;
+		// margin-left: var(--spacing-l);
+		// padding: var(--spacing-l) 0;
+		&-inner {
+			width: 100%;
+			padding: var(--spacing-xs) 0;
+			padding-right: 0;
+			@include mq(medium) {
+				width: 40%;
+				padding: var(--spacing);
+				padding-right: 0;
+			}
+			@include mq(large) {
+				padding: var(--spacing-l) var(--spacing);
+				padding-right: 0;
+			}
+			@include mq(container) {
+				width: 35%;
+				padding: var(--spacing-l) 0;
+				padding-right: 0;
+			}
+		}
 
 		.btn {
 			margin-top: var(--spacing);
 		}
 	}
 	&--image {
-		position: absolute;
-		width: 60%;
+		position: relative;
+		width: 100%;
 		height: 100%;
-		margin-left: 40%;
 
-		background-size: cover;
-		background-position: center left;
-		background-repeat: no-repeat;
+		@include mq(medium) {
+			position: absolute;
+			width: 60%;
+			height: 100%;
+			margin-left: 40%;
+			background-size: cover;
+			background-position: center left;
+			background-repeat: no-repeat;
+		}
 		img {
 			// min-width: 100%;
-			height: 100%;
-			max-width: none;
-			margin-left: auto;
-			display: none;
-			visibility: hidden;
+			width: 100%;
+			@include mq(medium) {
+				display: none;
+				visibility: hidden;
+				height: 100%;
+				max-width: none;
+				margin-left: auto;
+			}
 		}
 	}
 }
@@ -37,15 +69,29 @@
 		margin-right: 40%;
 		background-position: center right;
 		img {
-			display: none;
-			visibility: hidden;
+			// display: none;
+			// visibility: hidden;
 			margin-left: 0;
 			margin-right: auto;
 			right: 0;
-    		position: absolute;
+    		// position: absolute;
 		}
 	}
-	.text-image--content {
-		margin-left: 60%;
+	.text-image--content-inner {
+		margin-left: auto;
+		padding: var(--spacing-xs) 0;
+		padding-left: 0;
+		@include mq(medium) {
+			padding: var(--spacing);
+			padding-left: 0;
+		}
+		@include mq(large) {
+			padding: var(--spacing-l) var(--spacing);
+			padding-left: 0;
+		}
+		@include mq(container) {
+			padding: var(--spacing-l) 0;
+			padding-left: 0;
+		}
 	}
 }

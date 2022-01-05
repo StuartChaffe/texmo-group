@@ -14,7 +14,7 @@
 	--body-family: "Kohinoor", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	--display-family: "Kohinoor", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-	--font-size: calc(1rem + 0.15vw);
+	--font-size: calc(0.95rem + 0.15vw);
 	--font-size-lead: calc(1.75rem + 0.1vw);
 	--font-size-small: calc(0.9rem + 0.1vw);
 	--font-size-h1: calc(2rem + 0.2vw);
@@ -64,15 +64,15 @@
 	--spacing-l: 100px;
 	--spacing: 40px;
 	--spacing-s: 10px;
-	--spacing-xs: 1rem;
+	--spacing-xs: calc(var(--spacing-s) * 2);
 
 	--container: 1060px;
 	--container-l: 1430px;
 	--content-width: var(--container);
 
 	@include mq(large) {
-		--font-size-h1: calc(3.2rem + 0.2vw);
-		--font-size-h2: calc(2rem + 0.2vw);
+		--font-size-h1: calc(3.1rem + 0.2vw);
+		--font-size-h2: calc(2.5rem + 0.2vw);
 		--font-size-h3: calc(1.6rem + 0.2vw);
 		--font-size-h4: calc(1.4rem + 0.2vw);
 		--font-size-h5: calc(1.2rem + 0.2vw);

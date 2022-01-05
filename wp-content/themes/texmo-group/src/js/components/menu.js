@@ -10,6 +10,15 @@ jQuery(document).ready(function($) {
 		$menuContainer.toggleClass("is-active");
 	});
 
+	$(window).on("scroll", function() {
+		if($(window).scrollTop() > 80) {
+			$("header").addClass("global-header-active");
+		} else {
+			//remove the background property so it comes transparent again (defined in your css)
+			$("header").removeClass("global-header-active");
+		}
+	});
+
 });
 
 // jQuery(document).ready(function($) {

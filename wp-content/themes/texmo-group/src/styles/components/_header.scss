@@ -11,12 +11,17 @@
 }
 .global-header {
 	position: fixed;
-	transition: transform 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 	width: 100%;
 	top: 0;
 	z-index: 999;
 	&-active {
 		position: fixed;
+		background-color: var(--color-primary);
+		transition: background-color 0.1s ease-in-out;
+		@include mq(medium) {
+			background-color: transparent;
+		}
 	}
 	@include mq(medium) {
 		position: absolute;
