@@ -739,6 +739,50 @@ span.btn a {
   color: white;
 }
 
+.companies {
+  padding: var(--spacing-l) 0;
+  text-align: center;
+}
+.companies--title {
+  width: 100%;
+}
+.companies-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 50em) {
+  .companies-list {
+    flex-direction: row;
+  }
+}
+.companies-list-item {
+  text-align: left;
+  text-decoration: none;
+  width: 100%;
+}
+@media (min-width: 50em) {
+  .companies-list-item {
+    margin: 0 0.5rem;
+    width: auto;
+  }
+}
+.companies-list-item--image {
+  margin-bottom: 1rem;
+}
+.companies-list-item--image img {
+  width: 100%;
+}
+.companies-list-item p {
+  text-decoration: underline;
+}
+.companies-list-item:hover {
+  text-decoration: none;
+}
+.companies-list-item span {
+  text-decoration: none;
+}
+
 .content {
   padding: var(--spacing-l) 0;
 }
@@ -1280,7 +1324,7 @@ ul.menu .sub-menu li a:after {
   max-width: var(--container);
 }
 
-.container--large, .text-image--content, .link-block, .content, .global-footer__inner {
+.container--large, .text-image--content, .link-block, .companies-list, .content, .global-footer__inner {
   margin: 0 auto;
   padding: 0 1em;
   width: 100%;
@@ -1299,6 +1343,9 @@ ul.menu .sub-menu li a:after {
 }
 .bkg--darkgrey {
   background-color: var(--color-grey-dark);
+}
+.bkg--darkgrey h1, .bkg--darkgrey h2, .bkg--darkgrey h3, .bkg--darkgrey h4, .bkg--darkgrey h5, .bkg--darkgrey p, .bkg--darkgrey a {
+  color: white;
 }
 .bkg--grey {
   background-color: var(--color-grey);

@@ -48,6 +48,16 @@ function texmo_acf_blocks() {
 			'keywords'			=> array( 'carousel' ),
 		));
 		acf_register_block(array(
+			'name'				=> 'companies',
+			'title'				=> __('Company links'),
+			'description'		=> __('Add company links block'),
+			'render_callback'	=> 'texmo_acf_block_render_callback',
+			'category'			=> 'texmo-blocks',
+			'icon'				=> 'grid-view',
+			'align' 			=> 'wide',
+			'keywords'			=> array( 'link, links, company' ),
+		));
+		acf_register_block(array(
 			'name'				=> 'content',
 			'title'				=> __('Content'),
 			'description'		=> __('Add a content block'),
@@ -138,6 +148,7 @@ function texmo_allowed_block_types( $allowed_blocks ) {
 		'acf/banner',
 		// 'acf/carousel',
 		'acf/content',
+		'acf/companies',
 		'acf/cta',
 		// 'acf/featured-posts',
 		'acf/link-block',

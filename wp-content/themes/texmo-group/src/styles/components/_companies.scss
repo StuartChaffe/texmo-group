@@ -1,0 +1,43 @@
+.companies {
+	padding: var(--spacing-l) 0;
+	text-align: center;
+	
+	&--title {
+		width: 100%;
+	}
+	&-list {
+		@extend .container--large;
+		display: flex;
+		flex-direction: column;
+		// background: red;
+		justify-content: center;
+		@include mq(medium) {
+			flex-direction: row;
+		}
+		&-item {
+			text-align: left;
+			text-decoration: none;
+			width: 100%;
+			@include mq(medium) {
+				margin: 0 0.5rem;
+				width: auto;
+			}
+			&--image {
+				margin-bottom: 1rem;
+				img {
+					width: 100%;
+				}
+			}
+			p {
+				text-decoration: underline;
+			}
+			&:hover {
+				text-decoration: none;
+			}
+
+			span {
+				text-decoration: none;
+			}
+		}
+	}
+}
