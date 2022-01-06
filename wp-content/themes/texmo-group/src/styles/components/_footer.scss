@@ -1,19 +1,60 @@
-.global-footer {
+.footer {
 	margin-top: auto;
-	text-align: center;
 	background-color: var(--color-primary);
-	padding: var(--spacing);
+	padding: var(--spacing-l) var(--spacing);
+	@include mq(container) {
+		padding: var(--spacing-l) 0;
+	}
+	&--logo {
+		margin-bottom: 4rem;
+	}
+	&--companies {
+		display: flex;
+		&-item {
+			margin-right: 5rem;
+			img {
+				margin-bottom: 1.5rem;
+			}
+		}
+	}
+
+	&--left {
+		// width: calc(100% / 3 * 2);
+	}
+	&--right {
+		// width: calc(100% / 3 * 1);
+		display: flex;
+		flex-direction: column;
+		margin-left: auto;
+		@include mq(large) {
+			padding-right: var(--spacing-l);
+		}
+	}
+
+	p {
+		color: white;
+		margin: 0;
+		font-size: var(--font-size-small);
+		line-height: 1.1rem;
+	}
+	.menu-footer-container {
+		margin-top: auto;
+	}
+	.menu {
+		display: flex;
+		flex-direction: column;
+
+		a {
+			color: white;
+			font-size: var(--font-size-small);
+		}
+		li {
+			line-height: 1.1rem;
+		}
+	}
 }
 
-.global-footer__inner {
+.footer--inner {
 	@extend .container--large;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.global-footer p {
-	color: white;
-	margin: 0;
-	font-size: var(--font-size-small);
 }
