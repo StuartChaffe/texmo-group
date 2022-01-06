@@ -1341,7 +1341,7 @@ body.nav-open {
   text-decoration: none;
   width: 100%;
   flex: 0 0 0px;
-  min-width: 20%;
+  min-width: 30%;
 }
 @media (min-width: 50em) {
   .companies-list-item {
@@ -1377,7 +1377,6 @@ body.nav-open {
   display: flex;
   flex-wrap: wrap;
   padding-top: var(--spacing-xs);
-  margin-top: var(--spacing-xs);
 }
 @media (min-width: 50em) {
   .link-block {
