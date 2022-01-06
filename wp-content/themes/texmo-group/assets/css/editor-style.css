@@ -760,6 +760,8 @@ span.btn a {
   text-align: left;
   text-decoration: none;
   width: 100%;
+  flex: 0 0 0px;
+  min-width: 20%;
 }
 @media (min-width: 50em) {
   .companies-list-item {
