@@ -1328,11 +1328,20 @@ ul.menu .sub-menu li a:after {
   }
 }
 .icons-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   margin: 0 0.5rem;
 }
 .icons-item--image {
-  margin-bottom: 2rem;
+  text-align: center;
+  height: 100px;
+  width: 90px;
+  margin-bottom: 1rem;
+}
+.icons-item--image img {
+  width: 100%;
 }
 
 .global-container {
@@ -1607,6 +1616,12 @@ html, body {
 
 .fade {
   opacity: 1;
+}
+
+.icons,
+.content {
+  padding-top: var(--spacing-l) !important;
+  padding-bottom: var(--spacing-l) !important;
 }
 
 /* Stop links being clickable in the block editor */

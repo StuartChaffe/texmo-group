@@ -18,6 +18,12 @@ html, body  {
 	opacity: 1;
 }
 
+.icons,
+.content {
+	padding-top: var(--spacing-l) !important;
+	padding-bottom: var(--spacing-l) !important;
+}
+
 /* Stop links being clickable in the block editor */
 .acf-block-preview a {
 	pointer-events: none!important;

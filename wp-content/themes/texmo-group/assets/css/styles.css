@@ -1389,11 +1389,20 @@ body.nav-open {
   }
 }
 .icons-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   margin: 0 0.5rem;
 }
 .icons-item--image {
-  margin-bottom: 2rem;
+  text-align: center;
+  height: 100px;
+  width: 90px;
+  margin-bottom: 1rem;
+}
+.icons-item--image img {
+  width: 100%;
 }
 
 .link-block {
