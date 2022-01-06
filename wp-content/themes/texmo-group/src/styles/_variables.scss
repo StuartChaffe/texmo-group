@@ -35,13 +35,14 @@
 	--color-grey-dark: #424244;
 	--color-grey: #DBDBDB;
 	--color-grey-light: #efefef;
-	--color-white: #F8F7F1;
+	--color-white: #fff;
+	--color-cream: #F8F7F1;
 
 	--color-primary: var(--color-grey-dark);
 	--color-secondary: #E55E20;
 	--color-secondary-dark: #D46634;
 	--color-tertiary: var(--color-grey);
-	--color-quaternary: #F8F7F1;
+	--color-quaternary: var(--color-cream);
 
 	--color-text-base: #333;
 	--color-text-dark: #181822;

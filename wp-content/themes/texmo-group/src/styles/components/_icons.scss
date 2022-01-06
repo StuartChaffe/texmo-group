@@ -1,49 +1,25 @@
-.icon {
-	display: inline-block;
-	vertical-align: middle;
-	fill: currentColor;
-	width: 20px;
-	height: 20px;
-}
-.icon--play {
-	width: 90px;
-	height: 90px;  
-	color: var(--color-quaternary);
-	transition: all 0.1s ease-in-out;
-	&:hover {
-		color: var(--color-secondary);
-		transition: all 0.1s ease-in-out;
+.icons {
+	padding-top: var(--spacing-xs);
+	padding-bottom:  var(--spacing-xs);
+	@extend .container--large;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	@include mq(medium) {
+		padding-top: var(--spacing-l);
+		padding-bottom: var(--spacing-l);
 	}
-}
+	// @include mq(large) {
+	// 	padding-top: var(--spacing-l);
+	// 	padding-bottom: var(--spacing-l);
+	// }
 
-.icon--small {
-	width: 13px;
-	height: 13px;
-}
+	&-item {
+		text-align: center;
+		margin: 0 0.5rem;
 
-.icon--medium {
-	width: 26px;
-	height: 26px;
-}
-
-.icon--large {
-	width: 32px;
-	height: 32px;
-}
-
-.icon--xlarge {
-	width: 40px;
-	height: 40px;
-}
-
-.icon--scale {
-	width: 0.75em;
-	height: 0.75em;
-	vertical-align: middle;
-	position: relative;
-	top: -2px;
-}
-
-.icon--offset {
-	margin-right: 5px;
+		&--image {
+			margin-bottom: 2rem;
+		}
+	}
 }

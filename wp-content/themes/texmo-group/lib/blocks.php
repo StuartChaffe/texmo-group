@@ -89,6 +89,16 @@ function texmo_acf_blocks() {
 			'keywords'			=> array( 'posts, featured' ),
 		));
 		acf_register_block(array(
+			'name'				=> 'icons',
+			'title'				=> __('Icons list'),
+			'description'		=> __('Add a list of icons'),
+			'render_callback'	=> 'texmo_acf_block_render_callback',
+			'category'			=> 'texmo-blocks',
+			'icon'				=> 'awards',
+			'align' 			=> 'wide',
+			'keywords'			=> array( 'icon, icons' ),
+		));
+		acf_register_block(array(
 			'name'				=> 'link-block',
 			'title'				=> __('Link block'),
 			'description'		=> __('Add link block'),
@@ -151,6 +161,7 @@ function texmo_allowed_block_types( $allowed_blocks ) {
 		'acf/companies',
 		'acf/cta',
 		// 'acf/featured-posts',
+		'acf/icons',
 		'acf/link-block',
 		// 'acf/posts',
 		'acf/testimonial',

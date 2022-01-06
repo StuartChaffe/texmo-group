@@ -30,12 +30,13 @@
   --color-grey-dark: #424244;
   --color-grey: #DBDBDB;
   --color-grey-light: #efefef;
-  --color-white: #F8F7F1;
+  --color-white: #fff;
+  --color-cream: #F8F7F1;
   --color-primary: var(--color-grey-dark);
   --color-secondary: #E55E20;
   --color-secondary-dark: #D46634;
   --color-tertiary: var(--color-grey);
-  --color-quaternary: #F8F7F1;
+  --color-quaternary: var(--color-cream);
   --color-text-base: #333;
   --color-text-dark: #181822;
   --color-text-reversed: #fff;
@@ -1313,6 +1314,27 @@ ul.menu .sub-menu li a:after {
   margin-right: 5px;
 }
 
+.icons {
+  padding-top: var(--spacing-xs);
+  padding-bottom: var(--spacing-xs);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+@media (min-width: 50em) {
+  .icons {
+    padding-top: var(--spacing-l);
+    padding-bottom: var(--spacing-l);
+  }
+}
+.icons-item {
+  text-align: center;
+  margin: 0 0.5rem;
+}
+.icons-item--image {
+  margin-bottom: 2rem;
+}
+
 .global-container {
   display: flex;
   flex-direction: column;
@@ -1326,7 +1348,7 @@ ul.menu .sub-menu li a:after {
   max-width: var(--container);
 }
 
-.container--large, .text-image--content, .link-block, .companies-list, .content, .global-footer__inner {
+.container--large, .text-image--content, .link-block, .companies-list, .content, .global-footer__inner, .icons {
   margin: 0 auto;
   padding: 0 1em;
   width: 100%;
@@ -1342,6 +1364,9 @@ ul.menu .sub-menu li a:after {
 
 .bkg--white {
   background-color: var(--color-white);
+}
+.bkg--cream {
+  background-color: var(--color-cream);
 }
 .bkg--darkgrey {
   background-color: var(--color-grey-dark);
@@ -1587,6 +1612,11 @@ html, body {
 /* Stop links being clickable in the block editor */
 .acf-block-preview a {
   pointer-events: none !important;
+}
+
+.wp-block {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .wp-block[data-align=wide] {

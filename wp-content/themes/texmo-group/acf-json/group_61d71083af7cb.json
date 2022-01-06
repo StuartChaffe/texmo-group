@@ -1,12 +1,12 @@
 {
-    "key": "group_61bcaae57e5a4",
-    "title": "Text with image",
+    "key": "group_61d71083af7cb",
+    "title": "Icons",
     "fields": [
         {
-            "key": "field_61bf53e63e963",
-            "label": "Content",
-            "name": "text-image-content",
-            "type": "wysiwyg",
+            "key": "field_61d71087e81d3",
+            "label": "Icons",
+            "name": "icons",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,31 +15,16 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
-        },
-        {
-            "key": "field_61bf65dad168c",
-            "label": "Image",
-            "name": "image",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
             "layout": "block",
+            "button_label": "Add icon",
             "sub_fields": [
                 {
-                    "key": "field_61bf65e5d168d",
-                    "label": "Image",
-                    "name": "text-image-image",
+                    "key": "field_61d7108ee81d4",
+                    "label": "Icon",
+                    "name": "icon",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -62,10 +47,10 @@
                     "default_value": ""
                 },
                 {
-                    "key": "field_61bf65f6d168e",
-                    "label": "Position",
-                    "name": "text-image-position",
-                    "type": "radio",
+                    "key": "field_61d7109fe81d5",
+                    "label": "Content",
+                    "name": "content",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -74,42 +59,16 @@
                         "class": "",
                         "id": ""
                     },
-                    "choices": {
-                        "bkg--white": "White",
-                        "bkg--cream": "Cream",
-                        "bkg--grey": "Grey",
-                        "bkg--darkgrey": "Dark grey"
-                    },
-                    "allow_null": 0,
-                    "other_choice": 0,
-                    "save_other_choice": 0,
-                    "default_value": "Right",
-                    "layout": "bkg-colour",
-                    "return_format": "value"
-                },
-                {
-                    "key": "field_61d5dcf7f9735",
-                    "label": "Hide on mobile?",
-                    "name": "text-image-mobile",
-                    "type": "true_false",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "message": "",
-                    "default_value": 0,
-                    "ui": 1,
-                    "ui_on_text": "",
-                    "ui_off_text": ""
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "new_lines": "br"
                 }
             ]
         },
         {
-            "key": "field_61bf66bfd168f",
+            "key": "field_61d7183cbe428",
             "label": "Background colour",
             "name": "bkg-colour",
             "type": "select",
@@ -127,7 +86,7 @@
                 "bkg--grey": "Grey",
                 "bkg--darkgrey": "Dark grey"
             },
-            "default_value": "Cream",
+            "default_value": "White",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -141,7 +100,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/text-image"
+                "value": "acf\/icons"
             }
         ]
     ],
