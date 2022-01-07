@@ -1,5 +1,7 @@
 .cta {
-	background-color: var(--color-grey);
-	background: red;
-	min-height: 100px;
+	text-align: center;
+	padding: var(--spacing-l);
+	p + .btn {
+		margin-top: var(--spacing);
+	}
 }

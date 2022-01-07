@@ -2,20 +2,19 @@
 /**
 * The template used for displaying a cta block.
 */
-$cta = get_field('cta');
+$content = get_field('cta_content');
+$button = get_field('cta_button');
+$bkg = get_field('bkg-colour');
 ?>
 
-<section class="cta">
-	<!-- <?php if ($cta['cta_content']) { ?>
-		<?php echo $cta['cta_content']; ?>
-	<?php } ?>
+<section class="cta <?php echo $bkg ?>">
+	<div class="container">
+		<?php if ($content) { ?>
+			<?php echo $content; ?>
+		<?php } ?>
 
-	<div class="cta--buttons">
-		<?php if ($cta['button']) { ?>
-			<a class="btn" target="<?php echo $cta['button']['target']; ?>" href="<?php echo $cta['button']['url']; ?>"><?php echo $cta['button']['title']; ?></a>
+		<?php if ($button) { ?>
+			<a class="btn" href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>"><?php echo $button['title']; ?></a>
 		<?php } ?>
-		<?php if ($cta['button_2']) { ?>
-			or <a class="btn" href="<?php echo $cta['button_2']['url']; ?>"><?php echo $cta['button_2']['title']; ?></a>
-		<?php } ?>
-	</div> -->
+		</div>
 </section>

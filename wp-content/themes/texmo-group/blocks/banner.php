@@ -9,7 +9,7 @@ $content = get_field('banner_content');
 
 <section class="fade banner" <?php if ( $image['banner_image_large'] ) { ?>style="background-image: url('<?php echo $image['banner_image_large']['url']; ?>')"<?php } ?>>
 <?php if ( $image ) { ?><?php if ( $image['banner_image_overlay'] ) { ?><div class="banner--overlay" style="background-color: rgba(0,0,0,0.<?php echo $image['banner_image_overlay'] ?>);">&nbsp;</div><?php } ?><?php } ?>
-	<?php if ( $video['banner_video_image'] ) { ?><img loading="lazy" class="banner--video-image fade" src="<?php echo $video['banner_video_image']['url']; ?>" alt="<?php echo $video['banner_video_image']['alt']; ?>" /><?php } ?>
+	<?php if ( $video['banner_video_image'] ) { ?><div class="banner--video-image fade" style="background-image: url('<?php echo $video['banner_video_image']['url']; ?>')"><img loading="lazy" src="<?php echo $video['banner_video_image']['url']; ?>" alt="<?php echo $video['banner_video_image']['alt']; ?>" /></div><?php } ?>
 	<?php if ( $content ) { ?>
 		<div class="banner--content fade fade--delay__1 <?php if ( $video['banner_video_image'] ) { ?>banner--content-video<?php } ?>">
 		<?php echo $content ?>

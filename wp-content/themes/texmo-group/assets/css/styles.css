@@ -602,6 +602,10 @@ input[type=button]:focus {
 .bkg--darkgrey h1, .bkg--darkgrey h2, .bkg--darkgrey h3, .bkg--darkgrey h4, .bkg--darkgrey h5, .bkg--darkgrey p, .bkg--darkgrey a {
   color: white;
 }
+.bkg--darkgrey a:hover {
+  color: white;
+  border-color: white;
+}
 .bkg--grey {
   background-color: var(--color-grey);
 }
@@ -1302,18 +1306,25 @@ body.nav-open {
   }
 }
 .banner--video-image {
-  position: relative;
-  width: 100vh;
-  min-width: 50%;
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.banner--video-image img {
+  display: block;
 }
 @media (min-width: 50em) {
   .banner--video-image {
+    margin-bottom: 0;
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
-    margin-bottom: 0;
+    width: 60%;
+  }
+  .banner--video-image img {
+    display: none;
   }
 }
 .banner--image {
@@ -1342,6 +1353,7 @@ body.nav-open {
 .banner--content {
   z-index: 2;
   text-align: center;
+  padding-bottom: var(--spacing);
 }
 .banner--content h1, .banner--content h2, .banner--content h3, .banner--content h4, .banner--content h5, .banner--content p, .banner--content a {
   color: white;
@@ -1415,9 +1427,11 @@ body.nav-open {
 }
 
 .cta {
-  background-color: var(--color-grey);
-  background: red;
-  min-height: 100px;
+  text-align: center;
+  padding: var(--spacing-l);
+}
+.cta p + .btn {
+  margin-top: var(--spacing);
 }
 
 .icons {

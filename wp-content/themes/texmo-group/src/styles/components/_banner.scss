@@ -20,17 +20,31 @@
 	}
 	&--video {
 		&-image {
-			position: relative;
-			width: 100vh;
-			min-width: 50%;
-			margin-bottom: 2rem;
+			// position: relative;
+			// width: 100vh;
+			// min-width: 50%;
+			// margin-bottom: 2rem;
+			margin-bottom: var(--spacing);
+
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: right center;
+
+			img {
+				display: block;
+			}
 			
 			@include mq(medium) {
+				margin-bottom: 0;
 				position: absolute;
 				top: 0;
 				left: 0;
 				height: 100%;
-				margin-bottom: 0;
+				width: 60%;
+
+				img {
+					display: none;
+				}
 			}
 		}
 	}
@@ -59,6 +73,10 @@
 	&--content {
 		z-index: 2;
 		text-align: center;
+		padding-bottom: var(--spacing);
+		// @include mq(medium) {
+		// 	display: none;
+		// }
 		h1, h2, h3, h4, h5, p, a {
 			color: white;
 		}
