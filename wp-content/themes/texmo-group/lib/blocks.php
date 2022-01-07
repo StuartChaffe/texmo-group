@@ -154,7 +154,7 @@ add_filter( 'allowed_block_types_all', 'texmo_allowed_block_types' );
 function texmo_allowed_block_types( $allowed_blocks ) {
  
 	return array(
-		// 'acf/accordion',
+		'acf/accordion',
 		'acf/banner',
 		// 'acf/carousel',
 		'acf/content',
