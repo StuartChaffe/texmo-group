@@ -56,7 +56,7 @@
 	--color-youtube: #cc181e;
 	--color-linkedin: #0077B5;
 
-	--body-background-color: var(--color-quaternary);
+	--body-background-color: var(--color-white);
 
 	--border-radius: 16px;
 
@@ -70,6 +70,7 @@
 	--container: 1060px;
 	--container-l: 1430px;
 	--content-width: var(--container);
+	--container-global: 1800px;
 
 	@include mq(large) {
 		--font-size-h1: calc(3.1rem + 0.2vw);

@@ -8,10 +8,12 @@
 	}
 	&--content {
 		@extend .container--large;
-		// max-width: var(--container-l);
-		// width: 30%;
-		// margin-left: var(--spacing-l);
-		// padding: var(--spacing-l) 0;
+		padding: calc(var(--spacing) / 2) var(--spacing);
+		// @include mq(medium) {
+		// 	width: 40%;
+		// 	padding: var(--spacing);
+		// 	padding-right: 0;
+		// }
 		&-inner {
 			width: 100%;
 			padding: var(--spacing-xs) 0;
@@ -35,6 +37,37 @@
 		.btn {
 			margin-top: var(--spacing);
 		}
+		&__square {
+			max-width: none;
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			order: 1;
+			@include mq(medium) {
+				align-items: center;
+				flex-direction: row;
+			}
+
+			.text-image--content-inner {
+				width: 100%;
+				padding: var(--spacing) !important;
+				@include mq(medium) {
+					width: 50%;
+				}
+				@include mq(large) {
+					width: 50%;
+					padding: var(--spacing-l) !important;
+				}
+				@include mq(xlarge) {
+					width: 50%;
+					padding: var(--spacing-xl) !important;
+				}
+				@include mq(container) {
+					width: 50%;
+					padding: var(--spacing-xl) !important;
+				}
+			}
+		}
 	}
 	&--image {
 		position: relative;
@@ -51,7 +84,6 @@
 			background-repeat: no-repeat;
 		}
 		img {
-			// min-width: 100%;
 			width: 100%;
 			@include mq(medium) {
 				display: none;
@@ -61,20 +93,40 @@
 				margin-left: auto;
 			}
 		}
+		&__square {
+			margin-left: 0%;
+			width: 100%;
+			background-position: center;
+			@include mq(medium) {
+				margin-left: 50%;
+				width: 50%;
+			}
+		}
+	}
+	&__square {
+		min-height: 50vw;
+		@include mq(global) {
+			min-height: calc(var(--container-global) / 2);
+		}
 	}
 }
 .image--left {
+	.text-image--content__square {
+		padding-left: 0;
+		.text-image--content-inner {
+			@include mq(medium) {
+				margin-left: 50%;
+			}
+		}
+	}
 	.text-image--image {
 		margin-left: 0;
 		margin-right: 40%;
 		background-position: center right;
 		img {
-			// display: none;
-			// visibility: hidden;
 			margin-left: 0;
 			margin-right: auto;
 			right: 0;
-    		// position: absolute;
 		}
 	}
 	.text-image--content-inner {

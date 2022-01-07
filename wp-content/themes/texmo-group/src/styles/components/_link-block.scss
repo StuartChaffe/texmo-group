@@ -5,7 +5,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	padding-top: var(--spacing-xs);
-	// margin-top: var(--spacing-xs);
 	@include mq(medium) {
 		background-color: transparent;
 	}

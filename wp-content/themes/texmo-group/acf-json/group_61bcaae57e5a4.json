@@ -3,10 +3,10 @@
     "title": "Text with image",
     "fields": [
         {
-            "key": "field_61bf53e63e963",
-            "label": "Content",
-            "name": "text-image-content",
-            "type": "wysiwyg",
+            "key": "field_61d8253a9ab34",
+            "label": "Type",
+            "name": "text-image-type",
+            "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,11 +15,44 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
+            "choices": {
+                "Large": "Large",
+                "Square": "Square"
+            },
+            "default_value": "Large",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_61bf66bfd168f",
+            "label": "Background colour",
+            "name": "bkg-colour",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "bkg--white": "White",
+                "bkg--cream": "Cream",
+                "bkg--grey": "Grey",
+                "bkg--darkgrey": "Dark grey"
+            },
+            "default_value": "Cream",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         },
         {
             "key": "field_61bf65dad168c",
@@ -65,7 +98,7 @@
                     "key": "field_61bf65f6d168e",
                     "label": "Position",
                     "name": "text-image-position",
-                    "type": "radio",
+                    "type": "select",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -75,17 +108,16 @@
                         "id": ""
                     },
                     "choices": {
-                        "bkg--white": "White",
-                        "bkg--cream": "Cream",
-                        "bkg--grey": "Grey",
-                        "bkg--darkgrey": "Dark grey"
+                        "image--right": "Right",
+                        "image--left": "Left"
                     },
-                    "allow_null": 0,
-                    "other_choice": 0,
-                    "save_other_choice": 0,
                     "default_value": "Right",
-                    "layout": "bkg-colour",
-                    "return_format": "value"
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
                 },
                 {
                     "key": "field_61d5dcf7f9735",
@@ -109,10 +141,10 @@
             ]
         },
         {
-            "key": "field_61bf66bfd168f",
-            "label": "Background colour",
-            "name": "bkg-colour",
-            "type": "select",
+            "key": "field_61bf53e63e963",
+            "label": "Content",
+            "name": "text-image-content",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -121,19 +153,11 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "bkg--white": "White",
-                "bkg--cream": "Cream",
-                "bkg--grey": "Grey",
-                "bkg--darkgrey": "Dark grey"
-            },
-            "default_value": "Cream",
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
         }
     ],
     "location": [
@@ -154,5 +178,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1641486431
+    "modified": 1641555734
 }
