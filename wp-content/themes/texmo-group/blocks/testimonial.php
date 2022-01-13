@@ -13,7 +13,7 @@ $image = get_field('image');
 		<?php if ( $testimonial['author'] ) { ?><p><?php echo $testimonial['author'] ?></p><?php } ?>
 	</div>
 
-	<div class="testimonial--image">
+	<div class="testimonial--image" style="background-image: url('<?php echo $image['image']['url']; ?>')">
 		<img loading="lazy" src="<?php echo $image['image']['url']; ?>" alt="<?php echo $image['image']['alt']; ?>" />
 	</div>
 </section>
