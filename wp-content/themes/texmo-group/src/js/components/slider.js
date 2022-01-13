@@ -12,6 +12,20 @@ jQuery(document).ready(function($) {
 		adaptiveHeight: true,
 		pauseOnHover: false
 	});
+
+	$(".carousel-full").slick({
+		// settings: "unslick",
+		speed: 200,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: false,
+		autoplaySpeed: 5000,
+		arrows: false,
+		infinite: true,
+		dots: true,
+		adaptiveHeight: true,
+		pauseOnHover: false
+	});
 	$(".text-block--images").slick({
 		// settings: "unslick",
 		speed: 300,

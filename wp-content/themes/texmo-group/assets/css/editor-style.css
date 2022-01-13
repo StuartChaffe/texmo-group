@@ -875,6 +875,36 @@ span.btn a:hover:before {
   color: white;
 }
 
+.carousel-item {
+  display: flex !important;
+}
+.carousel-item--title {
+  transform: translateY(calc(100% + var(--spacing)));
+  z-index: 999;
+  position: relative;
+}
+.carousel-textleft--content {
+  width: 50%;
+  padding-right: 20%;
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
+.carousel-textleft-image {
+  width: 50%;
+}
+.carousel-full {
+  padding-top: var(--spacing);
+  padding-bottom: var(--spacing-l);
+}
+.carousel-full--content {
+  display: flex;
+  padding-bottom: var(--spacing-l);
+}
+.carousel-full--content > div {
+  width: 50%;
+}
+
 .companies {
   padding: var(--spacing-l) 0;
   text-align: center;
@@ -1537,7 +1567,7 @@ ul.menu .sub-menu li a:after {
   max-width: var(--container);
 }
 
-.container--large, .text-image--content, .link-list .carousel-slider, .link-block, .companies-list, .content, .footer--inner, .icons {
+.container--large, .text-image--content, .link-list .carousel-slider, .link-block, .carousel-item--title, .carousel-full, .carousel-full--content, .companies-list, .content, .footer--inner, .icons {
   margin: 0 auto;
   padding: 0 1em;
   width: 100%;
@@ -1797,7 +1827,8 @@ body.nav-open {
 }
 
 .slick-initialized .slick-slide {
-  display: block;
+  display: flex;
+  margin-top: auto;
 }
 
 .slick-loading .slick-slide {
@@ -1901,35 +1932,31 @@ body.nav-open {
 
 .slick-dots {
   position: absolute;
-  bottom: 15px;
+  bottom: 40px;
   list-style: none;
   display: block;
   text-align: center;
   padding: 0;
   margin: 0;
-  width: 100%;
-}
-@media (min-width: 50em) {
-  .slick-dots {
-    bottom: 35px;
-  }
+  width: calc(100% - 2em);
 }
 .slick-dots li {
   position: relative;
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 10px;
+  width: 14px;
+  height: 14px;
+  margin: 0 5px;
   padding: 0;
   cursor: pointer;
 }
 .slick-dots li button {
   border: 0;
   border-radius: 40px;
-  background: white;
+  background: transparent;
+  border: 1px solid var(--color-grey-dark);
   display: block;
-  height: 16px;
-  width: 16px;
+  height: 14px;
+  width: 14px;
   outline: none;
   line-height: 0px;
   font-size: 0px;
@@ -1940,7 +1967,7 @@ body.nav-open {
 }
 .slick-dots li button:hover, .slick-dots li button:focus {
   outline: none;
-  background: white;
+  background: var(--color-grey-dark);
   opacity: 1;
 }
 .slick-dots li button:hover:before, .slick-dots li button:focus:before {
@@ -1959,6 +1986,7 @@ body.nav-open {
 .slick-dots li.slick-active button {
   opacity: 1;
   background: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
 }
 .slick-dots li.slick-active button:before {
   background: white;

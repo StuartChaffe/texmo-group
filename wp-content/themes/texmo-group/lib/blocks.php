@@ -166,7 +166,7 @@ function texmo_allowed_block_types( $allowed_blocks ) {
 	return array(
 		'acf/accordion',
 		'acf/banner',
-		// 'acf/carousel',
+		'acf/carousel',
 		'acf/content',
 		'acf/companies',
 		'acf/cta',

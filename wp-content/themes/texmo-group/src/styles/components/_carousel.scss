@@ -1,0 +1,38 @@
+.carousel {
+	&-item {
+		display: flex !important;
+		&--title {
+			@extend .container--large;
+			transform: translateY(calc(100% + var(--spacing)));
+			z-index: 999;
+			position: relative;
+		}
+	}
+	&-textleft {
+		&--content {
+			width: 50%;
+			padding-right: 20%;
+			display: flex;
+			flex-direction: column;
+			margin-top: auto;
+		}
+		&-image {
+			width: 50%;
+		}
+	}
+	&-full {
+		@extend .container--large;
+		padding-top: var(--spacing);
+		padding-bottom: var(--spacing-l);
+
+		&--content {
+			@extend .container--large;
+			display: flex;
+			padding-bottom: var(--spacing-l);
+
+			> div {
+				width: 50%;
+			}
+		}
+	}
+}
