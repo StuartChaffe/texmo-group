@@ -105,9 +105,9 @@
 	}
 	&__square {
 		min-height: 50vw;
-		@include mq(global) {
-			min-height: calc(var(--container-global) / 2);
-		}
+		// @include mq(global) {
+		// 	min-height: calc(var(--container-global) / 2);
+		// }
 	}
 }
 .image--left {

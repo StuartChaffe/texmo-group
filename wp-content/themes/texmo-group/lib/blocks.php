@@ -109,6 +109,16 @@ function texmo_acf_blocks() {
 			'keywords'			=> array( 'link, links' ),
 		));
 		acf_register_block(array(
+			'name'				=> 'link-list',
+			'title'				=> __('Link list'),
+			'description'		=> __('Add link list'),
+			'render_callback'	=> 'texmo_acf_block_render_callback',
+			'category'			=> 'texmo-blocks',
+			'icon'				=> 'slides',
+			'align' 			=> 'wide',
+			'keywords'			=> array( 'link, links' ),
+		));
+		acf_register_block(array(
 			'name'				=> 'posts',
 			'title'				=> __('Posts'),
 			'description'		=> __('Add all posts'),
@@ -163,6 +173,7 @@ function texmo_allowed_block_types( $allowed_blocks ) {
 		// 'acf/featured-posts',
 		'acf/icons',
 		'acf/link-block',
+		'acf/link-list',
 		// 'acf/posts',
 		'acf/testimonial',
 		'acf/text-image',

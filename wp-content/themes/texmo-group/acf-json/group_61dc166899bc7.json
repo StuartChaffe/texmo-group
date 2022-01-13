@@ -1,9 +1,9 @@
 {
-    "key": "group_61bcaad639c6b",
-    "title": "Testimonial",
+    "key": "group_61dc166899bc7",
+    "title": "Link list",
     "fields": [
         {
-            "key": "field_61dc1754e2886",
+            "key": "field_61dc170fd30c6",
             "label": "Background colour",
             "name": "bkg-colour",
             "type": "select",
@@ -21,7 +21,7 @@
                 "bkg--grey": "Grey",
                 "bkg--darkgrey": "Dark grey"
             },
-            "default_value": "Dark grey",
+            "default_value": "bkg--darkgrey",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -30,10 +30,10 @@
             "placeholder": ""
         },
         {
-            "key": "field_61dc50e9624fd",
-            "label": "Testimonial",
-            "name": "testimonial",
-            "type": "group",
+            "key": "field_61dc1668a7d02",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -42,53 +42,17 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_61dc50f3624fe",
-                    "label": "Quote",
-                    "name": "quote",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 4,
-                    "new_lines": ""
-                },
-                {
-                    "key": "field_61dc50fc624ff",
-                    "label": "Author",
-                    "name": "author",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                }
-            ]
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
-            "key": "field_61dc50deb60bd",
-            "label": "Image",
-            "name": "image",
-            "type": "group",
+            "key": "field_61dc1668a7d14",
+            "label": "Links",
+            "name": "links",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -97,12 +61,16 @@
                 "class": "",
                 "id": ""
             },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
             "layout": "block",
+            "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_61dc5141ec397",
+                    "key": "field_61dc1668ac50b",
                     "label": "Image",
-                    "name": "image",
+                    "name": "company_image",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -125,10 +93,10 @@
                     "default_value": ""
                 },
                 {
-                    "key": "field_61dc5148ec398",
-                    "label": "Position",
-                    "name": "position",
-                    "type": "select",
+                    "key": "field_61dc1668ac516",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "group",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -137,17 +105,43 @@
                         "class": "",
                         "id": ""
                     },
-                    "choices": {
-                        "image--left": "Left",
-                        "image--right": "Right"
-                    },
-                    "default_value": false,
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
-                    "return_format": "value",
-                    "ajax": 0,
-                    "placeholder": ""
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_61dc1668ba46e",
+                            "label": "Link",
+                            "name": "company_link",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_61dc1668ba48d",
+                            "label": "Link text",
+                            "name": "company_link_text",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "br"
+                        }
+                    ]
                 }
             ]
         }
@@ -157,7 +151,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/testimonial"
+                "value": "acf\/link-list"
             }
         ]
     ],
@@ -170,5 +164,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1641830713
+    "modified": 1641814705
 }

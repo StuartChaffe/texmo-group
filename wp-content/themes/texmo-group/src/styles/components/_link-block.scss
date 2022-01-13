@@ -16,15 +16,12 @@
 		width: 100%;
 		margin-bottom: var(--spacing-xs);
 		margin-top: 0;
-		// min-height: 260px;
 		padding: var(--spacing);
+		// @include mq(medium) {
+		// 	width: 100%;
+		// 	padding: var(--spacing);
+		// }
 		@include mq(medium) {
-			width: 100%;
-			// margin: var(--spacing-s);
-			// min-height: 360px;
-			padding: var(--spacing);
-		}
-		@include mq(large) {
 			width: calc(100% / 2 - var(--spacing-s));
 			margin: var(--spacing-s);
 			margin-bottom: var(--spacing-xs);

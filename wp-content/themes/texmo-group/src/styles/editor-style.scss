@@ -24,6 +24,15 @@ html, body  {
 	padding-bottom: var(--spacing-l) !important;
 }
 
+.editor-styles-wrapper ul,
+.editor-styles-wrapper *,
+ul * {
+	box-sizing: border-box !important;
+}
+.accordion-list {
+	box-sizing: border-box;
+}
+
 /* Stop links being clickable in the block editor */
 .acf-block-preview a {
 	pointer-events: none!important;
@@ -42,4 +51,12 @@ html, body  {
 	.interface-complementary-area {
 		width: 400px !important;
 	}
+}
+.carousel-slider {
+	display: flex;
+	justify-content: center;
+}
+.link-list-item {
+	width: 30%;
+	margin: 0 10px;
 }

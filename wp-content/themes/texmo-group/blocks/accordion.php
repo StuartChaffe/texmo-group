@@ -6,16 +6,15 @@ $bkg = get_field('bkg-colour');
 $title = get_field( 'accordion_title');
 ?>
 <section class="accordion <?php echo $bkg ?>">
-	<div class="container--large">
 		<?php if ( $title ) { ?><h2><?php echo $title ?></h2><?php } ?>
 		<?php if( have_rows('accordion') ): ?>
-			<ul class="accordion">
+			<ul class="accordion-list">
 			<?php while( have_rows('accordion') ): the_row();
 				$title = get_sub_field('accordion_title', false, false);
 				$content = get_sub_field('accordion_content');
 			?>
 				<li>
-					<button class="accordion--title" aria-expanded="false"><?php echo $title ?> <svg class="icon icon--open"><use xlink:href="#open"></use></svg><svg class="icon icon--close"><use xlink:href="#close"></use></svg></button>
+					<button class="accordion--title" aria-expanded="false"><?php echo $title ?> <svg class="icon icon--open"><use xlink:href="#accordion-arrow"></use></svg></button>
 					<div class="accordion--content">
 						<div class="accordion--content-text">
 							<?php echo $content ?>
@@ -25,5 +24,4 @@ $title = get_field( 'accordion_title');
 			<?php endwhile; ?>
 			</ul>
 		<?php endif; ?>
-	</div>
 </section>

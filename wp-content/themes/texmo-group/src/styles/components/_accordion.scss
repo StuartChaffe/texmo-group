@@ -5,6 +5,16 @@
 	text-align: center;
 	padding: var(--spacing-l) 0;
 	border-bottom: 1px solid var(--color-grey);
+	&-list {
+		margin: 0 auto !important;
+		padding: 0 1em !important;
+		width: 100%;
+		max-width: var(--container-l) !important;
+
+		@include mq(medium) {
+			padding: 0 calc(var(--spacing) * 2) !important;
+		}
+	}
 	&--title {
 		@extend h3;
 		position: relative;
@@ -27,13 +37,9 @@
 			position: absolute;
 			display: inline-flex;
 			right: 0;
-			top: 1rem;
-			width: 20px;
-			height: 20px;
-			@include mq(medium) {
-				width: 30px;
-				height: 30px;
-			}
+			// top: 1rem;
+			width: 27px;
+			height: 27px;
 			&--close {
 				display: none;
 			}
@@ -46,10 +52,11 @@
 		.icon {
 			color: var(--color-text-base);
 			&--open {
-				display: none;
+				// display: none;
+				transform: rotate(180deg);
 			}
 			&--close {
-				display: block;
+				display: none;
 			}
 		}
 	}

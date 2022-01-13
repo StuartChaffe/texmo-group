@@ -2,11 +2,18 @@
 /**
 * The template used for displaying a testimonial.
 */
-$quote = get_field('testimonial_quote');
-$author = get_field('testimonial_author');
+$bkg = get_field('bkg-colour');
+$testimonial = get_field('testimonial');
+$image = get_field('image');
 ?>
 
-<section class="testimonial">
-	<?php if ( $quote ) { ?><p class="lead"><strong><?php echo $quote; ?></strong></p><?php } ?>
-	<p><?php if ( $author ) { ?><?php echo $author; ?><?php } ?></p>
+<section class="testimonial <?php echo $bkg ?> <?php echo $image['position']; ?>">
+	<div class="testimonial--quote">
+		<?php if ( $testimonial['quote'] ) { ?><p class="lead"><?php echo $testimonial['quote'] ?></p><?php } ?>
+		<?php if ( $testimonial['author'] ) { ?><p><?php echo $testimonial['author'] ?></p><?php } ?>
+	</div>
+
+	<div class="testimonial--image">
+		<img loading="lazy" src="<?php echo $image['image']['url']; ?>" alt="<?php echo $image['image']['alt']; ?>" />
+	</div>
 </section>
