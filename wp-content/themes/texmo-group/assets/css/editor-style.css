@@ -2301,6 +2301,10 @@ ul * {
   justify-content: center;
 }
 
+.carousel-full {
+  display: flex;
+}
+
 .link-list-item {
   width: 30%;
   margin: 0 10px;
