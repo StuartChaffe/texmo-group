@@ -10,7 +10,21 @@ jQuery(document).ready(function($) {
 		infinite: true,
 		dots: false,
 		adaptiveHeight: true,
-		pauseOnHover: false
+		pauseOnHover: false,
+		responsive: [
+			{
+				breakpoint: 640,
+				settings: {
+					slidesToShow: 1,
+				}
+			},
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 2,
+				}
+			}
+		]
 	});
 
 	$(".carousel-full").slick({

@@ -42,7 +42,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "<span class=\"btn\"><a href=\"http:\/\/texmo-group.local\/careers\/\">View Careers<\/a><\/span>",
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 0,
@@ -82,5 +82,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1641573406
+    "modified": 1642165941
 }

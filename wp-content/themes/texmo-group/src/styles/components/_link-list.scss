@@ -1,5 +1,5 @@
 .link-list {
-	padding: var(--spacing-l) 0;
+	padding: var(--spacing-l) 1em;
 	text-align: center;
 	
 	&--title {
@@ -16,7 +16,11 @@
 			padding: 0 var(--spacing);
 		}
 		.slick-list {
-			padding: 0 var(--spacing-s);
+			margin: 0 var(--spacing);
+
+			@include mq(container) {
+				margin: 0 var(--spacing-s);
+			}
 		}
 		.slick-slide {
 			// margin: 0 var(--spacing-s);

@@ -1,6 +1,7 @@
 .content {
 	@extend .container--large;
-	padding: var(--spacing-l) 0;
+	padding-top: var(--spacing-l);
+	padding-bottom: var(--spacing-l);
 	> * {
 		max-width: var(--content-width);
 		margin-right: auto;

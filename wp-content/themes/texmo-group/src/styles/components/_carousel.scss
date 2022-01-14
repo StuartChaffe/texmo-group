@@ -1,4 +1,6 @@
 .carousel {
+	width: 100%;
+    overflow: hidden;
 	&-item {
 		display: flex !important;
 		&--title {
@@ -9,16 +11,32 @@
 		}
 	}
 	&-textleft {
-		&--content {
+		.carousel--content {
 			width: 50%;
 			padding-right: 20%;
 			display: flex;
 			flex-direction: column;
 			margin-top: auto;
 		}
-		&-image {
+		.carousel--image {
 			width: 50%;
+			img {
+				margin-left: auto;
+			}
 		}
+		// &--content {
+		// 	width: 50%;
+		// 	padding-right: 20%;
+		// 	display: flex;
+		// 	flex-direction: column;
+		// 	margin-top: auto;
+		// }
+		// &--image {
+		// 	width: 50%;
+		// 	img {
+		// 		margin-left: auto;
+		// 	}
+		// }
 	}
 	&-full {
 		@extend .container--large;
@@ -28,6 +46,7 @@
 		&--content {
 			@extend .container--large;
 			display: flex;
+			justify-content: center;
 			padding-bottom: var(--spacing-l);
 
 			> div {

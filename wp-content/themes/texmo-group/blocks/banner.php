@@ -21,11 +21,3 @@ $content = get_field('banner_content');
 	<?php if ( $image['banner_image_large'] ) { ?><img loading="lazy" class="banner--image hidemobile" src="<?php echo $image['banner_image_large']['url']; ?>" alt="<?php echo $image['banner_image_large']['alt']; ?>" /><?php } ?>
 	<?php if ( $image['banner_image_mobile'] ) { ?><img loading="lazy" class="banner--image hidedesktop" src="<?php echo $image['banner_image_mobile']['url']; ?>" alt="<?php echo $image['banner_image_mobile']['alt']; ?>" /><?php } ?>
 </section>
-
-
-
-<a style="display: none" href="#" data-featherlight="#banner-video" data-featherlight-iframe-allow="autoplay"><?php echo $video['banner_video_text']; ?></a>
-
-<div class="lightbox" id="banner-video" style="display: none">
-	<iframe src="https://player.vimeo.com/video/219014507?autoplay=1&loop=1&autopause=0" width="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen ></iframe>
-</div>

@@ -50,15 +50,9 @@ function my_custom_styles( $init_array ) {
 			'wrapper' => false,
 		),  
 		array(  
-			'title' => 'Content Block',  
+			'title' => 'Orange text',  
 			'block' => 'span',  
-			'classes' => 'content-block',
-			'wrapper' => true,
-		),
-		array(  
-			'title' => 'Highlighter',  
-			'block' => 'span',  
-			'classes' => 'highlighter',
+			'classes' => 'text__orange',
 			'wrapper' => true,
 		),
 	);  

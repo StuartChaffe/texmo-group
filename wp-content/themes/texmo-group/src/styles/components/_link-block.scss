@@ -1,5 +1,7 @@
 .link-block {
 	@extend .container--large;
+	padding-left: 1em;
+	padding-right: 1em;
 	min-height: 100px;
 	background-color: white;
 	display: flex;

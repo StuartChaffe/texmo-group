@@ -84,3 +84,9 @@ pre {
 	width: calc(96vw - 2em);
 	line-height: 1.3;
 }
+
+.text {
+	&__orange {
+		color: var(--color-secondary);
+	}
+}

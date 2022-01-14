@@ -19,9 +19,13 @@
 }
 .container--large {
 	margin: 0 auto;
-	padding: 0 1em;
+	padding: 0 var(--spacing);
 	width: 100%;
 	max-width: var(--container-l);
+
+	@include mq(container) {
+		padding: 0 1em;
+	}
 }
 
 .main {

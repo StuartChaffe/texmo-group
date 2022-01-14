@@ -21,17 +21,17 @@ $title = get_field('carousel_title');
 		?>
 		<div class="carousel-item">
 			<?php if ( $content ) { ?>
-				<div class="carousel-textleft--content">
+				<div class="carousel--content">
 					<?php echo $content; ?>
 				</div>
 			<?php } ?>
 			
-			<?php if ( $image ) { ?><div class="carousel-textleft--image"><img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /></div><?php } ?>
+			<?php if ( $image ) { ?><div class="carousel--image"><img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /></div><?php } ?>
 		</div>
 		<?php endwhile; ?>
 	</div>
 
-		<?php if ( $type == 'carousel-standard' ) { ?>
+		<?php if ( $type == 'carousel-standard' && $contentleft || $contentright ) { ?>
 		<div class="carousel-full--content">
 			<?php if ( $contentleft ) { ?>
 				<div>
