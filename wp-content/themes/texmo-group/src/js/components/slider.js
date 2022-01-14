@@ -38,7 +38,8 @@ jQuery(document).ready(function($) {
 		infinite: true,
 		dots: true,
 		adaptiveHeight: true,
-		pauseOnHover: false
+		pauseOnHover: false,
+		fade: true
 	});
 	$(".text-block--images").slick({
 		// settings: "unslick",

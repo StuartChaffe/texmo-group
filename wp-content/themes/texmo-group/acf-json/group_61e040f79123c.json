@@ -102,13 +102,46 @@
             "button_label": "",
             "sub_fields": [
                 {
+                    "key": "field_61e19c0e6fa7d",
+                    "label": "Type",
+                    "name": "carousel_type",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Image": "Image",
+                        "Video": "Video"
+                    },
+                    "default_value": "Image",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
                     "key": "field_61e048ff213fb",
                     "label": "Image",
                     "name": "carousel_image",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61e19c0e6fa7d",
+                                "operator": "==",
+                                "value": "Image"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -125,6 +158,33 @@
                     "max_size": "",
                     "mime_types": "",
                     "default_value": ""
+                },
+                {
+                    "key": "field_61e19b2b80d91",
+                    "label": "Video",
+                    "name": "carousel_video",
+                    "type": "text",
+                    "instructions": "Head to Vimeo and grab the ID from the URL, i.e. https:\/\/vimeo.com\/219014507 = 219014507",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61e19c0e6fa7d",
+                                "operator": "==",
+                                "value": "Video"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
                     "key": "field_61e04919213fc",
@@ -228,5 +288,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1642089328
+    "modified": 1642175557
 }

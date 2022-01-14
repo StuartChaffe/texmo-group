@@ -4,11 +4,12 @@
 	list-style: none;
 	text-align: center;
 	padding: var(--spacing-l) 0;
-	border-bottom: 1px solid var(--color-grey);
+	// border-bottom: 1px solid var(--color-grey);
 	&-list {
 		@extend .container--large;
 		margin: 0 auto !important;
 		padding: 0 var(--spacing) !important;
+		// border-bottom: 1px solid var(--color-grey);
 		// width: 100%;
 		// max-width: var(--container-l) !important;
 
@@ -18,11 +19,18 @@
 		@include mq(container) {
 			padding: 0 1em !important;
 		}
+
+		li {
+			&:last-of-type {
+				border-bottom: 1px solid var(--color-grey);
+			}
+		}
 	}
 	&--title {
 		@extend h3;
 		position: relative;
 		display: flex;
+		justify-content: center;
 		flex-direction: column;
 		border: none;
 		border-top: 1px solid var(--color-grey);

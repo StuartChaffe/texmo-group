@@ -1,7 +1,10 @@
 .footer {
 	margin-top: auto;
 	background-color: var(--color-primary);
-	padding: var(--spacing-l) var(--spacing);
+	padding: var(--spacing) 1em;
+	@include mq(medium) {
+		padding: var(--spacing-l) var(--spacing);
+	}
 	@include mq(container) {
 		padding: var(--spacing-l) 0;
 	}
@@ -11,7 +14,10 @@
 	&--companies {
 		display: flex;
 		&-item {
-			margin-right: 5rem;
+			margin-right: 1rem;
+			@include mq(medium) {
+				margin-right: 5rem;
+			}
 			img {
 				margin-bottom: 1.5rem;
 			}
@@ -25,7 +31,10 @@
 		// width: calc(100% / 3 * 1);
 		display: flex;
 		flex-direction: column;
-		margin-left: auto;
+		
+		@include mq(medium) {
+			margin-left: auto;
+		}
 		@include mq(large) {
 			padding-right: var(--spacing-l);
 		}
@@ -57,4 +66,12 @@
 .footer--inner {
 	@extend .container--large;
 	display: flex;
+	flex-direction: column;
+	padding: 0;
+	// @include mq(medium) {
+	// 	padding: var(--spacing-l) var(--spacing);
+	// }
+	@include mq(large) {
+		flex-direction: row;
+	}
 }

@@ -56,8 +56,34 @@ ul * {
 	display: flex;
 	justify-content: center;
 }
+.carousel-item,
+.carousel--image {
+	width: 100%;
+}
+.carousel-item {
+	display: none;
+	&:first-of-type {
+		display: flex;
+	}
+}
+.carousel-textleft {
+	.carousel-item {
+		.carousel--content,
+		.carousel--image {
+			display: none;
+		}
+		&:first-of-type {
+			.carousel--content,
+			.carousel--image {
+				display: flex;
+			}
+		}
+	}
+}
+
 .carousel-full {
 	display: flex;
+	flex-wrap: wrap;
 }
 .link-list-item {
 	width: 30%;
