@@ -1580,6 +1580,22 @@ body.nav-open {
 .accordion-list li:last-of-type {
   border-bottom: 1px solid var(--color-grey);
 }
+.accordion-icons {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.accordion-icons-item {
+  width: 20%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.accordion-icons-item img {
+  margin-bottom: 1rem;
+}
 .accordion--title {
   position: relative;
   display: flex;
@@ -1650,8 +1666,8 @@ body.nav-open {
   color: var(--color-text-base);
 }
 .accordion--content-image {
-  width: 30%;
-  margin-right: var(--spacing);
+  width: 40%;
+  margin-right: var(--spacing-l);
 }
 .accordion--content-image img {
   width: 100%;

@@ -3,11 +3,11 @@ jQuery(document).ready(function($) {
 		closeIcon: 'close',
 	});
 
-	$('.#banner-videoo').on('click', function(ev) {
-		setTimeout(function() {
-			$("#video1")[0].src += "autoplay";
-			},150);
+	// $('.#banner-videoo').on('click', function(ev) {
+	// 	setTimeout(function() {
+	// 		$("#video1")[0].src += "autoplay";
+	// 		},150);
 	
-		ev.preventDefault();
-	});
+	// 	ev.preventDefault();
+	// });
 });

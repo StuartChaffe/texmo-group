@@ -87,13 +87,46 @@
                     "maxlength": ""
                 },
                 {
+                    "key": "field_61eae7244a3b4",
+                    "label": "Type",
+                    "name": "accordion_content_type",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "accordion-content": "Image + text",
+                        "accordion-icons": "Icons"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
                     "key": "field_61a4d7c42e978",
                     "label": "Content",
                     "name": "accordion_content",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61eae7244a3b4",
+                                "operator": "==",
+                                "value": "accordion-content"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -112,7 +145,15 @@
                     "type": "image",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61eae7244a3b4",
+                                "operator": "==",
+                                "value": "accordion-content"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -129,6 +170,79 @@
                     "max_size": "",
                     "mime_types": "",
                     "default_value": ""
+                },
+                {
+                    "key": "field_61eae7fed5225",
+                    "label": "Icons",
+                    "name": "icons",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61eae7244a3b4",
+                                "operator": "==",
+                                "value": "accordion-icons"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Add icon",
+                    "sub_fields": [
+                        {
+                            "key": "field_61eae8c4154b7",
+                            "label": "Icon",
+                            "name": "accordion_icon",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_61eae91b1f693",
+                            "label": "Benefit",
+                            "name": "accordion_benefit",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 3,
+                            "new_lines": "br"
+                        }
+                    ]
                 }
             ]
         }
@@ -151,5 +265,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1642781006
+    "modified": 1642785190
 }

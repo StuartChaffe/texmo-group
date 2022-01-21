@@ -1,5 +1,8 @@
 // FAQ
 jQuery(function ($) {
+	// $('body').on('click', '.accordion--title', function () {
+	// 	$(this)('.accordion-list').scrollView();
+	// })
 	$('.accordion-list .accordion--title').click(function() {
 		$('.accordion-list .accordion--title').removeClass('active');
 		$('.accordion-list .accordion--content').slideUp('normal');
