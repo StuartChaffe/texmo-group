@@ -574,21 +574,21 @@ input[type=button]:focus {
   background-color: var(--color-quaternary);
 }
 
-.container, .main {
+.container, .accordion-list, .main {
   margin: 0 auto;
   padding: 0 var(--spacing-xs);
   width: 100%;
   max-width: var(--container);
 }
 
-.container--large, .text-image--content, .testimonial--quote, .link-list .carousel-slider, .link-block, .icons, .companies-list, .carousel-full--content, .carousel-full, .carousel-item--title, .accordion-list, .footer--inner, .content {
+.container--large, .text-image--content, .testimonial--quote, .link-list .carousel-slider, .link-block, .icons, .companies-list, .carousel-full--content, .carousel-full, .carousel-item--title, .footer--inner, .content {
   margin: 0 auto;
   padding: 0 var(--spacing);
   width: 100%;
   max-width: var(--container-l);
 }
 @media (min-width: 93.75em) {
-  .container--large, .text-image--content, .testimonial--quote, .link-list .carousel-slider, .link-block, .icons, .companies-list, .carousel-full--content, .carousel-full, .carousel-item--title, .accordion-list, .footer--inner, .content {
+  .container--large, .text-image--content, .testimonial--quote, .link-list .carousel-slider, .link-block, .icons, .companies-list, .carousel-full--content, .carousel-full, .carousel-item--title, .footer--inner, .content {
     padding: 0 1em;
   }
 }
@@ -1650,13 +1650,11 @@ body.nav-open {
   color: var(--color-text-base);
 }
 .accordion--content-image {
-  width: 80px;
+  width: 30%;
   margin-right: var(--spacing);
 }
-@media (min-width: 50em) {
-  .accordion--content-image {
-    width: 130px;
-  }
+.accordion--content-image img {
+  width: 100%;
 }
 .accordion--content-text {
   flex: 1;

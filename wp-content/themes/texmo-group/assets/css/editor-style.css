@@ -679,13 +679,11 @@ pre {
   color: var(--color-text-base);
 }
 .accordion--content-image {
-  width: 80px;
+  width: 30%;
   margin-right: var(--spacing);
 }
-@media (min-width: 50em) {
-  .accordion--content-image {
-    width: 130px;
-  }
+.accordion--content-image img {
+  width: 100%;
 }
 .accordion--content-text {
   flex: 1;
@@ -1592,21 +1590,21 @@ ul.menu .sub-menu li a:after {
   background-color: var(--color-quaternary);
 }
 
-.container, .main {
+.container, .main, .accordion-list {
   margin: 0 auto;
   padding: 0 var(--spacing-xs);
   width: 100%;
   max-width: var(--container);
 }
 
-.container--large, .text-image--content, .testimonial--quote, .link-list .carousel-slider, .link-block, .accordion-list, .carousel-item--title, .carousel-full, .carousel-full--content, .companies-list, .content, .footer--inner, .icons {
+.container--large, .text-image--content, .testimonial--quote, .link-list .carousel-slider, .link-block, .carousel-item--title, .carousel-full, .carousel-full--content, .companies-list, .content, .footer--inner, .icons {
   margin: 0 auto;
   padding: 0 var(--spacing);
   width: 100%;
   max-width: var(--container-l);
 }
 @media (min-width: 93.75em) {
-  .container--large, .text-image--content, .testimonial--quote, .link-list .carousel-slider, .link-block, .accordion-list, .carousel-item--title, .carousel-full, .carousel-full--content, .companies-list, .content, .footer--inner, .icons {
+  .container--large, .text-image--content, .testimonial--quote, .link-list .carousel-slider, .link-block, .carousel-item--title, .carousel-full, .carousel-full--content, .companies-list, .content, .footer--inner, .icons {
     padding: 0 1em;
   }
 }
