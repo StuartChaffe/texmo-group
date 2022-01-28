@@ -4,6 +4,7 @@
 	position: relative;
 	overflow: hidden;
 	align-items: center;
+	justify-content: center;
 	background-color: var(--color-grey-dark);
 	background-size: cover;
 	background-position: 10% center;
@@ -14,7 +15,6 @@
 	}
 	@include mq(medium) {
 		flex-direction: row;
-		justify-content: center;
 		height: 100vh;
 		min-height: 800px;
 	}
@@ -69,6 +69,7 @@
 		height: 100%;
 		top: 0;
 		left: 0;
+		z-index: 2;
 	}
 	&--content {
 		z-index: 2;

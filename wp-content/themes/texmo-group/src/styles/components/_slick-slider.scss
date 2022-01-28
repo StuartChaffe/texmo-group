@@ -51,10 +51,14 @@
 	left: 0;
 	// max-height: 600px;
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 0;
+	margin-right: 0;
 	display: flex;
     // align-items: flex-end;
+	@include mq(medium) {
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 .slick-track:before,
 .slick-track:after {
@@ -230,13 +234,14 @@ $slick-opacity-not-active: 0.25 !default;
 .slick-dots {
 	position: absolute;
 	// bottom: 15px;
-	bottom: 40px;
+	bottom: 0px;
 	list-style: none;
 	display: block;
 	text-align: center;
 	padding: 0;
 	margin: 0;
-	width: calc(100% - 2em);
+	width: 100%;
+    left: 0;
 	@include mq(medium) {
 		// bottom: 35px;
 	}

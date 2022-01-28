@@ -47,6 +47,7 @@
 				top: 0;
 				left: 0;
 				background-color: rgba(0, 0, 0, 0);
+				transition: background .1s ease-in-out;
 			}
 		}
 		p {
@@ -64,6 +65,7 @@
 			.link-list-item--image {
 				&:after {
 					background-color: rgba(0, 0, 0, 0.15);
+					transition: background .1s ease-in-out;
 				}
 			}
 		}

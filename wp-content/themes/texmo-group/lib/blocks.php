@@ -38,6 +38,16 @@ function texmo_acf_blocks() {
 			'keywords'			=> array( 'banner' ),
 		));
 		acf_register_block(array(
+			'name'				=> 'careers',
+			'title'				=> __('Careers'),
+			'description'		=> __('Add careers'),
+			'render_callback'	=> 'texmo_acf_block_render_callback',
+			'category'			=> 'texmo-blocks',
+			'icon'				=> 'groups',
+			'align' 			=> 'wide',
+			'keywords'			=> array( 'careers, jobs' ),
+		));
+		acf_register_block(array(
 			'name'				=> 'carousel',
 			'title'				=> __('Carousel'),
 			'description'		=> __('Add a carousel'),
@@ -87,6 +97,16 @@ function texmo_acf_blocks() {
 			'icon'				=> 'screenoptions',
 			'align' 			=> 'wide',
 			'keywords'			=> array( 'posts, featured' ),
+		));
+		acf_register_block(array(
+			'name'				=> 'featured-stories',
+			'title'				=> __('Featured stories'),
+			'description'		=> __('Add featured stories'),
+			'render_callback'	=> 'texmo_acf_block_render_callback',
+			'category'			=> 'texmo-blocks',
+			'icon'				=> 'screenoptions',
+			'align' 			=> 'wide',
+			'keywords'			=> array( 'stories, featured' ),
 		));
 		acf_register_block(array(
 			'name'				=> 'icons',
@@ -166,11 +186,13 @@ function texmo_allowed_block_types( $allowed_blocks ) {
 	return array(
 		'acf/accordion',
 		'acf/banner',
+		'acf/careers',
 		'acf/carousel',
 		'acf/content',
 		'acf/companies',
 		'acf/cta',
 		// 'acf/featured-posts',
+		'acf/featured-stories',
 		'acf/icons',
 		'acf/link-block',
 		'acf/link-list',

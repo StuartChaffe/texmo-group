@@ -1,12 +1,18 @@
 .carousel {
 	width: 100%;
-    overflow: hidden;
+	overflow: hidden;
 	&-item {
 		&--title {
 			@extend .container--large;
+			padding: 0 calc(var(--spacing) + 16px);
 			transform: translateY(calc(100% + var(--spacing)));
 			z-index: 999;
 			position: relative;
+		}
+	}
+	.carousel--image {
+		img {
+			width: 100%;
 		}
 	}
 	&--video {
@@ -50,18 +56,41 @@
 	}
 	&-full {
 		@extend .container--large;
-		padding-top: var(--spacing);
-		padding-bottom: var(--spacing-l);
+		padding: var(--spacing);
+		@include mq(medium) {
+			padding: var(--spacing) calc(var(--spacing) + 1em);
+		}
 
 		&--content {
 			@extend .container--large;
 			display: flex;
+			flex-direction: column;
 			justify-content: center;
-			padding-bottom: var(--spacing-l);
+			padding-bottom: var(--spacing);
+
+			@include mq(medium) {
+				flex-direction: row;
+				padding-left: calc(var(--spacing) + 1em);
+				padding-right: calc(var(--spacing) + 1em);
+				padding-bottom: var(--spacing-l);
+			}
 
 			> div {
-				width: 50%;
+				width: 100%;
+				@include mq(medium) {
+					width: 50%;
+				}
+				&:first-child {
+					margin-bottom: 2rem;
+					@include mq(medium) {
+						margin-bottom: 0;
+					}
+				}
 			}
 		}
+	}
+
+	.slick-dotted {
+		margin-bottom: var(--spacing);
 	}
 }

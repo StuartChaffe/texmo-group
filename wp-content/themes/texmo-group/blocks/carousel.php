@@ -15,6 +15,7 @@ $title = get_field('carousel_title');
 	<div class="carousel-full <?php echo $type; ?>">
 		<?php while( have_rows('carousel') ): the_row();
 			$image = get_sub_field('carousel_image');
+			$imagemobile = get_sub_field('carousel_mobile_image');
 			$video = get_sub_field('carousel_video');
 			$content = get_sub_field('carousel_content');
 			$contentleft = get_field('carousel_content_left');
@@ -27,7 +28,8 @@ $title = get_field('carousel_title');
 				</div>
 			<?php } ?>
 			
-			<?php if ( $image ) { ?><div class="carousel--image"><img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /></div><?php } ?>
+			<?php if ( $image ) { ?><div class="carousel--image<?php if ( $imagemobile ) { ?> hidemobile<?php } ?>"><img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /></div><?php } ?>
+			<?php if ( $imagemobile ) { ?><div class="carousel--image hidedesktop"><img loading="lazy" src="<?php echo $imagemobile['url']; ?>" alt="<?php echo $imagemobile['alt']; ?>" /></div><?php } ?>
 			<?php if ( $video ) { ?><div class="carousel--video">
 				<iframe src="https://player.vimeo.com/video/<?php echo $video ?>?h=66f0aa3257&loop=1" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 			</div><?php } ?>

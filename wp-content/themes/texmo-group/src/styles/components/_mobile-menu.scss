@@ -13,6 +13,7 @@ body.nav-open {
 	background: white;
 	transform: translate3d(100%,0,0);
 	transition: transform .3s ease;
+	
 
 	@include mq(medium) {
 		display: none;

@@ -15,7 +15,7 @@ $type = get_field('text-image-type');
 		</div>
 	</div>
 	<div class="text-image--image<?php if ( $image['text-image-mobile'] == '1' ) { ?> hidemobile<?php } ?><?php if ( $type == 'Square' ) { ?> text-image--image__square<?php } ?>" style="background-image: url('<?php echo $image['text-image-image']['url']; ?>')">
-		<img class="hide" loading="lazy" src="<?php echo $image['text-image-image']['url']; ?>" alt="<?php echo $image['text-image-image']['alt']; ?>" />
-		<img class="hidedesktop" loading="lazy" src="<?php echo $image['text-image-mobile-image']['url']; ?>" alt="<?php echo $image['text-image-mobile-image']['alt']; ?>" />
+		<img class="hidedesktop <?php if ( $image['text-image-mobile-image'] ) { ?>hidemobile<?php } ?>" loading="lazy" src="<?php echo $image['text-image-image']['url']; ?>" alt="<?php echo $image['text-image-image']['alt']; ?>" />
+		<?php if ( $image['text-image-mobile-image'] ) { ?><img class="hidedesktop" loading="lazy" src="<?php echo $image['text-image-mobile-image']['url']; ?>" alt="<?php echo $image['text-image-mobile-image']['alt']; ?>" /><?php } ?>
 	</div>
 </section>
