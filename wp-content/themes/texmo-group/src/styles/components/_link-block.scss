@@ -19,6 +19,7 @@
 		margin-bottom: var(--spacing-xs);
 		margin-top: 0;
 		padding: var(--spacing);
+		transition: background .1s ease-in-out;
 		// @include mq(medium) {
 		// 	width: 100%;
 		// 	padding: var(--spacing);
@@ -61,14 +62,24 @@
 		&:nth-child(4) {
 			background: var(--color-grey);
 			color: var(--color-grey-dark);
+
+			&:hover {
+				text-decoration: none;
+				background-color: #B5B4B4;
+			}
 		}
 		&:nth-child(2),
 		&:nth-child(3) {
 			background: var(--color-grey-dark);
 			color: var(--color-white);
+
+			&:hover {
+				text-decoration: none;
+				background-color: #262626;
+			}
 		}
 		&:hover {
-			text-decoration: none;
+			transition: background .1s ease-in-out;
 		}
 	}
 }

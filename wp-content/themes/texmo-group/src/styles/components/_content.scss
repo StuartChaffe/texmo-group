@@ -12,6 +12,12 @@
 		margin-top: 0;
 	}
 
+	img {
+		@include mq($until: medium) {
+			max-width: 300px;
+		}
+	}
+
 	// h2,
 	// h3,
 	// h4,
