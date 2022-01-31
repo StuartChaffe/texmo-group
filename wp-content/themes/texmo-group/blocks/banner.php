@@ -18,7 +18,7 @@ $content = get_field('banner_content');
 		<?php } ?>
 
 		<!--testing -->
-		<a style="display: none" href="#" id="#banner-videoo" data-featherlight="#banner-videoo" data-featherlight-iframe-allow="autoplay"><?php echo $video['banner_video_text']; ?></a>
+		<!-- <a style="display: none" href="#" id="#banner-videoo" data-featherlight="#banner-videoo" data-featherlight-iframe-allow="autoplay"><?php echo $video['banner_video_text']; ?></a> -->
 		<!--testing end -->
 		</div>
 	<?php } ?>
@@ -27,12 +27,12 @@ $content = get_field('banner_content');
 </section>
 
 <!--testing -->
-<div class="lightbox" id="banner-videoo">
+<!-- <div class="lightbox" id="banner-videoo">
 <video id="video1" style="width:100%;max-width:100%;" controls="">
 	<source src="http://texmo-group.local/wp-content/uploads/mov_bbb.mp4" type="video/mp4">
 	Your browser does not support HTML5 video.
 </video>
-</div>
+</div> -->
 <!--testing end -->
 
 
