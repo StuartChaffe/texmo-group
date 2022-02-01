@@ -104,7 +104,7 @@ function texmo_acf_blocks() {
 			'description'		=> __('Add featured stories'),
 			'render_callback'	=> 'texmo_acf_block_render_callback',
 			'category'			=> 'texmo-blocks',
-			'icon'				=> 'screenoptions',
+			'icon'				=> 'format-status',
 			'align' 			=> 'wide',
 			'keywords'			=> array( 'stories, featured' ),
 		));
@@ -139,14 +139,14 @@ function texmo_acf_blocks() {
 			'keywords'			=> array( 'link, links' ),
 		));
 		acf_register_block(array(
-			'name'				=> 'posts',
-			'title'				=> __('Posts'),
-			'description'		=> __('Add all posts'),
+			'name'				=> 'stories',
+			'title'				=> __('Stories'),
+			'description'		=> __('Add all stories'),
 			'render_callback'	=> 'texmo_acf_block_render_callback',
 			'category'			=> 'texmo-blocks',
-			'icon'				=> 'calendar-alt',
+			'icon'				=> 'format-status',
 			'align' 			=> 'wide',
-			'keywords'			=> array( 'posts, blogs' ),
+			'keywords'			=> array( 'posts, stories' ),
 		));
 		acf_register_block(array(
 			'name'				=> 'testimonial',
@@ -196,7 +196,7 @@ function texmo_allowed_block_types( $allowed_blocks ) {
 		'acf/icons',
 		'acf/link-block',
 		'acf/link-list',
-		// 'acf/posts',
+		'acf/stories',
 		'acf/testimonial',
 		'acf/text-image',
 	);

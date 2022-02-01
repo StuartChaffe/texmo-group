@@ -13,7 +13,7 @@
 if( ! defined( 'ABSPATH' ) ) exit;
 
 // Custom post types
-// require_once('post-types.php');
+require_once('post-types.php');
 
 // Custom taxonomies
 require_once('taxonomies.php');

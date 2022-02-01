@@ -186,6 +186,7 @@ html.with-featherlight {
   --line-height-headings: 1.2;
   --color-grey-dark: #424244;
   --color-grey: #DBDBDB;
+  --color-grey-mid: #D1D1D1;
   --color-grey-light: #efefef;
   --color-white: #fff;
   --color-cream: #F8F7F1;
@@ -574,7 +575,7 @@ input[type=button]:focus {
   background-color: var(--color-quaternary);
 }
 
-.container, .accordion-list, .main {
+.container, .stories, .accordion-list, .main {
   margin: 0 auto;
   padding: 0 var(--spacing-xs);
   width: 100%;
@@ -2112,6 +2113,40 @@ body.nav-open {
 .link-list-item:hover .link-list-item--image:after {
   background-color: rgba(0, 0, 0, 0.15);
   transition: background 0.1s ease-in-out;
+}
+
+.stories {
+  display: flex;
+  flex-direction: column;
+  margin: var(--spacing-l) auto;
+}
+.stories-item {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid var(--color-grey-mid);
+  padding-bottom: var(--spacing);
+  margin-bottom: var(--spacing);
+}
+.stories-item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.stories-item--image {
+  width: 50%;
+  padding-right: var(--spacing-l);
+}
+.stories-item--content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.stories-item--content p:last-of-type {
+  margin-bottom: 1rem;
+}
+.stories-item--content .btn {
+  margin-top: auto;
 }
 
 .testimonial {
