@@ -28,7 +28,6 @@ $featuredstories = get_field( 'select_stories' );
 			</div>	
 			<p><?php if ( $name ) { ?><?php echo $name; ?> -
 				<?php } ?><?php echo($title); ?></p>
-				<?php the_excerpt(); ?>
 			<span>↳</span>
 		</a>
 	

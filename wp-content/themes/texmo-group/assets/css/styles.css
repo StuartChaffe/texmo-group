@@ -304,10 +304,6 @@ img[class*=wp-image-] {
 }
 
 /* Natural flow and rhythm in articles by default */
-article > * + * {
-  margin-top: 1em;
-}
-
 /* Inherit fonts for inputs and buttons */
 input,
 button,
@@ -655,7 +651,7 @@ input[type=button]:focus {
   max-width: 700px;
   font-size: var(--font-size-h3);
   line-height: 1.4;
-  margin: var(--spacing) auto;
+  margin: var(--spacing) auto var(--spacing-l) auto;
 }
 .content figure {
   max-width: none;
