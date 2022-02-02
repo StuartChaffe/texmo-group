@@ -11,7 +11,7 @@
 	</div>
 	<img loading="lazy" class="banner--image hidemobile" src="<?php echo get_the_post_thumbnail_url( get_the_ID()); ?>" alt="">
 </section>
-	<article>
+	<article> 
 		<?php the_content(); ?>
 	</article>
 	
