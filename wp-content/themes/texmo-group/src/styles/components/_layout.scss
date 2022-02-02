@@ -55,6 +55,12 @@
 		.btn a:hover {
 			color: white;
 		}
+		.slick-prev:before {
+			content: url("../../src/icons/carousel-arrow-white.svg");
+		}
+		.slick-next:before {
+			content: url("../../src/icons/carousel-arrow-white-next.svg");
+		}
 	}
 	&--grey {
 		background-color: var(--color-grey);

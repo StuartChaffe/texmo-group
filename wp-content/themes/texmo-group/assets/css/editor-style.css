@@ -1693,6 +1693,12 @@ ul.menu .sub-menu li a:after {
 .bkg--darkgrey .btn a:hover {
   color: white;
 }
+.bkg--darkgrey .slick-prev:before {
+  content: url("../../src/icons/carousel-arrow-white.svg");
+}
+.bkg--darkgrey .slick-next:before {
+  content: url("../../src/icons/carousel-arrow-white-next.svg");
+}
 .bkg--grey {
   background-color: var(--color-grey);
 }
@@ -2168,6 +2174,10 @@ body.nav-open {
 }
 .stories-item--content .btn {
   margin-top: auto;
+}
+
+.featured-stories {
+  display: flex;
 }
 
 .testimonial {

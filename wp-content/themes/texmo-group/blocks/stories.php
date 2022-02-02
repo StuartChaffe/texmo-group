@@ -22,7 +22,7 @@
 			$banner = get_field('banner_image', get_the_ID());
 			$image = get_field('square_image', get_the_ID());
 			$name = get_field('story_name', get_the_ID());
-	?>
+		?>
 		<div class="stories-item">
 			<div class="stories-item--image">
 				<?php echo get_the_post_thumbnail(get_the_ID(), 'Small'); ?>
