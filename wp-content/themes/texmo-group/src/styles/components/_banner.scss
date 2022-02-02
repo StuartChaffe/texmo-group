@@ -54,7 +54,7 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		max-width: 100%;
+		max-width: none;
 		min-width: calc(100% + 2px);
 		min-height: calc(100% + 2px);
 		display: block;
@@ -75,6 +75,12 @@
 		z-index: 2;
 		text-align: center;
 		padding-bottom: var(--spacing);
+		padding-left: var(--spacing);
+		padding-right: var(--spacing);
+		@include mq(medium) {
+			padding-left: 0;
+			padding-right: 0;
+		}
 		// @include mq(medium) {
 		// 	display: none;
 		// }
