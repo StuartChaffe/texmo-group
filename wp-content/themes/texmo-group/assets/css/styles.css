@@ -213,7 +213,7 @@ html.with-featherlight {
   --spacing: 40px;
   --spacing-s: 10px;
   --spacing-xs: calc(var(--spacing-s) * 2);
-  --container: 1060px;
+  --container: 950px;
   --container-l: 1430px;
   --content-width: var(--container);
   --container-global: 1800px;
@@ -364,8 +364,7 @@ li p {
 }
 
 blockquote {
-  padding-left: 1em;
-  border-left: 4px solid var(--color-text-dark);
+  font-weight: var(--font-weight-bold);
 }
 
 a {
@@ -575,21 +574,21 @@ input[type=button]:focus {
   background-color: var(--color-quaternary);
 }
 
-.container, .stories, .accordion-list, .main {
+.container, .stories, .accordion-list, .content, .main {
   margin: 0 auto;
   padding: 0 var(--spacing-xs);
   width: 100%;
   max-width: var(--container);
 }
 
-.container--large, .text-image--content, .testimonial--quote, .link-list .carousel-slider, .link-block, .icons, .companies-list, .carousel-full--content, .carousel-full, .carousel-item--title, .footer--inner, .content {
+.container--large, .text-image--content, .testimonial--quote, .link-list .carousel-slider, .link-block, .icons, .companies-list, .carousel-full--content, .carousel-full, .carousel-item--title, .footer--inner {
   margin: 0 auto;
   padding: 0 var(--spacing);
   width: 100%;
   max-width: var(--container-l);
 }
 @media (min-width: 93.75em) {
-  .container--large, .text-image--content, .testimonial--quote, .link-list .carousel-slider, .link-block, .icons, .companies-list, .carousel-full--content, .carousel-full, .carousel-item--title, .footer--inner, .content {
+  .container--large, .text-image--content, .testimonial--quote, .link-list .carousel-slider, .link-block, .icons, .companies-list, .carousel-full--content, .carousel-full, .carousel-item--title, .footer--inner {
     padding: 0 1em;
   }
 }
@@ -642,11 +641,6 @@ input[type=button]:focus {
 .content p {
   margin-top: 0;
 }
-@media (max-width: 49.99em) {
-  .content img {
-    max-width: 300px;
-  }
-}
 .content a {
   color: var(--link-color);
   text-decoration: underline;
@@ -658,10 +652,10 @@ input[type=button]:focus {
   text-decoration: underline;
 }
 .content blockquote {
-  max-width: none;
+  max-width: 700px;
   font-size: var(--font-size-h3);
   line-height: 1.4;
-  margin: var(--spacing-l) 0;
+  margin: var(--spacing) auto;
 }
 .content figure {
   max-width: none;
@@ -698,6 +692,20 @@ input[type=button]:focus {
   font-weight: bold;
   margin-right: 0.6em;
   color: var(--color-text-dark);
+}
+.content .size-full {
+  width: 100%;
+  position: relative;
+}
+@media (min-width: 50em) {
+  .content .size-full {
+    margin-top: var(--spacing-l);
+    margin-bottom: var(--spacing-l);
+    width: 120%;
+    max-width: 120%;
+    position: relative;
+    left: -10%;
+  }
 }
 
 .icon {

@@ -56,7 +56,7 @@
   --spacing: 40px;
   --spacing-s: 10px;
   --spacing-xs: calc(var(--spacing-s) * 2);
-  --container: 1060px;
+  --container: 950px;
   --container-l: 1430px;
   --content-width: var(--container);
   --container-global: 1800px;
@@ -519,8 +519,7 @@ li p {
 }
 
 blockquote {
-  padding-left: 1em;
-  border-left: 4px solid var(--color-text-dark);
+  font-weight: var(--font-weight-bold);
 }
 
 a {
@@ -1022,11 +1021,6 @@ span.btn:hover {
 .content p {
   margin-top: 0;
 }
-@media (max-width: 49.99em) {
-  .content img {
-    max-width: 300px;
-  }
-}
 .content a {
   color: var(--link-color);
   text-decoration: underline;
@@ -1038,10 +1032,10 @@ span.btn:hover {
   text-decoration: underline;
 }
 .content blockquote {
-  max-width: none;
+  max-width: 700px;
   font-size: var(--font-size-h3);
   line-height: 1.4;
-  margin: var(--spacing-l) 0;
+  margin: var(--spacing) auto;
 }
 .content figure {
   max-width: none;
@@ -1078,6 +1072,20 @@ span.btn:hover {
   font-weight: bold;
   margin-right: 0.6em;
   color: var(--color-text-dark);
+}
+.content .size-full {
+  width: 100%;
+  position: relative;
+}
+@media (min-width: 50em) {
+  .content .size-full {
+    margin-top: var(--spacing-l);
+    margin-bottom: var(--spacing-l);
+    width: 120%;
+    max-width: 120%;
+    position: relative;
+    left: -10%;
+  }
 }
 
 .cookie-alert {
@@ -1648,21 +1656,21 @@ ul.menu .sub-menu li a:after {
   background-color: var(--color-quaternary);
 }
 
-.container, .stories, .main, .accordion-list {
+.container, .stories, .main, .accordion-list, .content {
   margin: 0 auto;
   padding: 0 var(--spacing-xs);
   width: 100%;
   max-width: var(--container);
 }
 
-.container--large, .text-image--content, .testimonial--quote, .link-list .carousel-slider, .link-block, .carousel-item--title, .carousel-full, .carousel-full--content, .companies-list, .content, .footer--inner, .icons {
+.container--large, .text-image--content, .testimonial--quote, .link-list .carousel-slider, .link-block, .carousel-item--title, .carousel-full, .carousel-full--content, .companies-list, .footer--inner, .icons {
   margin: 0 auto;
   padding: 0 var(--spacing);
   width: 100%;
   max-width: var(--container-l);
 }
 @media (min-width: 93.75em) {
-  .container--large, .text-image--content, .testimonial--quote, .link-list .carousel-slider, .link-block, .carousel-item--title, .carousel-full, .carousel-full--content, .companies-list, .content, .footer--inner, .icons {
+  .container--large, .text-image--content, .testimonial--quote, .link-list .carousel-slider, .link-block, .carousel-item--title, .carousel-full, .carousel-full--content, .companies-list, .footer--inner, .icons {
     padding: 0 1em;
   }
 }
