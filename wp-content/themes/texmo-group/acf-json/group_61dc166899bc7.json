@@ -142,6 +142,28 @@
                             "new_lines": "br"
                         }
                     ]
+                },
+                {
+                    "key": "field_61fabc1797d30",
+                    "label": "Show logo?",
+                    "name": "logo",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "companies"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 1,
+                    "multiple": 0,
+                    "return_format": "id",
+                    "ui": 1
                 }
             ]
         }
@@ -164,5 +186,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1641814705
+    "modified": 1643901963
 }

@@ -1,6 +1,6 @@
 <header class="global-header">
 	<div class="global-header--inner">
-	<h1 class="global-header--logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/src/images/logo.svg" alt="Texmo Group logo" /></a></h1>
+	<div class="global-header--logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/src/images/logo.svg" alt="Texmo Group logo" /></a></div>
 		<button class="global-header--nav-btn" type="button">
 			<span class="global-header--nav-box">
 				<span class="global-header--nav-inner"><span>Show menu</span></span>

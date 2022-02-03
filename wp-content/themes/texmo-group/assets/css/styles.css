@@ -2116,6 +2116,13 @@ body.nav-open {
   background-color: rgba(0, 0, 0, 0);
   transition: background 0.1s ease-in-out;
 }
+.link-list-item--logo {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  width: 40px !important;
+  z-index: 9;
+}
 .link-list-item p {
   text-decoration: underline;
 }

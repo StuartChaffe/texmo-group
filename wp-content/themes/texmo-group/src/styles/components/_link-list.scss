@@ -50,6 +50,13 @@
 				transition: background .1s ease-in-out;
 			}
 		}
+		&--logo {
+			position: absolute;
+			left: 1rem;
+			bottom: 1rem;
+			width: 40px !important;
+			z-index: 9;
+		}
 		p {
 			text-decoration: underline;
 		}

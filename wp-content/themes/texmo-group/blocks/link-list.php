@@ -17,16 +17,25 @@ $title = get_field('title');
 			$link = get_sub_field('link');
 			$url = $link['company_link'];
 			$linktext = $link['company_link_text'];
+			$logos = get_sub_field( 'logo' );
 		?>
 
 		<a class="link-list-item" href="<?php echo $url['url']; ?>">
-			<?php if ( $image ) { ?><div class="link-list-item--image"><img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /></div><?php } ?>
+			<?php if ( $image ) { ?><div class="link-list-item--image"><img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+				<?php if ( $logos ) { 
+				$logo = get_field('company_icon', $logos);
+				?>
+					<img class="link-list-item--logo" loading="lazy" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
+				<?php } ?>
+			</div>
+			<?php } ?>
 			<?php if ( $linktext ) { ?>
 				<p><?php echo $linktext; ?></p>
 			<?php } elseif ( $url['title'] ) { ?>
 				<p><?php echo $url['title']; ?></p>
 			<?php } ?>
 			<span>↳</span>
+
 		</a>
 		<?php endwhile; ?>
 	</div>
