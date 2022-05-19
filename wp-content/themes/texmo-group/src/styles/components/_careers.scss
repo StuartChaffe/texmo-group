@@ -1,19 +1,32 @@
 .careers {
 	@extend .container--large;
 	margin: 0 auto;
-	padding-top: var(--spacing-l);
-	padding-bottom: var(--spacing-l);
+	padding-top: var(--spacing);
+	padding-bottom: var(--spacing);
 	text-align: center;
+
+	@include mq(medium) {
+		padding-top: var(--spacing-l);
+		padding-bottom: var(--spacing-l);
+	}
 
 	&__filter {
 		display: flex;
+		flex-direction: column;
 		width: 100%;
-		margin-bottom: 3rem;
+		padding: 0 1rem;
+		margin-bottom: 1rem;
+		@include mq(medium) {
+			flex-direction: row;
+			padding: 0;
+			margin-bottom: 3rem;
+		}
+		
 		&-item {
-			width: calc(100% / 3);
-			margin: 0 calc(var(--spacing-xs) * 2) 0 calc(var(--spacing-s) * 2);
-			select {
-				width: 100%;
+			width: 100%;
+			@include mq(medium) {
+				width: calc(100% / 3);
+				margin: 0 calc(var(--spacing-xs) * 2) 0 calc(var(--spacing-s) * 2);
 			}
 		}
 		select {
@@ -22,8 +35,14 @@
 			background: none;
 			border: none;
 			padding: 0;
+			width: 100%;
 			border-bottom: solid 1px var(--color-text-base);
 			border-radius: 0;
+			margin-bottom: 1rem;
+
+			@include mq(medium) {
+				margin-bottom: 0;
+			}
 			
 			option {
 				text-transform: capitalize;
@@ -41,14 +60,19 @@
 	&-item {
 		display: flex;
 		flex-direction: column;
-		width: calc(100% / 3 - var(--spacing-s) * 1.5);
-		margin: var(--spacing-s);
+		width: 100%;
+		margin: var(--spacing-s) 0;
 		background: white;
 		border-radius: 5px;
 		padding: calc(var(--spacing-s) * 2.5);
 		text-align: left;
 		border: 3px solid white;
 		transition: all .1s ease-in-out;
+
+		@include mq(medium) {
+			width: calc(100% / 3 - var(--spacing-s) * 1.5);
+			margin: var(--spacing-s);
+		}
 
 		&:hover {
 			transition: all .1s ease-in-out;

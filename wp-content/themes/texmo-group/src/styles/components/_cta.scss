@@ -1,7 +1,10 @@
 .cta {
 	text-align: center;
-	padding: var(--spacing-l);
+	padding: var(--spacing) var(--spacing);
 	p + .btn {
 		margin-top: var(--spacing);
+	}
+	@include mq(medium) {
+		padding: var(--spacing-l);
 	}
 }

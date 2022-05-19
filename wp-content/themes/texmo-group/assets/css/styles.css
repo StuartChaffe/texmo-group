@@ -712,29 +712,53 @@ input[type=button]:focus {
 
 .careers {
   margin: 0 auto;
-  padding-top: var(--spacing-l);
-  padding-bottom: var(--spacing-l);
+  padding-top: var(--spacing);
+  padding-bottom: var(--spacing);
   text-align: center;
+}
+@media (min-width: 50em) {
+  .careers {
+    padding-top: var(--spacing-l);
+    padding-bottom: var(--spacing-l);
+  }
 }
 .careers__filter {
   display: flex;
+  flex-direction: column;
   width: 100%;
-  margin-bottom: 3rem;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 50em) {
+  .careers__filter {
+    flex-direction: row;
+    padding: 0;
+    margin-bottom: 3rem;
+  }
 }
 .careers__filter-item {
-  width: calc(100% / 3);
-  margin: 0 calc(var(--spacing-xs) * 2) 0 calc(var(--spacing-s) * 2);
-}
-.careers__filter-item select {
   width: 100%;
+}
+@media (min-width: 50em) {
+  .careers__filter-item {
+    width: calc(100% / 3);
+    margin: 0 calc(var(--spacing-xs) * 2) 0 calc(var(--spacing-s) * 2);
+  }
 }
 .careers__filter select {
   color: var(--color-text-base);
   background: none;
   border: none;
   padding: 0;
+  width: 100%;
   border-bottom: solid 1px var(--color-text-base);
   border-radius: 0;
+  margin-bottom: 1rem;
+}
+@media (min-width: 50em) {
+  .careers__filter select {
+    margin-bottom: 0;
+  }
 }
 .careers__filter select option {
   text-transform: capitalize;
@@ -749,14 +773,20 @@ input[type=button]:focus {
 .careers-item {
   display: flex;
   flex-direction: column;
-  width: calc(100% / 3 - var(--spacing-s) * 1.5);
-  margin: var(--spacing-s);
+  width: 100%;
+  margin: var(--spacing-s) 0;
   background: white;
   border-radius: 5px;
   padding: calc(var(--spacing-s) * 2.5);
   text-align: left;
   border: 3px solid white;
   transition: all 0.1s ease-in-out;
+}
+@media (min-width: 50em) {
+  .careers-item {
+    width: calc(100% / 3 - var(--spacing-s) * 1.5);
+    margin: var(--spacing-s);
+  }
 }
 .careers-item:hover {
   transition: all 0.1s ease-in-out;
@@ -2032,10 +2062,15 @@ body.nav-open {
 
 .cta {
   text-align: center;
-  padding: var(--spacing-l);
+  padding: var(--spacing) var(--spacing);
 }
 .cta p + .btn {
   margin-top: var(--spacing);
+}
+@media (min-width: 50em) {
+  .cta {
+    padding: var(--spacing-l);
+  }
 }
 
 .icons {
