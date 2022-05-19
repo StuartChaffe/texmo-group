@@ -1,0 +1,68 @@
+.carrer-row{
+    width: 1200px;
+margin: auto;
+}
+.career-card {
+background: #fff;
+width: 32%;
+padding: 1.5%;
+    float: left;
+margin: 0 2% 2% 0;
+}
+.career-card:nth-child(3n+1){
+    margin-right: 0;
+}
+.job-title {
+text-align: left;
+float: left;
+width: 100%;
+}
+.job-title h3 {
+font-size: 0.8em;
+color: #333;
+float: left;
+    line-height: 20px;
+}
+.job-title button {
+background: #d46635;
+color: #fff;
+text-transform: uppercase;
+border-radius: 20px;
+float: right;
+border: none;
+height: 27px;
+width: 60px;
+font-size: 13px;
+cursor: pointer;
+    line-height: 24px;
+}
+.career-card strong {
+display: block;
+}
+.job-location {
+display: block
+}
+.job-location p {
+text-transform: uppercase;
+font-size: 10px;
+}
+.job-location {
+float: left;
+}
+.filter-career{
+    margin-bottom: 3em;
+}
+.filter-career select{
+    width: 31.7%;
+    font-size: 0.8em;
+    color: #333;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0 2% 0 0;
+    border-bottom: solid 1px #727272;
+    border-radius: 0;
+}
+.filter-career select:last-child{
+    margin-right: 0;
+}
