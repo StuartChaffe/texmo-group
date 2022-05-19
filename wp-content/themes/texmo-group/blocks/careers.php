@@ -2,12 +2,8 @@
 /**
 * The template used for displaying careers.
 */
-
+$intro = get_field('careers_intro');
 ?>
-
-<section class="bkg--cream" style="height: 300px; display: flex; align-items: center; justify-content: center;">
-	<h2>Latest Careers</h2>
-</section>
 
 <?php
 $jobURL = "https://api-qa.texmo.com/api/recruitment-management/jobs";
@@ -60,44 +56,58 @@ $jobFilter_roles = $jobFilter_response['roles'];
 ?>
 
 
-<section class="carrer-row">
-	<div class="filter-career">
-	<select>
-		<option>COMPANY</option>
-	</select>
-		<select>
-		<option>LOCATION</option>
-			<?php 
-			foreach ($jobFilter_locations as  $location){
+<section class="careers bkg--cream">
+
+	<?php if ( $intro ) { ?>
+		<?php echo $intro; ?>
+	<?php } ?>
+	<div class="careers__filter">
+		<div class="careers__filter-item">
+			<select>
+				<option>Company</option>
+			</select>
+		</div>
+		<div class="careers__filter-item">
+			<select>
+				<option>Location</option>
+				<?php foreach ($jobFilter_locations as  $location){
 					echo "<option  value='$location[id]'  >$location[name]</option>";
-}
-			?>
-		</select>
-		<select>
-		<option>JOB ROLE</option>
-			<?php 
-			foreach ($jobFilter_roles as  $role){
+				} ?>
+			</select>
+		</div>
+		<div class="careers__filter-item">
+			<select>
+				<option>Job role</option>
+				<?php foreach ($jobFilter_roles as  $role){
 					echo "<option  value='$role[id]' >$role[title]</option>";
-}
-			?>
-		</select>
+				} ?>
+			</select>
+		</div>
 	</div>
 
-	
-<?php  
-foreach ($data as $value) { 
-?> 
-  <div class="career-card">
-    <div class="job-title">
-      <h3><strong> <?php echo $value['title'] ?> </strong> <?php echo $value['location']['name'] ?></h3>
-      <button>New</button>
-    </div>
-    <div class="job-location">
-      <p><?php echo $value['department']['name'] ?></p>
-      <img src="" alt="" title=""> </div>
-  </div>
-<?php  
+	<div class="careers-list">
+		<?php foreach ($data as $value) { ?> 
+		<a href="" class="careers-item">
+			<div class="careers-item__header">
+				<div>
+					<p><strong><?php echo $value['title'] ?></strong></p>
+					<p><?php echo $value['location']['name'] ?></p>
+				</div>
+				<div>
+					<span class="careers-item__new label">New</span>
+				</div>
+			</div>
 
-}
-?>
+			<div class="careers-item__footer">
+				<div>
+					<p class="label">UK / INDIA needs adding</p>
+					<p class="label"><?php echo $value['department']['name'] ?></p>
+				</div>
+				<div>
+					<img src="//texmo-group.local/wp-content/themes/texmo-group/src/images/logo-taro.svg" alt="Texmo Group logo">
+				</div>
+			</div>
+		</a>
+		<?php } ?>
+	</div>
 </section>

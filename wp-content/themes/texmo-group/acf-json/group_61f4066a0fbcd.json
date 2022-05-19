@@ -1,7 +1,27 @@
 {
     "key": "group_61f4066a0fbcd",
     "title": "Careers",
-    "fields": [],
+    "fields": [
+        {
+            "key": "field_628610f92edac",
+            "label": "Intro",
+            "name": "careers_intro",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        }
+    ],
     "location": [
         [
             {
@@ -20,5 +40,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1648210202
+    "modified": 1652953361
 }

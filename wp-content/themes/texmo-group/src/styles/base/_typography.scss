@@ -10,6 +10,12 @@ p.lead {
 	font-size: var(--font-size-lead);
 }
 
+.label {
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #939393;
+}
+
 strong {
 	font-weight: var(--font-weight-bold);
 }
