@@ -3,6 +3,7 @@
 * The template used for displaying careers.
 */
 $intro = get_field('careers_intro');
+$bkg = get_field('bkg-colour');
 ?>
 
 <?php
@@ -56,58 +57,59 @@ $jobFilter_roles = $jobFilter_response['roles'];
 ?>
 
 
-<section class="careers bkg--cream">
-
-	<?php if ( $intro ) { ?>
-		<?php echo $intro; ?>
-	<?php } ?>
-	<div class="careers__filter">
-		<div class="careers__filter-item">
-			<select>
-				<option>Company</option>
-			</select>
-		</div>
-		<div class="careers__filter-item">
-			<select>
-				<option>Location</option>
-				<?php foreach ($jobFilter_locations as  $location){
-					echo "<option  value='$location[id]'  >$location[name]</option>";
-				} ?>
-			</select>
-		</div>
-		<div class="careers__filter-item">
-			<select>
-				<option>Job role</option>
-				<?php foreach ($jobFilter_roles as  $role){
-					echo "<option  value='$role[id]' >$role[title]</option>";
-				} ?>
-			</select>
-		</div>
-	</div>
-
-	<div class="careers-list">
-		<?php foreach ($data as $value) { ?> 
-		<a href="" class="careers-item">
-			<div class="careers-item__header">
-				<div>
-					<p><strong><?php echo $value['title'] ?></strong></p>
-					<p><?php echo $value['location']['name'] ?></p>
-				</div>
-				<div>
-					<span class="careers-item__new label">New</span>
-				</div>
-			</div>
-
-			<div class="careers-item__footer">
-				<div>
-					<p class="label">UK / INDIA needs adding</p>
-					<p class="label"><?php echo $value['department']['name'] ?></p>
-				</div>
-				<div>
-				<img src="<?php echo get_template_directory_uri(); ?>/src/images/logo-taro.svg" alt="Texmo Group logo" />
-				</div>
-			</div>
-		</a>
+<section class="<?php echo $bkg; ?>">
+	<div class="careers">
+		<?php if ( $intro ) { ?>
+			<?php echo $intro; ?>
 		<?php } ?>
-	</div>
+		<div class="careers__filter">
+			<div class="careers__filter-item">
+				<select>
+					<option>Company</option>
+				</select>
+			</div>
+			<div class="careers__filter-item">
+				<select>
+					<option>Location</option>
+					<?php foreach ($jobFilter_locations as  $location){
+						echo "<option  value='$location[id]'  >$location[name]</option>";
+					} ?>
+				</select>
+			</div>
+			<div class="careers__filter-item">
+				<select>
+					<option>Job role</option>
+					<?php foreach ($jobFilter_roles as  $role){
+						echo "<option  value='$role[id]' >$role[title]</option>";
+					} ?>
+				</select>
+			</div>
+		</div>
+
+		<div class="careers-list">
+			<?php foreach ($data as $value) { ?> 
+			<a href="" class="careers-item">
+				<div class="careers-item__header">
+					<div>
+						<p><strong><?php echo $value['title'] ?></strong></p>
+						<p><?php echo $value['location']['name'] ?></p>
+					</div>
+					<div>
+						<span class="careers-item__new label">New</span>
+					</div>
+				</div>
+
+				<div class="careers-item__footer">
+					<div>
+						<p class="label">UK / INDIA needs adding</p>
+						<p class="label"><?php echo $value['department']['name'] ?></p>
+					</div>
+					<div>
+					<img src="<?php echo get_template_directory_uri(); ?>/src/images/logo-taro.svg" alt="Texmo Group logo" />
+					</div>
+				</div>
+			</a>
+			<?php } ?>
+		</div>
+</div>
 </section>
