@@ -71,13 +71,12 @@
 		&__header {
 			display: flex;
 			justify-content: space-between;
-			// margin-bottom: var(--spacing-xs);
+			margin-bottom: calc(var(--spacing) * 2);
 		}
 		&__footer {
 			display: flex;
 			justify-content: space-between;
-			
-			margin-top: var(--spacing);
+			margin-top: auto;
 		}
 		&__new {
 			display: flex;

@@ -957,11 +957,12 @@ span.btn:hover {
 .careers-item__header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: calc(var(--spacing) * 2);
 }
 .careers-item__footer {
   display: flex;
   justify-content: space-between;
-  margin-top: var(--spacing);
+  margin-top: auto;
 }
 .careers-item__new {
   display: flex;

@@ -104,7 +104,7 @@ $jobFilter_roles = $jobFilter_response['roles'];
 					<p class="label"><?php echo $value['department']['name'] ?></p>
 				</div>
 				<div>
-					<img src="//texmo-group.local/wp-content/themes/texmo-group/src/images/logo-taro.svg" alt="Texmo Group logo">
+				<img src="<?php echo get_template_directory_uri(); ?>/src/images/logo-taro.svg" alt="Texmo Group logo" />
 				</div>
 			</div>
 		</a>
