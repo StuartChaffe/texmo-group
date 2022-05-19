@@ -6,38 +6,39 @@ $intro = get_field('careers_intro');
 $bkg = get_field('bkg-colour');
 ?>
 
+<?php if ( ! is_admin() ){ ?>
 <?php
 $jobURL = "https://api-qa.texmo.com/api/recruitment-management/jobs";
 $jobFilterURL = "https://api-qa.texmo.com/api/recruitment-management/job-filters";
 
 //$jobURL_KEY = "";
 
-// function callAPI($url){
-// $curl = curl_init();
-// curl_setopt_array( $curl, array(
-//   CURLOPT_URL => $url,
-//   CURLOPT_HTTPHEADER => array(
-// 	  "accept: application/json",
-// 	  "TEXMO-KEY: 2c589ffd7309c8679015e0ccc7aea9ee6568ed5f0ae821d5e6522e6cf7d39b23"
-//   ),
-// ) );
-// curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-// curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-// $response = curl_exec( $curl );
-//  curl_close($curl);	
-// return $response;
-// };
+function callAPI($url){
+$curl = curl_init();
+curl_setopt_array( $curl, array(
+  CURLOPT_URL => $url,
+  CURLOPT_HTTPHEADER => array(
+	  "accept: application/json",
+	  "TEXMO-KEY: 2c589ffd7309c8679015e0ccc7aea9ee6568ed5f0ae821d5e6522e6cf7d39b23"
+  ),
+) );
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+$response = curl_exec( $curl );
+ curl_close($curl);	
+return $response;
+};
 
-// $get_data = callAPI($jobURL);
-// $response = json_decode($get_data, true);
-// $data = $response['jobs'];
+$get_data = callAPI($jobURL);
+$response = json_decode($get_data, true);
+$data = $response['jobs'];
 
-// $jobFilter_data = callAPI($jobFilterURL);
-// $jobFilter_response = json_decode($jobFilter_data, true);
-// $jobFilter_locations = $jobFilter_response['locations'];
+$jobFilter_data = callAPI($jobFilterURL);
+$jobFilter_response = json_decode($jobFilter_data, true);
+$jobFilter_locations = $jobFilter_response['locations'];
 
-// $jobFilter_companies = $jobFilter_response['companies'];
-// $jobFilter_roles = $jobFilter_response['roles'];
+$jobFilter_companies = $jobFilter_response['companies'];
+$jobFilter_roles = $jobFilter_response['roles'];
 
 //print_r($jobFilter_response);
 
@@ -113,3 +114,13 @@ $jobFilterURL = "https://api-qa.texmo.com/api/recruitment-management/job-filters
 		</div>
 </div>
 </section>
+
+<?php } ?>
+
+<?php if ( is_admin() ){ ?>
+<section class="bkg--cream">
+	<div class="careers">
+		<h2>Latest careers show here</h2>
+	</div>
+</section>
+<?php } ?>
