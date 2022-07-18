@@ -202,9 +202,9 @@ echo( "Current Page: " . $pageNumber );
 </form>
 <?php } ?>
 <?php if ( is_admin() ){ ?>
-<section class="bkg--cream">
+<section class="<?php echo $bkg; ?>">
   <div class="careers">
-    <h2>Latest careers show here</h2>
+    <h2>Similar careers show here</h2>
   </div>
 </section>
 <?php } ?>

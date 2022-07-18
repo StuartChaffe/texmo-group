@@ -109,6 +109,16 @@ function texmo_acf_blocks() {
 			'keywords'			=> array( 'stories, featured' ),
 		));
 		acf_register_block(array(
+			'name'				=> 'featured-careers',
+			'title'				=> __('Featured careers'),
+			'description'		=> __('Add featured careers'),
+			'render_callback'	=> 'texmo_acf_block_render_callback',
+			'category'			=> 'texmo-blocks',
+			'icon'				=> 'format-status',
+			'align' 			=> 'wide',
+			'keywords'			=> array( 'careers, featured' ),
+		));
+		acf_register_block(array(
 			'name'				=> 'icons',
 			'title'				=> __('Icons list'),
 			'description'		=> __('Add a list of icons'),
@@ -193,6 +203,7 @@ function texmo_allowed_block_types( $allowed_blocks ) {
 		'acf/cta',
 		// 'acf/featured-posts',
 		'acf/featured-stories',
+		'acf/featured-careers',
 		'acf/icons',
 		'acf/link-block',
 		'acf/link-list',

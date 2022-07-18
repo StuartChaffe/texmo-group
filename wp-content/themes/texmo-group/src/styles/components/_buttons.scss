@@ -87,8 +87,12 @@ span.btn {
 	color: white;
 
 	&:hover, &:focus {
-		border-color: var(--color-secondary);
-		color: white;
-
+		background-color: white;
+		box-shadow: inset 0px 0px 0px 3px var(--color-secondary);
+		color: var(--color-secondary);
 	}
+}
+input[type="submit"] {
+	@extend .btn;
+	@extend .btn--primary;
 }

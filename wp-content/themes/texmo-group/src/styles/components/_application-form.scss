@@ -1,0 +1,43 @@
+.application-form {
+	@extend .container;
+	display: flex;
+	justify-content: space-between;
+	padding: var(--spacing-l) 0;
+	&--form {
+		width: 65%;
+
+		ul {
+			li {
+				display: flex;
+				flex-direction: row;
+				margin-bottom: 1rem;
+			}
+		}
+
+		label {
+			width: 20%;
+			margin-right: 5%;
+			margin-top: 1.2rem;
+			font-weight: var(--font-weight-normal);
+		}
+		p {
+			width: 100%;
+		}
+		input[type="text"] {
+			width: 100%;
+			// height: 60px;
+			padding: 2rem 2rem;
+			border-radius: 60px;
+			background-color: transparent;
+			border: solid 1px black;
+		}
+		textarea {
+			width: 100%;
+			padding: 2rem 2rem;
+			border-radius: 30px;
+			background-color: transparent;
+			border: solid 1px #000;
+			height: 220px;
+		}
+	}
+}
