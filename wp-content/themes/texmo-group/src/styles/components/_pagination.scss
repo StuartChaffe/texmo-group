@@ -1,0 +1,28 @@
+.pagination {
+	margin-top: 70px;
+}
+.pagination div {
+	display: inline-block;
+	margin: 0 2px;
+}
+.pagination div a {
+	border-radius: 50%;
+	border: solid 1px #f8f7f1;
+	padding: 2px;
+	width: 32px;
+	height: 32px;
+	display: block;
+	text-decoration: none;
+	font-size: 18px;
+	color: #505050;
+}
+.pagination div a.active, .pagination div a:hover {
+	border: solid 1px #e55e20;
+}
+.no-record {
+	text-align: center;
+	background: #fff;
+	padding: 10px;
+	border: solid 1px #e7e7e7;
+	color: #e52d2d;
+}
