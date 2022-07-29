@@ -1091,6 +1091,9 @@ span.btn:hover {
   border-radius: 16px;
   transform: translateY(-5px);
 }
+.careers-item__image {
+  width: 34px;
+}
 
 .carousel {
   width: 100%;

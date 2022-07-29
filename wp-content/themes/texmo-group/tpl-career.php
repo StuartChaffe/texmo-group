@@ -61,9 +61,9 @@ $imagemobile = get_field( 'story_image_mobile', get_the_ID() );
 	<div class="career-details-inner">
 		<a href="/job-application/?id=<?php echo $data['id'] ?>" class="btn btn--primary">Apply Now</a>
 		<div>
-			<p><strong><?php echo  $_GET['title'] ; ?> • <span class='red'>Company Name</span></strong><br />
+			<p><strong><?php echo  $_GET['title'] ; ?> • <span class='red'><?php echo $data['company']['title'] ?></span></strong><br />
 			<?php
-				echo  $data['location']['name'] .", <span class='red'>India</span> • ". $data['department']['name'] . " • Apply by ".date_format(date_create($data['deadlineAt']),'d/m/Y');
+				echo  $data['location']['name'] .", <span class='red'>".$data['location']['country'] ."</span> • ". $data['department']['name'] . " • Apply by ".date_format(date_create($data['deadlineAt']),'d/m/Y');
 			?></p>
 		</div>
  	</div>
@@ -77,7 +77,7 @@ $imagemobile = get_field( 'story_image_mobile', get_the_ID() );
 		?><?php */?>
 		<div class="career-details-item">
 			<div>
-				<h3>Job Description</h3>
+				<h3>Job Description 1</h3>
 			</div>
 			<div class="career-details-item--content">
 				<p><?php echo $data['description'] ; ?> </p>

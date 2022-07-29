@@ -177,10 +177,24 @@ echo( "Current Page: " . $pageNumber );
         </div>
         <div class="careers-item__footer">
           <div>
-            <p class="label red">UK</p>
+            <p class="label"><?php echo $value['location']['country'] ?></p>
             <p class="label"><?php echo $value['department']['name'] ?></p>
           </div>
-          <div> <img class="b-red" src="<?php echo get_template_directory_uri(); ?>/src/images/logo-taro.svg" alt="Texmo Group logo" /> </div>
+          <div>
+            
+          <?php if( have_rows('company', 'options') ) { ?>
+            <?php while( have_rows('company', 'options') ): the_row();
+              $name = get_sub_field('company_name', 'options');
+              $logo = get_sub_field( 'company_icon', 'options' );
+            ?>
+            <?php if ( $value['company']['title'] == $name ) { ?><img class="careers-item__image" loading="lazy" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" /><?php } ?>
+            
+            <?php endwhile; ?>
+          <?php } ?>
+
+
+  <!-- <img src="<?php echo get_template_directory_uri(); ?>/src/images/logo-taro.svg" alt="Texmo Group logo" />  -->
+        </div>
         </div>
         </a>
         <?php
@@ -192,7 +206,7 @@ echo( "Current Page: " . $pageNumber );
       <?php }  else { ?>
       <div class="pagination">
         <?php for($i=1 ; $i <= $pageCount ; $i++)	{ ?>
-        <div><a href="#" class="<?php  echo ( $pageNumber == $i ) ?  'active' : ''; ?>"  onClick="check('<?php echo $i ?>');"><?php echo $i ?></a></div>
+        <div><a href="#" class="<?php  echo ( $pageNumber == $i ) ?  'active' : ''; ?>"  onClick="PageClick('<?php echo $i ?>');"><?php echo $i ?></a></div>
         <?php } ?>
       </div>
       <input type="hidden"  name="pageNumber" id="pageNumber" />
@@ -209,10 +223,10 @@ echo( "Current Page: " . $pageNumber );
 </section>
 <?php } ?>
 <script type='text/javascript'>
-function check(p)
+function PageClick(pageNo)
 {
-	document.getElementById('pageNumber').value = p;
-	document.getElementById('pageNumber').text = p;
+	document.getElementById('pageNumber').value = pageNo;
+	document.getElementById('pageNumber').text = pageNo;
 	document.getElementById('jobForm').submit();
     return false;
 }

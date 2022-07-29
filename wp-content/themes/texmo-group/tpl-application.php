@@ -203,9 +203,10 @@ $datas = $data[ "question" ];
 
 	<div class="banner--overlay" style="background-color: rgba(0,0,0,0.40);">&nbsp;</div>
 	<div class="banner--content fade fade--delay__1">
-		<h1>Job Title</h1>
-		<h3>Company Name</h3>
-		<p><strong>City, Country • Department • Apply by</strong></p>
+		<h1><?php echo $data['title'] ?></h1>
+		<h3><?php echo $data['company']['title'] ?></h3>
+		<p><strong><?php
+				echo  $data['location']['name'] .", <span class='red'>".$data['location']['country'] ."</span> • ". $data['department']['name'] . " • Apply by ".date_format(date_create($data['deadlineAt']),'d/m/Y');	?></strong></p>
 	</div>
 	<img loading="lazy" class="banner--image hidemobile" src="<?php echo get_the_post_thumbnail_url( get_the_ID()); ?>" alt="">
 	<?php if ( $imagemobile ) { ?>

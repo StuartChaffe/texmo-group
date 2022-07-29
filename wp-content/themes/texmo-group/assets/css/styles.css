@@ -862,6 +862,9 @@ input[type=button]:focus {
   border-radius: 16px;
   transform: translateY(-5px);
 }
+.careers-item__image {
+  width: 34px;
+}
 
 .icon {
   display: inline-block;
