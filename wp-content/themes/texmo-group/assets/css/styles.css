@@ -747,7 +747,7 @@ input[type=button]:focus {
 }
 .career-details--additional {
   text-align: center;
-  padding: var(--spacing-l) 0;
+  padding-top: var(--spacing-l);
 }
 
 .careers {
@@ -842,6 +842,9 @@ input[type=button]:focus {
 }
 .careers-item p {
   margin: 0;
+}
+.careers-item .label {
+  color: var(--color-grey-dark);
 }
 .careers-item__header {
   display: flex;
@@ -1797,7 +1800,7 @@ body.nav-open {
   margin-bottom: 1rem;
 }
 .application-form--form label {
-  width: 20%;
+  width: 25%;
   margin-right: 5%;
   margin-top: 1.2rem;
   font-weight: var(--font-weight-normal);
@@ -2194,7 +2197,6 @@ body.nav-open {
   padding-bottom: var(--spacing-xs);
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
 }
 @media (min-width: 50em) {
   .icons {
@@ -2208,6 +2210,7 @@ body.nav-open {
   align-items: center;
   text-align: center;
   margin: 0 0.5rem;
+  flex: 1 1 0px;
 }
 .icons-item--image {
   display: flex;

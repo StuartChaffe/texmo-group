@@ -4,7 +4,7 @@
 	@extend .container--large;
 	display: flex;
 	justify-content: space-around;
-	flex-wrap: wrap;
+	// flex-wrap: wrap;
 	@include mq(medium) {
 		padding-top: var(--spacing-l);
 		padding-bottom: var(--spacing-l);
@@ -20,6 +20,7 @@
 		align-items: center;
 		text-align: center;
 		margin: 0 0.5rem;
+		flex: 1 1 0px;
 
 		&--image {
 			display: flex;

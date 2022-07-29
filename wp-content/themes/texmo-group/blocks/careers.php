@@ -182,19 +182,16 @@ echo( "Current Page: " . $pageNumber );
           </div>
           <div>
             
-          <?php if( have_rows('company', 'options') ) { ?>
-            <?php while( have_rows('company', 'options') ): the_row();
-              $name = get_sub_field('company_name', 'options');
-              $logo = get_sub_field( 'company_icon', 'options' );
-            ?>
-            <?php if ( $value['company']['title'] == $name ) { ?><img class="careers-item__image" loading="lazy" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" /><?php } ?>
-            
-            <?php endwhile; ?>
-          <?php } ?>
-
-
-  <!-- <img src="<?php echo get_template_directory_uri(); ?>/src/images/logo-taro.svg" alt="Texmo Group logo" />  -->
-        </div>
+            <?php if( have_rows('company', 'options') ) { ?>
+              <?php while( have_rows('company', 'options') ): the_row();
+                $name = get_sub_field('company_name', 'options');
+                $logo = get_sub_field( 'company_icon', 'options' );
+              ?>
+              <?php if ( $value['company']['title'] == $name ) { ?><img class="careers-item__image" loading="lazy" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" /><?php } ?>
+              
+              <?php endwhile; ?>
+            <?php } ?>
+          </div>
         </div>
         </a>
         <?php

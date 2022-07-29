@@ -61,9 +61,9 @@ $imagemobile = get_field( 'story_image_mobile', get_the_ID() );
 	<div class="career-details-inner">
 		<a href="/job-application/?id=<?php echo $data['id'] ?>" class="btn btn--primary">Apply Now</a>
 		<div>
-			<p><strong><?php echo  $_GET['title'] ; ?> • <span class='red'><?php echo $data['company']['title'] ?></span></strong><br />
+			<p><strong><?php echo  $_GET['title'] ; ?> • <?php echo $data['company']['title'] ?></strong><br />
 			<?php
-				echo  $data['location']['name'] .", <span class='red'>".$data['location']['country'] ."</span> • ". $data['department']['name'] . " • Apply by ".date_format(date_create($data['deadlineAt']),'d/m/Y');
+				echo  $data['location']['name'] .", ".$data['location']['country'] ." • ". $data['department']['name'] . " • Apply by ".date_format(date_create($data['deadlineAt']),'d/m/Y');
 			?></p>
 		</div>
  	</div>
@@ -112,10 +112,10 @@ $imagemobile = get_field( 'story_image_mobile', get_the_ID() );
 		</div>
 	</section>
 	<?php 	if (count($datas) != 0 && $datas != "") {  ?>
-	<section class="similar-jobs">
+	<section class="similar-jobs bkg--grey">
 		<div class="careers">
 			<h2 style="text-align: center">Similar Careers</h2>
-			<div class="careers-list">
+			<div class="careers-list mb-l">
 				<?php
 					$loop = 1;
 					foreach ( $datas as $value ) {
@@ -138,8 +138,8 @@ $imagemobile = get_field( 'story_image_mobile', get_the_ID() );
 					</div>
 					<div class="careers-item__footer">
 						<div>
-							<p class="label">UK / INDIA needs adding</p>
-							<p class="label"><?php echo $value['department']['name'] ?></p>
+							<p class="label red">UK / INDIA needs adding</p>
+							<p class="label red"><?php echo $value['department']['name'] ?></p>
 						</div>
 						<div>
 							<img src="<?php echo get_template_directory_uri(); ?>/src/images/logo-taro.svg" alt="Texmo Group logo" />
@@ -154,6 +154,7 @@ $imagemobile = get_field( 'story_image_mobile', get_the_ID() );
 					}
 				?>
 			</div>
+			<a class="btn" href="/careers">View careers</a>
 		</div>
 	</section>
 	<?php } ?>

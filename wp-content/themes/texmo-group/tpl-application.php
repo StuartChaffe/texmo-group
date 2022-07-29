@@ -206,7 +206,7 @@ $datas = $data[ "question" ];
 		<h1><?php echo $data['title'] ?></h1>
 		<h3><?php echo $data['company']['title'] ?></h3>
 		<p><strong><?php
-				echo  $data['location']['name'] .", <span class='red'>".$data['location']['country'] ."</span> • ". $data['department']['name'] . " • Apply by ".date_format(date_create($data['deadlineAt']),'d/m/Y');	?></strong></p>
+				echo  $data['location']['name'] .", ".$data['location']['country'] ." • ". $data['department']['name'] . " • Apply by ".date_format(date_create($data['deadlineAt']),'d/m/Y');	?></strong></p>
 	</div>
 	<img loading="lazy" class="banner--image hidemobile" src="<?php echo get_the_post_thumbnail_url( get_the_ID()); ?>" alt="">
 	<?php if ( $imagemobile ) { ?>
