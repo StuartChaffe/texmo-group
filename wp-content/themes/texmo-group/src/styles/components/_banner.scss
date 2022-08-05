@@ -18,6 +18,16 @@
 		height: 100vh;
 		min-height: 800px;
 	}
+	&__small {
+		min-height: auto;
+		@include mq(medium) {
+			height: auto;
+			min-height: 300px;
+		}
+		.banner--content {
+			padding-top: calc(var(--spacing) * 2);
+		}
+	}
 	&--video {
 		&-image {
 			// position: relative;

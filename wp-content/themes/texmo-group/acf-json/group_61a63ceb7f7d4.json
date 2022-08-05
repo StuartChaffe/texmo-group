@@ -280,6 +280,31 @@
             "layout": "table",
             "button_label": "",
             "sub_fields": []
+        },
+        {
+            "key": "field_62ecea2978520",
+            "label": "Size",
+            "name": "banner_size",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Large": "Large",
+                "Small": "Small"
+            },
+            "default_value": "Large",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -300,5 +325,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1643383063
+    "modified": 1659693646
 }

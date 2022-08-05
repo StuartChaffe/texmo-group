@@ -792,6 +792,18 @@ pre {
     min-height: 800px;
   }
 }
+.banner__small {
+  min-height: auto;
+}
+@media (min-width: 50em) {
+  .banner__small {
+    height: auto;
+    min-height: 300px;
+  }
+}
+.banner__small .banner--content {
+  padding-top: calc(var(--spacing) * 2);
+}
 .banner--video-image {
   margin-bottom: var(--spacing);
   background-size: cover;
