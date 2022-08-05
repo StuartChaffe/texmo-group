@@ -149,6 +149,16 @@ function texmo_acf_blocks() {
 			'keywords'			=> array( 'link, links' ),
 		));
 		acf_register_block(array(
+			'name'				=> 'map',
+			'title'				=> __('Map'),
+			'description'		=> __('Add locations map'),
+			'render_callback'	=> 'texmo_acf_block_render_callback',
+			'category'			=> 'texmo-blocks',
+			'icon'				=> 'admin-site',
+			'align' 			=> 'wide',
+			'keywords'			=> array( 'map, locations' ),
+		));
+		acf_register_block(array(
 			'name'				=> 'stories',
 			'title'				=> __('Stories'),
 			'description'		=> __('Add all stories'),
@@ -207,6 +217,7 @@ function texmo_allowed_block_types( $allowed_blocks ) {
 		'acf/icons',
 		'acf/link-block',
 		'acf/link-list',
+		'acf/map',
 		'acf/stories',
 		'acf/testimonial',
 		'acf/text-image',

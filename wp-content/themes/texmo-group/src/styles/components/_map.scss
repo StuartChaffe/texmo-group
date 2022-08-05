@@ -1,0 +1,118 @@
+.map {
+    position: relative;
+	background-color: white;
+	text-align: center;
+	padding: var(--spacing) 0;
+	@include mq(medium) {
+		padding: var(--spacing-l) 0;
+	}
+	&--inner {
+		@extend .container--large;
+		position: relative;
+		@include mq($until: medium) {
+			padding: 0 1rem;
+		}
+	}
+    img {
+        width: 100%;
+    }
+    a {
+        font-size: 18px;
+        font-weight: var(--font-weight-bold);
+		@include mq(medium) {
+			font-size: 22px;
+		}
+    }
+}
+.map-item {
+	font-size: 18px;
+	line-height: 1.4rem;
+	text-align: left;
+	@include mq(medium) {
+		font-size: 22px;
+		line-height: 1.5rem;
+	}
+	&--icon {
+		position: absolute;
+		content: '';
+		width: 20px;
+		height: 30px;
+		left: 0;
+		top: 0;
+		transform: translateY(calc(-100% - 5px));
+		@include mq(medium) {
+			left: 0;
+			top: 0;
+			transform: translateX(calc(-100% - 16px));
+			width: 20px;
+			height: 30px;
+		}
+		@include mq(large) {
+			width: 30px;
+			height: 45px;
+		}
+	}
+	&--1 {
+		position: absolute;
+		top: 30%;
+		left: 18%;
+		@include mq(medium) {
+			top: 23%;
+			left: 24%;
+		}
+		@include mq(large) {
+			top: 22%;
+			left: 22.5%;
+		}
+		@include mq(xlarge) {
+			top: 25%;
+			left: 21%;
+		}
+		.map-item--icon {
+			color: var(--color-secondary);
+		}
+	}
+
+	&--2 {
+		position: absolute;
+		top: 20%;
+		left: 41%;
+		@include mq(medium) {
+			top: 12%;
+			left: 46%;
+		}
+		@include mq(large) {
+			top: 11%;
+			left: 45.5%;
+		}
+		@include mq(xlarge) {
+			top: 12.5%;
+			left: 45%;
+		}
+		.map-item--icon {
+			color: var(--color-text-base);
+		}
+	}
+
+	&--3 {
+		position: absolute;
+		top: 46%;
+		left: 65%;
+		@include mq(medium) {
+			top: 40%;
+			left: 69%;
+		}
+		@include mq(large) {
+			top: 40%;
+			left: 69%;
+		}
+		@include mq(xlarge) {
+			top: 41%;
+			left: 69%;
+		}
+		.map-item--icon {
+			color: #F8F7F1;
+		}
+	}
+
+}
