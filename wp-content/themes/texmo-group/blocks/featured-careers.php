@@ -2,21 +2,19 @@
 /**
 * The template used for displaying careers.
 */
-$intro = get_field('careers_intro');
+$title = get_field('featured_careers_title');
 $bkg = get_field('bkg-colour');
+$location = get_field('location');
 ?>
 <?php if ( ! is_admin() ){ ?>
 <a name="JobCard" id="JobCard"></a>
 <?php
 $jobURL = "https://api-qa.texmo.com/api/recruitment-management/jobs";
-$jobFilterURL = "https://api-qa.texmo.com/api/recruitment-management/job-filters";
 $dateDiff = 15;
 $pageNumber = 1;
 $pageSize = 12;
 $totalJobs = 60;
 $pageCount = 1;
-
-//$jobURL_KEY = "";
 
 function callAPI( $url ) {
   $curl = curl_init();
@@ -34,58 +32,13 @@ function callAPI( $url ) {
   return $response;
 };
 
-//$get_data = callAPI($jobURL);
-//$response = json_decode($get_data, true);
-//$data = $response['jobs'];
-
-$jobFilter_data = callAPI( $jobFilterURL );
-$jobFilter_response = json_decode( $jobFilter_data, true );
-$jobFilter_locations = $jobFilter_response[ 'locations' ];
-
-$jobFilter_companies = $jobFilter_response[ 'companies' ];
-$jobFilter_roles = $jobFilter_response[ 'roles' ];
-
-//print_r($jobFilter_response);
-
-//print_r($jobFilter_roles);
-
-//foreach ($jobFilter_result as  $location){
-//echo $location['id'] . $location['name']. "<br>";
-//}
-
-//echo $data[0]['title'];
-//echo $data[0] ['department'];
-//echo $data[0] ['department'][0]; 
-
-//print_r( $data[0] );
-//print_r( $data[0]['department'] );
-//die();
 $jobURL = $jobURL . "?PageSize=" . $pageSize;
 $queryString = "&";
-if ( isset( $_POST[ 'location' ] ) && ( $_POST[ 'location' ] != "" ) ) {
-  $jobURL = $jobURL . $queryString . "Location=" . $_POST[ 'location' ];
+
+
+  $jobURL = $jobURL . $queryString . "LocationName=" . $location;
   $queryString = "&";
-  //$response = json_decode($get_data, true);
-  //$data = $response['jobs'];
-  //echo "1".$jobURL."?Location=".$_POST['location'];
-}
-
-
-if ( isset( $_POST[ 'role' ] ) && ( $_POST[ 'role' ] != "" && $_POST[ 'role' ] != "JOB ROLE" ) ) {
-  $var = str_replace( ' ', '%20', $_POST[ 'role' ] );
-  $jobURL = $jobURL . $queryString . "Role=" . $var;
-
-  //$response = json_decode($get_data, true);
-  //$data = $response['jobs'];
-  //echo $jobURL."?Role=".$_POST['role'];
-}
-
-
-if ( isset( $_POST[ 'company' ] ) && ( $_POST[ 'company' ] != "" && $_POST[ 'company' ] != "COMPANY" ) ) {
-  $var = str_replace( ' ', '%20', $_POST[ 'company' ] );
-  $jobURL = $jobURL . $queryString . "Company=" . $var;
-
-}
+  
 
 if ( isset( $_POST[ 'pageNumber' ] ) && ( $_POST[ 'pageNumber' ] != "" && $_POST[ 'pageNumber' ] != "" ) ) {
   $pageNumber = $_POST[ 'pageNumber' ];
@@ -93,7 +46,7 @@ if ( isset( $_POST[ 'pageNumber' ] ) && ( $_POST[ 'pageNumber' ] != "" && $_POST
   $jobURL = $jobURL . $queryString . "pageNumber=" . $var;
 }
 
-//echo $jobURL;
+echo $jobURL;
 
 $get_data = callAPI( $jobURL );
 $response = json_decode( $get_data, true );
@@ -112,49 +65,11 @@ echo( "Current Page: " . $pageNumber );
   <?php /*?>Result ID : <?php echo $_POST['location'] ; ?>: <?php echo $_POST['role']; ?><?php */?>
   <section class="<?php echo $bkg; ?>">
     <div class="careers">
-      <?php if ( $intro ) { ?>
-      <?php echo $intro; ?>
+      <?php if ( $title ) { ?>
+        <h2><?php echo $title; ?> </h2>
       <?php } ?>
-      <div class="careers__filter">
-        <div class="careers__filter-item">
-          <select name="company" id="company" onChange="this.form.submit()">
-<!--            <option>COMPANY</option>-->
-			  <option value="" disabled selected hidden>COMPANY</option>
-			   <option value="">All Company</option>
-            <?php
-            foreach ( $jobFilter_companies as $company ) {
-              $selected = ( isset( $_POST[ 'company' ] ) && $_POST[ 'company' ] == $company[ id ] ) ? 'selected' : '';
-              echo "<option  value='$company[id]' $selected >$company[title]</option>";
-            }
-            ?>
-          </select>
-        </div>
-        <div class="careers__filter-item">
-          <select name="location" id="location" onChange="this.form.submit()">
-            <option value=""  disabled selected hidden>LOCATION</option>
-            <option value="">All Location</option>
-            <?php
-            foreach ( $jobFilter_locations as $location ) {
-              $selected = ( isset( $_POST[ 'location' ] ) && $_POST[ 'location' ] == $location[ id ] ) ? 'selected' : '';
-              echo "<option  value='$location[id]' $selected >$location[name]</option>";
-            }
-            ?>
-          </select>
-        </div>
-        <div class="careers__filter-item">
-          <select  name="role" id="role" onChange="this.form.submit()">
-            <option value=""  disabled selected hidden>JOB ROLE</option>
-            <option value="">All Job Role</option>
-            <?php
-            foreach ( $jobFilter_roles as $role ) {
-              $selected = ( isset( $_POST[ 'role' ] ) && $_POST[ 'role' ] == $role[ title ] ) ? 'selected' : '';
-              echo "<option  value='$role[title]' $selected>$role[title]</option>";
-            }
-            ?>
-          </select>
-        </div>
-      </div>
-      <div class="careers-list">
+		  <!-- <h2>Career in  <?php echo $data[0]['location']['name'] ?></h2> -->
+     <div class="careers-list">
         <?php
         foreach ( $data as $value ) {
           ?>
