@@ -107,13 +107,56 @@ $imagemobile = get_field( 'story_image_mobile', get_the_ID() );
 </div>
 <div class="bkg--white career-details--additional">
 	<h2>More Information</h2>
-	<section class="career-details-item">
-		
-		<h3>About the Hiring Team</h3>
-		<div class="career-details-item--content">
-			<p><?php echo $data['hiringManager']['firstName']."  ".$data['hiringManager']['lastName'] ; ?> </p>
-		</div>
+
+	<section class="career-details--list">
+		<ul class="accordion-list">
+			<?php // if ( $data['hiringManager'] ) { ?>
+			<li>
+				<button class="accordion--title" aria-expanded="false"><?php echo $title ?> <svg class="icon icon--open"><use xlink:href="#accordion-arrow"></use></svg>About the Hiring Team</button>
+				<div class="accordion--content">
+					<p><?php echo $data['hiringManager']['firstName']."  ".$data['hiringManager']['lastName'] ; ?> </p>
+				</div>
+			</li>
+			<?php // } ?>
+
+			<li>
+				<button class="accordion--title" aria-expanded="false"><?php echo $title ?> <svg class="icon icon--open"><use xlink:href="#accordion-arrow"></use></svg>Training & Progression</button>
+				<div class="accordion--content">
+					Training
+				</div>
+			</li>
+
+			<li>
+				<button class="accordion--title" aria-expanded="false"><?php echo $title ?> <svg class="icon icon--open"><use xlink:href="#accordion-arrow"></use></svg>Benefits</button>
+				<div class="accordion--content">
+					Benefits
+				</div>
+			</li>
+
+			<li>
+				<button class="accordion--title" aria-expanded="false"><?php echo $title ?> <svg class="icon icon--open"><use xlink:href="#accordion-arrow"></use></svg>Application Tips</button>
+				<div class="accordion--content">
+					Tips
+				</div>
+			</li>
+
+			<li>
+				<button class="accordion--title" aria-expanded="false"><?php echo $title ?> <svg class="icon icon--open"><use xlink:href="#accordion-arrow"></use></svg>Application Process</button>
+				<div class="accordion--content">
+					Process
+				</div>
+			</li>
+
+			<li>
+				<button class="accordion--title" aria-expanded="false"><?php echo $title ?> <svg class="icon icon--open"><use xlink:href="#accordion-arrow"></use></svg>Working in <?php echo $data['location']['name'] .", ".$data['location']['country'] ." ";?></button>
+				<div class="accordion--content">
+					Location
+				</div>
+			</li>
+		</ul>
 	</section>
+</div>
+
 	<?php 	if (count($datas) != 0 && $datas != "") {  ?>
 	<section class="similar-jobs bkg--grey">
 		<div class="careers">
@@ -161,7 +204,7 @@ $imagemobile = get_field( 'story_image_mobile', get_the_ID() );
 		</div>
 	</section>
 	<?php } ?>
-</div>
+
 </article>
 <?php the_content(); ?>
 <?php endwhile; ?>
