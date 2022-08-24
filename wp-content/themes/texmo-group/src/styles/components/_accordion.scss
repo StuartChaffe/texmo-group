@@ -25,6 +25,19 @@
 				border-bottom: 1px solid var(--color-grey);
 			}
 		}
+
+		.active {
+			.icon {
+				color: var(--color-text-base);
+				&--open {
+					// display: none;
+					transform: rotate(180deg);
+				}
+				&--close {
+					display: none;
+				}
+			}
+		}
 	}
 	&-icons {
 		display: flex;
@@ -77,18 +90,7 @@
 			cursor: pointer;
 		}
 	}
-	.active {
-		.icon {
-			color: var(--color-text-base);
-			&--open {
-				// display: none;
-				transform: rotate(180deg);
-			}
-			&--close {
-				display: none;
-			}
-		}
-	}
+	
 	&--content {
 		display: flex;
 		transition: .3s background-color ease-in-out;

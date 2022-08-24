@@ -46,7 +46,7 @@ if ( isset( $_POST[ 'pageNumber' ] ) && ( $_POST[ 'pageNumber' ] != "" && $_POST
   $jobURL = $jobURL . $queryString . "pageNumber=" . $var;
 }
 
-echo $jobURL;
+//echo $jobURL;
 
 $get_data = callAPI( $jobURL );
 $response = json_decode( $get_data, true );

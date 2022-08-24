@@ -41,3 +41,13 @@
 		}
 	}
 }
+.career-details--list {
+	.accordion--content {
+		.career-details-item--content {
+			margin-left: 0;
+			@include mq(medium) {
+				margin-left: 50%;
+			}
+		}
+	}
+}

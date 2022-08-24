@@ -750,6 +750,15 @@ input[type=button]:focus {
   padding-top: var(--spacing-l);
 }
 
+.career-details--list .accordion--content .career-details-item--content {
+  margin-left: 0;
+}
+@media (min-width: 50em) {
+  .career-details--list .accordion--content .career-details-item--content {
+    margin-left: 50%;
+  }
+}
+
 .careers {
   margin: 0 auto;
   padding-top: var(--spacing);
@@ -1992,6 +2001,15 @@ body.nav-open {
 .accordion-list li:last-of-type {
   border-bottom: 1px solid var(--color-grey);
 }
+.accordion-list .active .icon {
+  color: var(--color-text-base);
+}
+.accordion-list .active .icon--open {
+  transform: rotate(180deg);
+}
+.accordion-list .active .icon--close {
+  display: none;
+}
 .accordion-icons {
   display: flex;
   width: 100%;
@@ -2035,15 +2053,6 @@ body.nav-open {
 }
 .accordion--title:hover {
   cursor: pointer;
-}
-.accordion .active .icon {
-  color: var(--color-text-base);
-}
-.accordion .active .icon--open {
-  transform: rotate(180deg);
-}
-.accordion .active .icon--close {
-  display: none;
 }
 .accordion--content {
   display: flex;

@@ -75,31 +75,34 @@ $imagemobile = get_field( 'story_image_mobile', get_the_ID() );
 		<br />";
 		echo "Job Title: ". $_GET['title'] ;
 		?><?php */?>
-		<div class="career-details-item">
-			<div>
-				<h3>Job Description 1</h3>
-			</div>
-			<div class="career-details-item--content">
-				<p><?php echo $data['description'] ; ?> </p>
-			</div>
-		</div>
-		<div class="career-details-item">
-			<div>
-				<h3>Responsibilities</h3>
-			</div>
-			<div class="career-details-item--content">
-				<p><?php echo $data['keyResponsibilities'] ; ?> </p>
-			</div>
-		</div>
-		<div class="career-details-item">
-			<div>
-				<h3>Requirements</h3>
-			</div>
-			<div class="career-details-item--content">
-				<p><?php echo $data['skillsKnowledgeExpertise'] ; ?> </p>
-			</div>
-		</div>
+		<ul class="accordion-list">
+			<li>
+				<button class="accordion--title" aria-expanded="false"><?php echo $title ?> <svg class="icon icon--open"><use xlink:href="#accordion-arrow"></use></svg>Job Description</button>
+				<div class="accordion--content">
+					<div class="career-details-item--content">
+						<p><?php echo $data['description'] ; ?> </p>
+					</div>
+				</div>
+			</li>
 
+			<li>
+				<button class="accordion--title" aria-expanded="false"><?php echo $title ?> <svg class="icon icon--open"><use xlink:href="#accordion-arrow"></use></svg>Responsibilities</button>
+				<div class="accordion--content">
+					<div class="career-details-item--content">
+						<p><?php echo $data['keyResponsibilities'] ; ?> </p>
+					</div>
+				</div>
+			</li>
+
+			<li>
+				<button class="accordion--title" aria-expanded="false"><?php echo $title ?> <svg class="icon icon--open"><use xlink:href="#accordion-arrow"></use></svg>Requirements</button>
+				<div class="accordion--content">
+					<div class="career-details-item--content">
+						<p><?php echo $data['skillsKnowledgeExpertise'] ; ?> </p>
+					</div>
+				</div>
+			</li>
+		</ul>
 	</section>
 </div>
 <div class="bkg--white career-details--additional">
