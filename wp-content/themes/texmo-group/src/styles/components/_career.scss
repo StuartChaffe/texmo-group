@@ -42,11 +42,23 @@
 	}
 }
 .career-details--list {
+	.accordion-list {
+		max-width: var(--container-l);
+	}
 	.accordion--content {
+		flex-wrap: wrap;
 		.career-details-item--content {
 			margin-left: 0;
 			@include mq(medium) {
 				margin-left: 50%;
+			}
+		}
+		&__image {
+			img {
+				margin-bottom: 2rem;
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 		}
 	}

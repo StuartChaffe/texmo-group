@@ -110,21 +110,32 @@ $imagemobile = get_field( 'story_image_mobile', get_the_ID() );
 
 	<section class="career-details--list">
 		<ul class="accordion-list">
-			<?php // if ( $data['hiringManager'] ) { ?>
+			<?php if ( $data['hiringManager'] ) { ?>
 			<li>
 				<button class="accordion--title" aria-expanded="false"><?php echo $title ?> <svg class="icon icon--open"><use xlink:href="#accordion-arrow"></use></svg>About the Hiring Team</button>
 				<div class="accordion--content">
 					<p><?php echo $data['hiringManager']['firstName']."  ".$data['hiringManager']['lastName'] ; ?> </p>
 				</div>
 			</li>
-			<?php // } ?>
-
+			<?php } ?>
+			<?php if( have_rows('training_progression', 'options') ) { ?>
 			<li>
 				<button class="accordion--title" aria-expanded="false"><?php echo $title ?> <svg class="icon icon--open"><use xlink:href="#accordion-arrow"></use></svg>Training & Progression</button>
 				<div class="accordion--content">
-					Training
+				<?php while( have_rows('training_progression', 'options') ): the_row();
+					$image = get_sub_field('image');
+					$content = get_sub_field('content');
+				?>
+					<div class="accordion--content__image">
+						<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+					</div>
+					<div class="accordion--content__text">
+						<?php echo $content; ?>
+					</div>
+				<?php endwhile; ?>
 				</div>
 			</li>
+			<?php } ?>
 
 			<li>
 				<button class="accordion--title" aria-expanded="false"><?php echo $title ?> <svg class="icon icon--open"><use xlink:href="#accordion-arrow"></use></svg>Benefits</button>
@@ -133,26 +144,86 @@ $imagemobile = get_field( 'story_image_mobile', get_the_ID() );
 				</div>
 			</li>
 
+			<?php if( have_rows('application_tips', 'options') ) { ?>
 			<li>
 				<button class="accordion--title" aria-expanded="false"><?php echo $title ?> <svg class="icon icon--open"><use xlink:href="#accordion-arrow"></use></svg>Application Tips</button>
 				<div class="accordion--content">
-					Tips
+				<?php while( have_rows('application_tips', 'options') ): the_row();
+						$image = get_sub_field('image');
+						$content = get_sub_field('content');
+					?>
+					<div class="accordion--content-item">
+						<div class="accordion--content__image">
+							<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+						</div>
+						<div class="accordion--content__text">
+							<?php echo $content; ?>
+						</div>
+					</div>
+				<?php endwhile; ?>
 				</div>
 			</li>
+			<?php } ?>
 
+			<?php if( have_rows('application_process', 'options') ) { ?>
 			<li>
 				<button class="accordion--title" aria-expanded="false"><?php echo $title ?> <svg class="icon icon--open"><use xlink:href="#accordion-arrow"></use></svg>Application Process</button>
 				<div class="accordion--content">
-					Process
+				<?php while( have_rows('application_process', 'options') ): the_row();
+						$image = get_sub_field('image');
+						$content = get_sub_field('content');
+					?>
+					<div class="accordion--content-item">
+						<div class="accordion--content__image">
+							<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+						</div>
+						<div class="accordion--content__text">
+							<?php echo $content; ?>
+						</div>
+					</div>
+				<?php endwhile; ?>
 				</div>
 			</li>
+			<?php } ?>
 
+
+			<?php if( have_rows('location_details', 'options') ) { ?>
 			<li>
 				<button class="accordion--title" aria-expanded="false"><?php echo $title ?> <svg class="icon icon--open"><use xlink:href="#accordion-arrow"></use></svg>Working in <?php echo $data['location']['name'] .", ".$data['location']['country'] ." ";?></button>
 				<div class="accordion--content">
-					Location
+						<?php while( have_rows('location_details', 'options') ): the_row();
+							$sheffield = get_sub_field('sheffield', 'options');
+						?>
+							<?php if( have_rows('sheffield') ) { ?>						
+								<?php while( have_rows('sheffield') ): the_row();
+									$content = get_sub_field('text');
+									$images = get_sub_field('images');
+								?>
+									<div class="accordion--content-item">
+
+										<?php if( have_rows('images') ) { ?>
+											<div class="accordion--content__image">
+											<?php while( have_rows('images') ): the_row();
+												$image = get_sub_field('image');
+											?>
+												<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+											<?php endwhile; ?>
+											</div>
+										<?php } ?>
+									
+										<div class="accordion--content__text">
+											<?php echo $content; ?>
+										</div>	
+									</div>
+
+								<?php endwhile; ?>
+								
+							<?php } ?>
+						<?php endwhile; ?>
 				</div>
 			</li>
+			<?php } ?>
+			
 		</ul>
 	</section>
 </div>

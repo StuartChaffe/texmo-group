@@ -750,6 +750,12 @@ input[type=button]:focus {
   padding-top: var(--spacing-l);
 }
 
+.career-details--list .accordion-list {
+  max-width: var(--container-l);
+}
+.career-details--list .accordion--content {
+  flex-wrap: wrap;
+}
 .career-details--list .accordion--content .career-details-item--content {
   margin-left: 0;
 }
@@ -757,6 +763,12 @@ input[type=button]:focus {
   .career-details--list .accordion--content .career-details-item--content {
     margin-left: 50%;
   }
+}
+.career-details--list .accordion--content__image img {
+  margin-bottom: 2rem;
+}
+.career-details--list .accordion--content__image img:last-child {
+  margin-bottom: 0;
 }
 
 .careers {
@@ -2059,6 +2071,21 @@ body.nav-open {
   transition: 0.3s background-color ease-in-out;
   text-align: left;
   padding-bottom: var(--spacing);
+}
+.accordion--content-item {
+  display: flex;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.accordion--content__image {
+  width: 30%;
+}
+.accordion--content__image img {
+  width: 100%;
+}
+.accordion--content__text {
+  width: 70%;
+  padding: 0 var(--spacing-l);
 }
 .accordion--content ul {
   margin-top: 1.5em;
