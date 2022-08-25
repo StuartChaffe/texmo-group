@@ -741,9 +741,9 @@ input[type=button]:focus {
   width: 50%;
 }
 .career-details-item--content ul li {
-  list-style: disc;
   padding-bottom: 8px;
   line-height: 27px;
+  border-bottom: 0 !important;
 }
 .career-details--additional {
   text-align: center;
@@ -2101,6 +2101,9 @@ body.nav-open {
 }
 .accordion--content p:last-of-type {
   margin-bottom: 0 !important;
+}
+.accordion--content li::marker {
+  display: none;
 }
 .accordion--content li:before {
   content: "•";

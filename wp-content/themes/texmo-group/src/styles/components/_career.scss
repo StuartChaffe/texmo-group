@@ -29,9 +29,10 @@
 			&--content {
 				width: 50%;
 				ul li {
-					list-style: disc;
+					// list-style: disc;
 					padding-bottom: 8px;
 					line-height: 27px;
+					border-bottom: 0 !important;
 				}
 			}
 		}

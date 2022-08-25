@@ -191,6 +191,24 @@ $imagemobile = get_field( 'story_image_mobile', get_the_ID() );
 			<li>
 				<button class="accordion--title" aria-expanded="false"><?php echo $title ?> <svg class="icon icon--open"><use xlink:href="#accordion-arrow"></use></svg>Working in <?php echo $data['location']['name'] .", ".$data['location']['country'] ." ";?></button>
 				<div class="accordion--content">
+
+
+				<?php 
+
+					$location = $data['location']['name'];
+					$field = strtolower($location);
+					$content = get_sub_field($field, 'options');
+
+					if($content) {
+						foreach ($content as $item) {
+							var_dump($item);
+						}
+					}
+
+				?>
+
+				<div style="display: none">
+				<?php if ( $data['location']['name'] == 'Sheffield') { ?>
 						<?php while( have_rows('location_details', 'options') ): the_row();
 							$sheffield = get_sub_field('sheffield', 'options');
 						?>
@@ -220,6 +238,74 @@ $imagemobile = get_field( 'story_image_mobile', get_the_ID() );
 								
 							<?php } ?>
 						<?php endwhile; ?>
+					<?php } ?>
+
+			
+					<?php if ( $data['location']['name'] == 'Coimbatore') { ?>
+						<?php while( have_rows('location_details', 'options') ): the_row();
+							$coimbatore = get_sub_field('coimbatore', 'options');
+						?>
+							<?php if( have_rows('coimbatore') ) { ?>						
+								<?php while( have_rows('coimbatore') ): the_row();
+									$content = get_sub_field('text');
+									$images = get_sub_field('images');
+								?>
+									<div class="accordion--content-item">
+
+										<?php if( have_rows('images') ) { ?>
+											<div class="accordion--content__image">
+											<?php while( have_rows('images') ): the_row();
+												$image = get_sub_field('image');
+											?>
+												<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+											<?php endwhile; ?>
+											</div>
+										<?php } ?>
+									
+										<div class="accordion--content__text">
+											<?php echo $content; ?>
+										</div>	
+									</div>
+
+								<?php endwhile; ?>
+								
+							<?php } ?>
+						<?php endwhile; ?>
+					<?php } ?>
+
+					<?php if ( $data['location']['name'] == 'Indiana') { ?>
+						<?php while( have_rows('location_details', 'options') ): the_row();
+							$indiana = get_sub_field('indiana', 'options');
+						?>
+							<?php if( have_rows('indiana') ) { ?>						
+								<?php while( have_rows('indiana') ): the_row();
+									$content = get_sub_field('text');
+									$images = get_sub_field('images');
+								?>
+									<div class="accordion--content-item">
+
+										<?php if( have_rows('images') ) { ?>
+											<div class="accordion--content__image">
+											<?php while( have_rows('images') ): the_row();
+												$image = get_sub_field('image');
+											?>
+												<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+											<?php endwhile; ?>
+											</div>
+										<?php } ?>
+									
+										<div class="accordion--content__text">
+											<?php echo $content; ?>
+										</div>	
+									</div>
+
+								<?php endwhile; ?>
+								
+							<?php } ?>
+						<?php endwhile; ?>
+					<?php } ?>
+
+					</div>
 				</div>
 			</li>
 			<?php } ?>
