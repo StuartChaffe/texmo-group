@@ -195,20 +195,18 @@ $imagemobile = get_field( 'story_image_mobile', get_the_ID() );
 
 				<?php 
 
-					$location = $data['location']['name'];
-					$field = strtolower($location);
-					$content = get_sub_field($field, 'options');
+					// $location = $data['location']['name'];
+					// $field = strtolower($location);
+					// $content = get_sub_field($field, 'options');
 
-					if($content) {
-						foreach ($content as $item) {
-							var_dump($item);
-						}
-					}
+					// if($content) {
+						// foreach ($content as $item) {
+							// var_dump($item);
+						// }
+					// }
 
 				?>
-
-				<div style="display: none">
-				<?php if ( $data['location']['name'] == 'Sheffield') { ?>
+					<?php if ( $data['location']['name'] == 'Sheffield') { ?>
 						<?php while( have_rows('location_details', 'options') ): the_row();
 							$sheffield = get_sub_field('sheffield', 'options');
 						?>
@@ -304,8 +302,6 @@ $imagemobile = get_field( 'story_image_mobile', get_the_ID() );
 							<?php } ?>
 						<?php endwhile; ?>
 					<?php } ?>
-
-					</div>
 				</div>
 			</li>
 			<?php } ?>
