@@ -1923,6 +1923,11 @@ ul.menu .sub-menu li a:after {
   width: 100%;
 }
 
+.benefits-icons {
+  padding-top: var(--spacing-xs);
+  padding-bottom: var(--spacing);
+}
+
 .global-container {
   display: flex;
   flex-direction: column;

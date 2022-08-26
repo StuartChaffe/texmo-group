@@ -137,12 +137,24 @@ $imagemobile = get_field( 'story_image_mobile', get_the_ID() );
 			</li>
 			<?php } ?>
 
+			<?php if( have_rows('benefits', 'options') ) { ?>
 			<li>
 				<button class="accordion--title" aria-expanded="false"><?php echo $title ?> <svg class="icon icon--open"><use xlink:href="#accordion-arrow"></use></svg>Benefits</button>
-				<div class="accordion--content">
-					Benefits
+				<div class="accordion--content benefits-icons icons">
+				<?php while( have_rows('benefits', 'options') ): the_row();
+					$image = get_sub_field('benefit_icon');
+					$content = get_sub_field('benefit_name');
+				?>
+					<div class="icons-item">
+						<div class="icons-item--image">
+							<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+						</div>
+						<p><?php echo $content; ?></p>
+					</div>
+				<?php endwhile; ?>
 				</div>
 			</li>
+			<?php } ?>
 
 			<?php if( have_rows('application_tips', 'options') ) { ?>
 			<li>
@@ -337,7 +349,7 @@ $imagemobile = get_field( 'story_image_mobile', get_the_ID() );
 					</div>
 					<div class="careers-item__footer">
 						<div>
-							<p class="label red">UK / INDIA needs adding</p>
+							<p class="label red"><?php echo $value['location']['country'] ?></p>
 							<p class="label red"><?php echo $value['department']['name'] ?></p>
 						</div>
 						<div>

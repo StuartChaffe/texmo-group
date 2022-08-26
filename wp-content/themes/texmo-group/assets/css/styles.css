@@ -2424,6 +2424,11 @@ body.nav-open {
   width: 100%;
 }
 
+.benefits-icons {
+  padding-top: var(--spacing-xs);
+  padding-bottom: var(--spacing);
+}
+
 .link-block {
   padding-left: 1em;
   padding-right: 1em;
