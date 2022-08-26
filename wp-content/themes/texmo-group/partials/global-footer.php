@@ -20,7 +20,7 @@
 						United Kingdom</p>
 				</div>
 				<div class="footer--companies-item">
-					<img src="<?php echo get_template_directory_uri(); ?>/src/images/taro-water.svg" alt="Texmo Group logo" />
+					<img src="<?php echo get_template_directory_uri(); ?>/src/images/taro-water.png" alt="Texmo Group logo" />
 					<p>Taro Water<br />
 						P.O. Box: 5303,<br />
 						Mettupalayam Road,<br />

@@ -76,6 +76,7 @@
 			}
 
 			> div {
+				padding-right: 2rem;
 				width: 100%;
 				@include mq(medium) {
 					width: 50%;

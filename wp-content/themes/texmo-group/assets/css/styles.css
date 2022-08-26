@@ -1643,6 +1643,7 @@ body.nav-open {
   }
 }
 .footer--companies-item img {
+  height: 32px;
   margin-bottom: 1.5rem;
 }
 .footer--right {
@@ -2308,6 +2309,7 @@ body.nav-open {
   }
 }
 .carousel-full--content > div {
+  padding-right: 2rem;
   width: 100%;
 }
 @media (min-width: 50em) {
