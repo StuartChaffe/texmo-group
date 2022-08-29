@@ -111,13 +111,37 @@ $imagemobile = get_field( 'story_image_mobile', get_the_ID() );
 	<section class="career-details--list">
 		<ul class="accordion-list">
 			<?php if ( $data['hiringManager'] ) { ?>
+			<?php if( have_rows('team', 'options') ) { ?>
 			<li>
 				<button class="accordion--title" aria-expanded="false"><?php echo $title ?> <svg class="icon icon--open"><use xlink:href="#accordion-arrow"></use></svg>About the Hiring Team</button>
 				<div class="accordion--content">
-					<p><?php echo $data['hiringManager']['firstName']."  ".$data['hiringManager']['lastName'] ; ?> </p>
+					<?php while( have_rows('team', 'options') ): the_row();
+						$image = get_sub_field('team_image');
+						$name = get_sub_field('team_name');
+						$role = get_sub_field('team_role');
+						$bio = get_sub_field('team_bio');
+						$location = $data['location']['name'];
+						$teamlocation = get_sub_field('team_location');
+					?>
+					<?php if ($location == $teamlocation ) { ?>
+					<div class="accordion--content-item">
+						<div class="accordion--content__image">
+							<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+						</div>
+						<div class="accordion--content__text">
+							<p><strong><?php echo $name; ?></strong><br />
+							<?php// echo $data['hiringManager']['firstName']."  ".$data['hiringManager']['lastName'] ; ?> 
+							<strong><?php echo $role; ?></strong></p>
+							<?php echo $bio; ?>
+						</div>
+					</div>
+					<?php } ?>
+					<?php endwhile; ?>
 				</div>
 			</li>
 			<?php } ?>
+			<?php } ?>
+			
 			<?php if( have_rows('training_progression', 'options') ) { ?>
 			<li>
 				<button class="accordion--title" aria-expanded="false"><?php echo $title ?> <svg class="icon icon--open"><use xlink:href="#accordion-arrow"></use></svg>Training & Progression</button>
@@ -144,13 +168,17 @@ $imagemobile = get_field( 'story_image_mobile', get_the_ID() );
 				<?php while( have_rows('benefits', 'options') ): the_row();
 					$image = get_sub_field('benefit_icon');
 					$content = get_sub_field('benefit_name');
+					$location = $data['location']['name'];
+					$benefitlocation = get_sub_field('benefit_location');
 				?>
+					<?php if(in_array($location, $benefitlocation )){ ?>
 					<div class="icons-item">
 						<div class="icons-item--image">
 							<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 						</div>
 						<p><?php echo $content; ?></p>
 					</div>
+					<?php } ?>
 				<?php endwhile; ?>
 				</div>
 			</li>
