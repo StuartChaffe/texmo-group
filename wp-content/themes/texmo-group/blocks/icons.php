@@ -6,7 +6,7 @@ $bkg = get_field('bkg-colour');
 ?>
 
 <section class="<?php echo $bkg ?>">
-	<div class="icons">
+	<div class="icons icons-slider">
 	<?php if( have_rows('icons') ) { ?>
 		<?php while( have_rows('icons') ): the_row();
 			$icon = get_sub_field('icon');

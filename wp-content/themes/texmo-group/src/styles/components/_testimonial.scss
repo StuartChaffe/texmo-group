@@ -13,6 +13,7 @@
 	&--quote {
 		width: 100%;
 		@extend .container--large;
+		padding: 0;
 		@include mq(medium) {
 			padding: 0 var(--spacing-l);
 		}
@@ -21,14 +22,17 @@
 		}
 
 		&__position {
-			width: 50%;
+			width: 60%;
+			@include mq(medium) {
+				width: 50%;
+			}
 		}
 	}
 	&--image {
 		position: absolute;
 		top: 0;
 		height: 100%;
-		width: 70%;
+		width: 60%;
 		@include mq(medium) {
 			width: 50%;
 		}

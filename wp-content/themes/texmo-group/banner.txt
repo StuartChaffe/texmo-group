@@ -1,0 +1,9 @@
+
+Banner removed 
+<?php if ( $video['banner_video_id'] ) { ?>
+<a style="display: none" href="#" data-featherlight="#banner-video" data-featherlight-iframe-allow="autoplay"><?php echo $video['banner_video_text']; ?></a>
+
+<div class="lightbox" id="banner-video" style="display: none">
+    <iframe src="https://player.vimeo.com/video/219014507?autoplay=1&loop=1&autopause=0" width="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen ></iframe>
+</div>
+<?php } ?>

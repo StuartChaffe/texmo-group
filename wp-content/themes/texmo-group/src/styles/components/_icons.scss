@@ -1,9 +1,9 @@
 .icons {
-	padding-top: var(--spacing-xs);
-	padding-bottom:  var(--spacing-xs);
+	padding-top: var(--spacing);
+	padding-bottom:  var(--spacing);
 	@extend .container--large;
 	display: flex;
-	justify-content: space-around;
+	// justify-content: space-around;
 	// flex-wrap: wrap;
 	@include mq(medium) {
 		padding-top: var(--spacing-l);
@@ -28,11 +28,33 @@
 			justify-content: center;
 			text-align: center;
 			height: 100px;
-			max-width: 90px;
-			// background: red;
+			// max-width: 90px;
 			margin-bottom: 0.5rem;
 			img {
-				width: 100%;
+				// width: 100%;
+			}
+		}
+	}
+
+	&-slider {
+		.slick-prev {
+			left: 1rem;
+		}
+		.slick-next {
+			right: 1rem;
+		}
+		.slick-list {
+			width: 100%;
+			.slick-track {
+				// @include mq($until: medium) {
+				// 	width: 100% !important;
+				// }
+				.slick-slide {
+					flex: 1 1 0px;
+					div {
+						width: 100%;
+					}
+				}
 			}
 		}
 	}
