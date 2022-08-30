@@ -1,6 +1,6 @@
 .testimonial {
 	position: relative;
-	padding: var(--spacing) var(--spacing) var(--spacing-l) var(--spacing);
+	padding: var(--spacing);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -11,6 +11,7 @@
 		padding: var(--spacing-l) 0;
 	}
 	&--quote {
+		z-index: 9;
 		width: 100%;
 		@extend .container--large;
 		padding: 0;
@@ -22,7 +23,7 @@
 		}
 
 		&__position {
-			width: 60%;
+			width: 100%;
 			@include mq(medium) {
 				width: 50%;
 			}
@@ -33,7 +34,9 @@
 		top: 0;
 		height: 100%;
 		width: 60%;
+		display: none;
 		@include mq(medium) {
+			display: block;
 			width: 50%;
 		}
 		@include mq(large) {

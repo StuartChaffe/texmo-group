@@ -13,10 +13,13 @@
 	}
 	&--companies {
 		display: flex;
+		flex-wrap: wrap;
 		&-item {
 			margin-right: 1rem;
+			width: calc(50% - 1rem);
 			@include mq(medium) {
 				margin-right: 5rem;
+				width: auto;
 			}
 			img {
 				height: 32px;
@@ -31,13 +34,23 @@
 	&--right {
 		// width: calc(100% / 3 * 1);
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
+		align-items: flex-start;
+		margin-top: 2rem;
 		
 		@include mq(medium) {
+			margin-top: 0;
 			margin-left: auto;
+			flex-direction: column;
 		}
 		@include mq(large) {
 			padding-right: var(--spacing-l);
+		}
+		img {
+			margin-right: 2rem;
+			@include mq(medium) {
+				margin-right: 0;
+			}
 		}
 	}
 

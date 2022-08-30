@@ -18,8 +18,9 @@
 		width: 100%;
 		margin-bottom: var(--spacing-xs);
 		margin-top: 0;
-		padding: var(--spacing);
-		transition: background .1s ease-in-out;
+		padding: var(--spacing-xs) var(--spacing-s);
+		padding-left: var(--spacing-xs);
+		transition: background-color .1s ease-in-out;
 		// @include mq(medium) {
 		// 	width: 100%;
 		// 	padding: var(--spacing);
@@ -46,7 +47,10 @@
 			margin-left: 0;
 			p {
 				margin: 0;
-				margin-left: 50%;
+				margin-left: 40%;
+				@include mq(medium) {
+					margin-left: 50%;
+				}
 			}
 			img {
 				left: 0;
@@ -79,7 +83,7 @@
 			}
 		}
 		&:hover {
-			transition: background .1s ease-in-out;
+			transition: background-color .1s ease-in-out;
 		}
 	}
 }
