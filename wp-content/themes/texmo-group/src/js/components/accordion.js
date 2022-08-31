@@ -9,11 +9,11 @@ jQuery(function ($) {
 		if($(this).next().is(':hidden') == true) {
 			$(this).addClass('active');
 			$(this).next().slideDown('normal');
-			// setTimeout(() => {
-			// 	$('body, html').animate({
-			// 	  scrollTop: $(this).offset().top
-			// 	 }, 0)
-			//   }, 400)
+			setTimeout(() => {
+				$('body, html').animate({
+				  scrollTop: $(this).offset().top
+				 }, 200)
+			  }, 400)
 		}
 		return false;
 	});

@@ -15,8 +15,19 @@
 			align-items: center;
    			justify-content: space-between;
 			@extend .container;
-			padding: 1.5rem 0;
+			padding: 1rem;
 			color: white;
+			@include mq(medium) {
+				padding: 1.5rem 0;
+			}
+			.btn {
+				@include mq($until: medium) {
+					padding: 1rem 0;
+					min-width: 120px;
+					white-space: nowrap;
+					margin-right: 1rem;
+				}
+			}
 		}
 		&-item {
 			@extend .container;

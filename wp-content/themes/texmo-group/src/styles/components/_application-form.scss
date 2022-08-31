@@ -1,24 +1,40 @@
 .application-form {
 	@extend .container;
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
-	padding: var(--spacing-l) 0;
+	padding: var(--spacing) var(--spacing-s);
+	@include mq(medium) {
+		flex-direction: row;
+		padding: var(--spacing-l) 0;
+	}
 	&--form {
-		width: 65%;
+		
+		@include mq(medium) {
+			width: 65%;
+		}
 
 		ul {
+
+			padding-left: 0;
 			li {
 				display: flex;
-				flex-direction: row;
+				flex-direction: column;
 				margin-bottom: 1rem;
+				@include mq(medium) {
+					flex-direction: row;
+					margin-bottom: 1rem;
+				}
 			}
 		}
 
 		label {
-			width: 25%;
 			margin-right: 5%;
 			margin-top: 1.2rem;
 			font-weight: var(--font-weight-normal);
+			@include mq(medium) {
+				width: 25%;
+			}
 		}
 		p {
 			width: 100%;

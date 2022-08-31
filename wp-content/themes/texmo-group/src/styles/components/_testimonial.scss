@@ -54,8 +54,11 @@
 .image--left {
 	.testimonial--quote {
 		&__position {
-			width: 50%;
+			width: 100%;
 			margin-left: auto;
+			@include mq(large) {
+				width: 50%;
+			}
 		}
 	}
 	.testimonial--image {

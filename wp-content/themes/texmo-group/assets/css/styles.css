@@ -726,8 +726,21 @@ input[type=button]:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 0;
+  padding: 1rem;
   color: white;
+}
+@media (min-width: 50em) {
+  .career-details-inner {
+    padding: 1.5rem 0;
+  }
+}
+@media (max-width: 49.99em) {
+  .career-details-inner .btn, .career-details-inner input[type=submit] {
+    padding: 1rem 0;
+    min-width: 120px;
+    white-space: nowrap;
+    margin-right: 1rem;
+  }
 }
 .career-details-item {
   display: flex;
@@ -1091,9 +1104,16 @@ span.btn:hover {
 }
 .global-header--inner .btn, .global-header--inner input[type=submit] {
   z-index: 999;
-  padding: 8px 35px 5px 35px;
+  min-width: 100px;
+  padding: 8px 0px 5px 0px;
   border: 1px solid white;
   color: white;
+}
+@media (min-width: 50em) {
+  .global-header--inner .btn, .global-header--inner input[type=submit] {
+    min-width: none;
+    padding: 8px 35px 5px 35px;
+  }
 }
 .global-header--inner .btn:hover, .global-header--inner input[type=submit]:hover {
   color: var(--color-secondary);
@@ -1431,7 +1451,7 @@ ul.menu .sub-menu li a:after {
   width: 100%;
 }
 .map a {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: var(--font-weight-bold);
 }
 @media (min-width: 50em) {
@@ -1441,8 +1461,8 @@ ul.menu .sub-menu li a:after {
 }
 
 .map-item {
-  font-size: 18px;
-  line-height: 1.4rem;
+  font-size: 14px;
+  line-height: 1.2rem;
   text-align: left;
 }
 @media (min-width: 50em) {
@@ -1967,22 +1987,44 @@ body.nav-open {
 
 .application-form {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  padding: var(--spacing-l) 0;
+  padding: var(--spacing) var(--spacing-s);
 }
-.application-form--form {
-  width: 65%;
+@media (min-width: 50em) {
+  .application-form {
+    flex-direction: row;
+    padding: var(--spacing-l) 0;
+  }
+}
+@media (min-width: 50em) {
+  .application-form--form {
+    width: 65%;
+  }
+}
+.application-form--form ul {
+  padding-left: 0;
 }
 .application-form--form ul li {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-bottom: 1rem;
 }
+@media (min-width: 50em) {
+  .application-form--form ul li {
+    flex-direction: row;
+    margin-bottom: 1rem;
+  }
+}
 .application-form--form label {
-  width: 25%;
   margin-right: 5%;
   margin-top: 1.2rem;
   font-weight: var(--font-weight-normal);
+}
+@media (min-width: 50em) {
+  .application-form--form label {
+    width: 25%;
+  }
 }
 .application-form--form p {
   width: 100%;
@@ -2034,6 +2076,10 @@ body.nav-open {
 .accordion-list .active .icon--close {
   display: none;
 }
+.accordion-list .benefits-icons {
+  flex-direction: row;
+  padding: 1rem;
+}
 .accordion-icons {
   display: flex;
   width: 100%;
@@ -2051,6 +2097,7 @@ body.nav-open {
   margin-bottom: 1rem;
 }
 .accordion--title {
+  text-align: left;
   position: relative;
   display: flex;
   justify-content: center;
@@ -2080,24 +2127,47 @@ body.nav-open {
 }
 .accordion--content {
   display: flex;
+  flex-direction: column;
   transition: 0.3s background-color ease-in-out;
   text-align: left;
   padding-bottom: var(--spacing);
 }
+@media (min-width: 50em) {
+  .accordion--content {
+    flex-direction: row;
+  }
+}
 .accordion--content-item {
   display: flex;
+  flex-direction: column;
   margin-bottom: 2rem;
   width: 100%;
 }
+@media (min-width: 50em) {
+  .accordion--content-item {
+    flex-direction: row;
+  }
+}
 .accordion--content__image {
-  width: 30%;
+  width: 100%;
+}
+@media (min-width: 50em) {
+  .accordion--content__image {
+    width: 30%;
+  }
 }
 .accordion--content__image img {
   width: 100%;
 }
 .accordion--content__text {
-  width: 70%;
-  padding: 0 var(--spacing-l);
+  width: 100%;
+  padding: var(--spacing) 0;
+}
+@media (min-width: 50em) {
+  .accordion--content__text {
+    width: 70%;
+    padding: 0 var(--spacing-l);
+  }
 }
 .accordion--content ul {
   margin-top: 1.5em;
@@ -2265,10 +2335,15 @@ body.nav-open {
   overflow: hidden;
 }
 .carousel-item--title {
-  padding: 0 calc(var(--spacing) + 16px);
+  padding: 0 var(--spacing);
   transform: translateY(calc(100% + var(--spacing)));
   z-index: 999;
   position: relative;
+}
+@media (min-width: 50em) {
+  .carousel-item--title {
+    padding: 0 calc(var(--spacing) + 16px);
+  }
 }
 .carousel .carousel--image img {
   width: 100%;
@@ -2279,20 +2354,41 @@ body.nav-open {
   min-height: 50vw;
 }
 .carousel-textleft .slick-slide {
-  margin-top: auto;
+  margin-top: 3rem;
+}
+@media (min-width: 50em) {
+  .carousel-textleft .slick-slide {
+    margin-top: auto;
+  }
 }
 .carousel-textleft .carousel-item {
   display: flex !important;
+  flex-direction: column;
+}
+@media (min-width: 50em) {
+  .carousel-textleft .carousel-item {
+    flex-direction: row;
+  }
 }
 .carousel-textleft .carousel--content {
-  width: 50%;
-  padding-right: 20%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin-top: auto;
 }
+@media (min-width: 50em) {
+  .carousel-textleft .carousel--content {
+    width: 50%;
+    padding-right: 20%;
+  }
+}
 .carousel-textleft .carousel--image {
-  width: 50%;
+  width: 100%;
+}
+@media (min-width: 50em) {
+  .carousel-textleft .carousel--image {
+    width: 50%;
+  }
 }
 .carousel-textleft .carousel--image img {
   margin-left: auto;
@@ -2716,8 +2812,13 @@ body.nav-open {
 }
 
 .image--left .testimonial--quote__position {
-  width: 50%;
+  width: 100%;
   margin-left: auto;
+}
+@media (min-width: 70em) {
+  .image--left .testimonial--quote__position {
+    width: 50%;
+  }
 }
 .image--left .testimonial--image {
   background-position: right center;

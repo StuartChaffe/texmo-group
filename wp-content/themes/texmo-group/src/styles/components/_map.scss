@@ -17,7 +17,7 @@
         width: 100%;
     }
     a {
-        font-size: 18px;
+        font-size: 14px;
         font-weight: var(--font-weight-bold);
 		@include mq(medium) {
 			font-size: 22px;
@@ -25,8 +25,8 @@
     }
 }
 .map-item {
-	font-size: 18px;
-	line-height: 1.4rem;
+	font-size: 14px;
+	line-height: 1.2rem;
 	text-align: left;
 	@include mq(medium) {
 		font-size: 22px;

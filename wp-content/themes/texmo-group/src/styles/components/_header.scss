@@ -40,7 +40,15 @@
 		}
 		.btn {
 			z-index: 999;
-			padding: 8px 35px 5px 35px;
+			min-width: 100px;
+    		padding: 8px 0px 5px 0px;
+			
+			@include mq(medium) {
+				min-width: none;
+				padding: 8px 35px 5px 35px;
+			}
+
+
 			border: 1px solid white;
 			color: white;
 			&:hover {
