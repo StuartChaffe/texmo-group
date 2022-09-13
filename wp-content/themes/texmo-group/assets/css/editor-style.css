@@ -846,7 +846,7 @@ pre {
   background-size: cover;
   background-position: 10% center;
   width: 100%;
-  min-height: 100vh;
+  min-height: 400px;
 }
 @media (max-width: 49.99em) {
   .banner {
@@ -930,6 +930,9 @@ pre {
     padding-left: 0;
     padding-right: 0;
   }
+}
+.banner--content h1 {
+  margin-bottom: 0;
 }
 .banner--content h1, .banner--content h2, .banner--content h3, .banner--content .accordion--title, .banner--content h4, .banner--content h5, .banner--content p, .banner--content a {
   color: white;
@@ -1257,9 +1260,11 @@ span.btn:hover {
   display: flex;
   flex-direction: column;
   margin-top: auto;
+  margin-bottom: 1.5rem;
 }
 @media (min-width: 50em) {
   .carousel-textleft .carousel--content {
+    margin-bottom: 0;
     width: 50%;
     padding-right: 20%;
   }
@@ -1287,7 +1292,7 @@ span.btn:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: var(--spacing);
+  padding-bottom: 0;
 }
 @media (min-width: 50em) {
   .carousel-full--content {
@@ -1312,6 +1317,11 @@ span.btn:hover {
 @media (min-width: 50em) {
   .carousel-full--content > div:first-child {
     margin-bottom: 0;
+  }
+}
+@media (max-width: 49.99em) {
+  .carousel-full--content > div h3, .carousel-full--content > div .accordion--title, .carousel-full--content > div p {
+    text-align: left !important;
   }
 }
 .carousel .slick-dotted {
@@ -1616,7 +1626,7 @@ span.btn:hover {
   width: 100%;
   max-width: var(--container-l);
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1.5rem;
   z-index: 9;
 }
 @media (min-width: 50em) {

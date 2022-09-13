@@ -9,7 +9,7 @@
 	background-size: cover;
 	background-position: 10% center;
 	width: 100%;
-	min-height: 100vh;
+	min-height: 400px;
 	@include mq($until: medium) {
 		background-image: none !important;
 	}
@@ -94,6 +94,9 @@
 		// @include mq(medium) {
 		// 	display: none;
 		// }
+		h1 {
+			margin-bottom: 0;
+		}
 		h1, h2, h3, h4, h5, p, a {
 			color: white;
 		}
