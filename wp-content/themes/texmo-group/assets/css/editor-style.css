@@ -1206,7 +1206,7 @@ span.btn:hover {
   display: flex;
   align-items: center;
   background-color: var(--color-secondary);
-  color: white;
+  color: white !important;
   padding: 0.5rem 1rem 0.3rem 1rem;
   border-radius: 16px;
   transform: translateY(-5px);

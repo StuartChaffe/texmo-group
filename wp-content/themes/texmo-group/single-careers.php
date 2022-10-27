@@ -18,10 +18,6 @@
 	<article> 
 		
 		<?php the_content(); ?>
-		<h1>testSDF<br>
-No Block
-</h1>
-		
 	</article>
 </div>
 	
