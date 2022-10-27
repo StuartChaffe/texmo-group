@@ -616,9 +616,6 @@ pre {
     padding: 0 1em !important;
   }
 }
-.accordion-list li:last-of-type {
-  border-bottom: 1px solid var(--color-grey);
-}
 .accordion-list .active .icon {
   color: var(--color-text-base);
 }
@@ -2027,9 +2024,9 @@ ul.menu .sub-menu li a:after {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 0;
+  margin: 0 0 1rem 0;
   padding: 0 1rem;
-  flex: 1 1 0px;
+  flex: 1 1 16.66666667%;
 }
 .icons-item--image {
   display: flex;
@@ -2038,6 +2035,9 @@ ul.menu .sub-menu li a:after {
   text-align: center;
   height: 100px;
   margin-bottom: 0.5rem;
+}
+.icons-item--image img {
+  height: 100%;
 }
 .icons-slider .slick-prev {
   left: 1rem;

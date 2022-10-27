@@ -20,11 +20,12 @@
 			padding: 0 1em !important;
 		}
 
-		li {
-			&:last-of-type {
-				border-bottom: 1px solid var(--color-grey);
-			}
-		}
+		// li {
+		// 	&:last-of-type {
+		// 		border-bottom: 1px solid var(--color-grey);
+		// 		padding-bottom: 2rem;
+		// 	}
+		// }
 
 		.active {
 			.icon {
