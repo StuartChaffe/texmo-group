@@ -816,12 +816,16 @@ pre {
 .application-form--form p {
   width: 100%;
 }
-.application-form--form input[type=text] {
+.application-form--form input[type=text],
+.application-form--form input[type=file] {
   width: 100%;
   padding: 2rem 2rem;
   border-radius: 60px;
   background-color: transparent;
   border: solid 1px black;
+}
+.application-form--form input[type=file] {
+  padding: 1.2rem 2rem 2.7rem 2rem;
 }
 .application-form--form textarea {
   width: 100%;
