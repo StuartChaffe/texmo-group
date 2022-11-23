@@ -32,6 +32,31 @@
 				padding: var(--spacing-l) 0;
 				padding-right: 0;
 			}
+
+			ul {
+				margin-top: 1.5em;
+				margin-bottom: 1.5em;
+				padding: 0;
+			}
+		
+			li {
+				position: relative;
+				padding-left: 1.2rem;
+			}
+			li::marker {
+				display: none;
+			}
+			li:before {
+				content: "•";
+				position: absolute;
+				left: 0;
+				top: 3px;
+				font-size: 1.2rem;
+				line-height: 1;
+				font-weight: bold;
+				margin-right: 0.6em;
+				color: var(--color-text-base);
+			}
 		}
 
 		.btn {
