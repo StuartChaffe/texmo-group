@@ -210,6 +210,7 @@
                     "choices": {
                         "Sheffield": "Sheffield",
                         "Coimbatore": "Coimbatore",
+                        "TPC (Coimbatore)": "TPC (Coimbatore)",
                         "Indiana": "Indiana"
                     },
                     "allow_custom": 0,
@@ -710,5 +711,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666862387
+    "modified": 1669302641
 }

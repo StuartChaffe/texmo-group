@@ -188,7 +188,6 @@ echo( "Current Page: " . $pageNumber );
                 $logo = get_sub_field( 'company_icon', 'options' );
               ?>
               <?php if ( $value['company']['title'] == $name ) { ?><img class="careers-item__image" loading="lazy" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" /><?php } ?>
-              
               <?php endwhile; ?>
             <?php } ?>
           </div>

@@ -172,6 +172,7 @@ $imagemobile = get_field( 'story_image_mobile', get_the_ID() );
 					$benefitlocation = get_sub_field('benefit_location');
 				?>
 					<?php if(in_array($location, $benefitlocation )){ ?>
+						
 					<div class="icons-item">
 						<div class="icons-item--image">
 							<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
@@ -246,7 +247,7 @@ $imagemobile = get_field( 'story_image_mobile', get_the_ID() );
 					// }
 
 				?>
-					<?php if ( $data['location']['name'] == 'Sheffield') { ?>
+					<?php if ( $data['location']['name'] == 'TPC (Sheffield)') { ?>
 						<?php while( have_rows('location_details', 'options') ): the_row();
 							$sheffield = get_sub_field('sheffield', 'options');
 						?>
@@ -279,7 +280,7 @@ $imagemobile = get_field( 'story_image_mobile', get_the_ID() );
 					<?php } ?>
 
 			
-					<?php if ( $data['location']['name'] == 'Coimbatore') { ?>
+					<?php if ( $data['location']['name'] == 'TPC (Coimbatore)') { ?>
 						<?php while( have_rows('location_details', 'options') ): the_row();
 							$coimbatore = get_sub_field('coimbatore', 'options');
 						?>
