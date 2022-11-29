@@ -9,6 +9,7 @@
 	<div class="banner--overlay" style="background-color: rgba(0,0,0,0.40);">&nbsp;</div>
 	<div class="banner--content fade fade--delay__1">
 		<h1><?php if ( $name ) { ?><?php echo $name; ?> -<br /><?php } ?><?php the_title(); ?></h1>
+		<h3>£15,000 - £18,000</h3>
 	</div>
 	<img loading="lazy" class="banner--image hidemobile" src="<?php echo get_the_post_thumbnail_url( get_the_ID()); ?>" alt="">
 	<?php if ( $imagemobile ) { ?><img loading="lazy" class="banner--image hidedesktop" src="<?php echo $imagemobile['url']; ?>" alt="<?php echo $imagemobile['alt']; ?>" /><?php } ?>

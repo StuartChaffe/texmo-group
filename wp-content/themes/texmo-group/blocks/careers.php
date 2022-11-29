@@ -163,6 +163,7 @@ echo( "Current Page: " . $pageNumber );
           <div>
             <p><strong><?php echo $value['title'] ?></strong></p>
             <p><?php echo $value['location']['name'] ?></p>
+            <p>£15,000 - £18,000</p>
           </div>
           <div>
             <?php

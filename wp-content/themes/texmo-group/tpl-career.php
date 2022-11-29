@@ -51,6 +51,7 @@ $imagemobile = get_field( 'story_image_mobile', get_the_ID() );
 <div class="banner--overlay" style="background-color: rgba(0,0,0,0.40);">&nbsp;</div>
 <div class="banner--content fade fade--delay__1">
 	<h1><?php echo  $_GET['title'] ; ?></h1>
+	<h3>£15,000 - £18,000</h3>
 </div>
 <img loading="lazy" class="banner--image hidemobile" src="<?php echo get_the_post_thumbnail_url( get_the_ID()); ?>" alt="">
 <?php if ( $imagemobile ) { ?>
@@ -61,7 +62,7 @@ $imagemobile = get_field( 'story_image_mobile', get_the_ID() );
 	<div class="career-details-inner">
 		<a href="/job-application/?id=<?php echo $data['id'] ?>" class="btn btn--primary">Apply Now</a>
 		<div>
-			<p><strong><?php echo  $_GET['title'] ; ?> • <?php echo $data['company']['title'] ?></strong><br />
+			<p><strong><?php echo  $_GET['title'] ; ?> • <?php echo $data['company']['title'] ?>, £15,000 - £18,000</strong><br />
 			<?php
 				echo  $data['location']['name'] .", ".$data['location']['country'] ." • ". $data['department']['name'] . " • Apply by ".date_format(date_create($data['deadlineAt']),'d/m/Y');
 			?></p>
@@ -77,7 +78,7 @@ $imagemobile = get_field( 'story_image_mobile', get_the_ID() );
 		?><?php */?>
 		<ul class="accordion-list">
 			<li>
-				<button class="accordion--title" aria-expanded="false"><?php echo $title ?> <svg class="icon icon--open"><use xlink:href="#accordion-arrow"></use></svg>Job Description</button>
+				<button class="accordion--title active" aria-expanded="true"><?php echo $title ?> <svg class="icon icon--open"><use xlink:href="#accordion-arrow"></use></svg>Job Description</button>
 				<div class="accordion--content">
 					<div class="career-details-item--content">
 						<p><?php echo $data['description'] ; ?> </p>
