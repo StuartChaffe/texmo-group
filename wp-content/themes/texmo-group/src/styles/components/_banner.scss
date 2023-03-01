@@ -1,5 +1,5 @@
 .banner {
-	display: flex;
+	display: flex !important;
 	flex-direction: column;
 	position: relative;
 	overflow: hidden;
@@ -17,6 +17,32 @@
 		flex-direction: row;
 		height: 100vh;
 		min-height: 800px;
+	}
+	&-carousel {
+		.slick-slide > div {
+			width: 100%;
+		} 
+		.slick-dots {
+			max-width: var(--container);
+			text-align: right;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		.slick-dots li button {
+			border: 1px solid rgba(255, 255, 255, 0.8);
+			&:hover {
+				background-color: white;
+			}
+		}
+		.slick-dots li.slick-active button {
+			border: 1px solid var(--color-secondary);
+			&:hover {
+				background-color: var(--color-secondary);
+			}
+		}
+		.slick-dots {
+			bottom: var(--spacing);
+		}
 	}
 	&__small {
 		min-height: auto;

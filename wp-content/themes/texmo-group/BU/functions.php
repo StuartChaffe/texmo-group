@@ -69,7 +69,7 @@ add_filter( 'tiny_mce_before_init', 'my_custom_styles' );
 function my_login_logo() { ?>
 	<style type="text/css">
 		#login h1 a, .login h1 a {
-		background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/src/images/logo.svg');
+		background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/src/images/logo.svg);
 		height: 49px;
 		width: 121px;
 		background-size: 121px 49px;

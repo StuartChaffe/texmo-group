@@ -1637,6 +1637,7 @@ body.nav-open {
   margin-top: auto;
   background-color: var(--color-primary);
   padding: var(--spacing) 1em;
+  z-index: 9;
 }
 @media (min-width: 50em) {
   .footer {
@@ -2214,7 +2215,7 @@ body.nav-open {
 }
 
 .banner {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   position: relative;
   overflow: hidden;
@@ -2237,6 +2238,30 @@ body.nav-open {
     height: 100vh;
     min-height: 800px;
   }
+}
+.banner-carousel .slick-slide > div {
+  width: 100%;
+}
+.banner-carousel .slick-dots {
+  max-width: var(--container);
+  text-align: right;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.banner-carousel .slick-dots li button {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+.banner-carousel .slick-dots li button:hover {
+  background-color: white;
+}
+.banner-carousel .slick-dots li.slick-active button {
+  border: 1px solid var(--color-secondary);
+}
+.banner-carousel .slick-dots li.slick-active button:hover {
+  background-color: var(--color-secondary);
+}
+.banner-carousel .slick-dots {
+  bottom: var(--spacing);
 }
 .banner__small {
   min-height: auto;

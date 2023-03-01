@@ -19,14 +19,14 @@
 						Sheffield S3 8GW <br />
 						United Kingdom</p>
 				</div>
-				<div class="footer--companies-item">
-					<img src="<?php echo get_template_directory_uri(); ?>/src/images/taro-water.png" alt="Texmo Group logo" />
+				<!-- <div class="footer--companies-item">
+					<img src="<?php // echo get_template_directory_uri(); ?>/src/images/taro-water.png" alt="Texmo Group logo" />
 					<p>Taro Water<br />
 						P.O. Box: 5303,<br />
 						Mettupalayam Road,<br />
 						Coimbatore - 641 029,<br />
 						Tamil Nadu, India.</p>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<div class="footer--right">

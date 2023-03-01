@@ -26,6 +26,19 @@ jQuery(document).ready(function($) {
 			}
 		]
 	});
+	
+	$(".banner-carousel").slick({
+		// settings: "unslick",
+		speed: 200,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: false,
+		autoplaySpeed: 5000,
+		arrows: false,
+		infinite: true,
+		dots: true,
+		pauseOnHover: false,
+	});
 
 
 	$(".icons-slider").slick({

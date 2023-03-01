@@ -2,6 +2,7 @@
 	margin-top: auto;
 	background-color: var(--color-primary);
 	padding: var(--spacing) 1em;
+	z-index: 9;
 	@include mq(medium) {
 		padding: var(--spacing-l) var(--spacing);
 	}

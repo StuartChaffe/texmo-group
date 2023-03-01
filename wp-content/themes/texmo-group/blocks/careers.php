@@ -108,7 +108,7 @@ echo( "Total Jobs: " . $totalJobs . "<br />" );
 echo( "Pages: " . $pageCount . "<br />" );
 echo( "Current Page: " . $pageNumber );
 <?php */?>
-<form name="jobForm" id="jobForm" action="#JobCard", method="post">
+<form name="jobForm" id="jobForm" action="#JobCard" method="post">
   <?php /*?>Result ID : <?php echo $_POST['location'] ; ?>: <?php echo $_POST['role']; ?><?php */?>
   <section class="<?php echo $bkg; ?>">
     <div class="careers">
@@ -163,7 +163,6 @@ echo( "Current Page: " . $pageNumber );
           <div>
             <p><strong><?php echo $value['title'] ?></strong></p>
             <p><?php echo $value['location']['name'] ?></p>
-            <p>£15,000 - £18,000</p>
           </div>
           <div>
             <?php
